@@ -1,0 +1,186 @@
+{
+  "date": "2026-07-04",
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-07-04T21:30:27.164Z",
+  "scripts": [
+    {
+      "type": "market-recap",
+      "title": "Market Recap: Moderna, Apple, Tesla Moves",
+      "hook": "Moderna jumped over ten percent today!",
+      "beats": [
+        {
+          "vo": "Moderna climbed over 10% after Jim Cramer expressed confidence, stating he likes having a position in the stock.",
+          "caption": "Moderna +10% on Cramer boost",
+          "ticker": "MRNA",
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "pharmaceuticals",
+            "up"
+          ]
+        },
+        {
+          "vo": "Meanwhile, Tesla shares fell nearly 7.5% after Barclays reiterated a cautious \"Equalweight\" rating, citing concerns around robotaxi and Optimus developments.",
+          "caption": "Tesla -7.5% on cautious outlook",
+          "ticker": "TSLA",
+          "sentiment": "down",
+          "keywords": [
+            "tesla",
+            "ev",
+            "down"
+          ]
+        },
+        {
+          "vo": "Apple rose almost 5% on plans for a major iPhone lineup expansion between late 2026 and early 2027, including its first foldable iPhone.",
+          "caption": "Apple +5% on foldable iPhone plans",
+          "ticker": "AAPL",
+          "sentiment": "up",
+          "keywords": [
+            "apple",
+            "tech",
+            "up"
+          ]
+        },
+        {
+          "vo": "And Arm Holdings dropped nearly 6.6%, pulling back from recent peaks, despite reports of its robust licensing business driving AI-fueled growth.",
+          "caption": "Arm -6.6% pulls back from peak",
+          "ticker": "ARM",
+          "sentiment": "down",
+          "keywords": [
+            "arm holdings",
+            "semiconductors",
+            "down"
+          ]
+        }
+      ],
+      "cta": "Watching any of these stocks?",
+      "disclaimer": "For information only — not financial advice.",
+      "fbCaption": "Moderna soared, Tesla dipped, and Apple pushed higher with foldable iPhone plans. Get the full market rundown here!",
+      "hashtags": [
+        "#MarketRecap",
+        "#StockMarket",
+        "#Moderna",
+        "#Tesla",
+        "#Apple",
+        "#ArmHoldings",
+        "#Investing"
+      ]
+    },
+    {
+      "type": "top-mover",
+      "title": "Moderna Surges: What's Driving the Biotech Rally?",
+      "hook": "Moderna surged over 10% today, capping off a remarkable run!",
+      "beats": [
+        {
+          "vo": "Moderna, ticker MRNA, climbed more than 10% today, now trading at $79.76 a share, extending a significant rally that began last month.",
+          "caption": "Moderna Jumps +10.01%",
+          "ticker": "MRNA",
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "biotech",
+            "up",
+            "pharma"
+          ]
+        },
+        {
+          "vo": "This recent momentum follows a unanimous 9-0 FDA vote which has helped push the biotech stock up over 70% in just the last month, reigniting investor interest.",
+          "caption": "FDA Vote Powers MRNA",
+          "ticker": "MRNA",
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "fda",
+            "regulatory",
+            "growth"
+          ]
+        },
+        {
+          "vo": "This robust performance comes as some Wall Street analysts hold an average price target suggesting the stock could fall by 44% from current levels. However, even Jim Cramer has noted he now likes having a position in Moderna after years of skepticism.",
+          "caption": "Analysts Diverge on MRNA",
+          "ticker": "MRNA",
+          "sentiment": "neutral",
+          "keywords": [
+            "moderna",
+            "analysts",
+            "jim cramer",
+            "outlook"
+          ]
+        }
+      ],
+      "cta": "Watching Moderna's next move?",
+      "disclaimer": "For information only — not financial advice.",
+      "fbCaption": "Moderna (MRNA) is on a roll, up 10% today and over 70% this month! Find out what's behind the biotech's surge, and why some analysts are still cautious. #Moderna #MRNA #StockMarket #Biotech #FDA #Investing",
+      "hashtags": [
+        "#Moderna",
+        "#MRNA",
+        "#StockMarket",
+        "#Biotech",
+        "#FDA",
+        "#Investing"
+      ]
+    },
+    {
+      "type": "headline",
+      "title": "Market Movers: Moderna Jumps, Tesla Dips",
+      "hook": "Moderna jumped over 10% today – let's break down the market's biggest moves.",
+      "beats": [
+        {
+          "vo": "Moderna jumped over 10% after Jim Cramer voiced his confidence, with investor sentiment also boosted as oil prices dipped to pre-Iran war levels.",
+          "caption": "Moderna jumps 10%+",
+          "ticker": "MRNA",
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "pharma",
+            "up"
+          ]
+        },
+        {
+          "vo": "Meanwhile, Tesla fell almost 7.5% today. This came as Barclays reiterated a cautious Equalweight rating on the stock, citing concerns around its robotaxi and Optimus developments.",
+          "caption": "Tesla drops on analyst caution",
+          "ticker": "TSLA",
+          "sentiment": "down",
+          "keywords": [
+            "tesla",
+            "ev",
+            "down"
+          ]
+        },
+        {
+          "vo": "Apple climbed nearly 5%, driven by news of its plans for a significant expansion of its iPhone lineup, including its first foldable model, anticipated in late 2026.",
+          "caption": "Apple plans foldable iPhone",
+          "ticker": "AAPL",
+          "sentiment": "up",
+          "keywords": [
+            "apple",
+            "tech",
+            "up"
+          ]
+        },
+        {
+          "vo": "And Netflix was up almost 4.7%, following reports highlighting its robust cash-generating business model compared to competitors in the streaming space.",
+          "caption": "Netflix cash flow strong",
+          "ticker": "NFLX",
+          "sentiment": "up",
+          "keywords": [
+            "netflix",
+            "streaming",
+            "up"
+          ]
+        }
+      ],
+      "cta": "Watching any of these stocks?",
+      "disclaimer": "For information only — not financial advice.",
+      "fbCaption": "Moderna, Tesla, Apple, and Netflix made big moves today. Here's why.",
+      "hashtags": [
+        "#StockMarket",
+        "#Moderna",
+        "#Tesla",
+        "#Apple",
+        "#Netflix",
+        "#MarketRecap"
+      ]
+    }
+  ]
+}

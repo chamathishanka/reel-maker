@@ -1,0 +1,13 @@
+{
+	"_comment": "Watchlist scanned each run for daily movers. One Finnhub /quote call per ticker (well under the ~300/day free limit). Curated for liquidity + recognisability so the 'top mover' is a name viewers know. Edit freely.",
+	"tickers": [
+		"AAPL", "MSFT", "NVDA", "GOOGL", "AMZN", "META", "TSLA", "AVGO",
+		"AMD", "NFLX", "INTC", "MU", "QCOM", "ORCL", "CRM", "ADBE",
+		"PLTR", "SMCI", "ARM", "DELL",
+		"JPM", "BAC", "GS", "MS", "V", "MA", "PYPL", "COIN",
+		"XOM", "CVX", "OXY",
+		"JNJ", "PFE", "LLY", "UNH", "MRNA",
+		"WMT", "COST", "HD", "NKE", "SBUX", "MCD", "DIS",
+		"BA", "GE", "CAT", "F", "GM", "UBER", "ABNB"
+	]
+}

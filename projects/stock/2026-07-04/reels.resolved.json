@@ -1,0 +1,264 @@
+{
+  "date": "2026-07-04",
+  "results": [
+    {
+      "type": "market-recap",
+      "title": "Market Recap: Moderna, Apple, Tesla Moves",
+      "file": "01_market-recap-mrna.mp4",
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "Moderna jumped over ten percent today!",
+          "text": "Moderna jumped over ten percent today!",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-04/audio/01-market-recap-mrna-00.mp3",
+          "durationInFrames": 94
+        },
+        {
+          "kind": "beat",
+          "vo": "Moderna climbed over 10% after Jim Cramer expressed confidence, stating he likes having a position in the stock.",
+          "caption": "Moderna +10% on Cramer boost",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "price": 79.76,
+          "changePct": 10.0138,
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "pharmaceuticals",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/01-market-recap-mrna-01.mp3",
+          "durationInFrames": 234
+        },
+        {
+          "kind": "beat",
+          "vo": "Meanwhile, Tesla shares fell nearly 7.5% after Barclays reiterated a cautious \"Equalweight\" rating, citing concerns around robotaxi and Optimus developments.",
+          "caption": "Tesla -7.5% on cautious outlook",
+          "ticker": "TSLA",
+          "name": "Tesla",
+          "price": 393.45,
+          "changePct": -7.4888,
+          "sentiment": "down",
+          "keywords": [
+            "tesla",
+            "ev",
+            "down"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/01-market-recap-mrna-02.mp3",
+          "durationInFrames": 389
+        },
+        {
+          "kind": "beat",
+          "vo": "Apple rose almost 5% on plans for a major iPhone lineup expansion between late 2026 and early 2027, including its first foldable iPhone.",
+          "caption": "Apple +5% on foldable iPhone plans",
+          "ticker": "AAPL",
+          "name": "Apple",
+          "price": 308.63,
+          "changePct": 4.8407,
+          "sentiment": "up",
+          "keywords": [
+            "apple",
+            "tech",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/01-market-recap-mrna-03.mp3",
+          "durationInFrames": 337
+        },
+        {
+          "kind": "beat",
+          "vo": "And Arm Holdings dropped nearly 6.6%, pulling back from recent peaks, despite reports of its robust licensing business driving AI-fueled growth.",
+          "caption": "Arm -6.6% pulls back from peak",
+          "ticker": "ARM",
+          "name": "Arm Holdings",
+          "price": 315.28,
+          "changePct": -6.5754,
+          "sentiment": "down",
+          "keywords": [
+            "arm holdings",
+            "semiconductors",
+            "down"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/01-market-recap-mrna-04.mp3",
+          "durationInFrames": 335
+        },
+        {
+          "kind": "cta",
+          "vo": "Watching any of these stocks?",
+          "text": "Watching any of these stocks?",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-04/audio/01-market-recap-mrna-05.mp3",
+          "durationInFrames": 65
+        }
+      ]
+    },
+    {
+      "type": "top-mover",
+      "title": "Moderna Surges: What's Driving the Biotech Rally?",
+      "file": "02_top-mover-mrna.mp4",
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "Moderna surged over 10% today, capping off a remarkable run!",
+          "text": "Moderna surged over 10% today, capping off a remarkable run!",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-04/audio/02-top-mover-mrna-00.mp3",
+          "durationInFrames": 176
+        },
+        {
+          "kind": "beat",
+          "vo": "Moderna, ticker MRNA, climbed more than 10% today, now trading at $79.76 a share, extending a significant rally that began last month.",
+          "caption": "Moderna Jumps +10.01%",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "price": 79.76,
+          "changePct": 10.0138,
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "biotech",
+            "up",
+            "pharma"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/02-top-mover-mrna-01.mp3",
+          "durationInFrames": 381
+        },
+        {
+          "kind": "beat",
+          "vo": "This recent momentum follows a unanimous 9-0 FDA vote which has helped push the biotech stock up over 70% in just the last month, reigniting investor interest.",
+          "caption": "FDA Vote Powers MRNA",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "price": 79.76,
+          "changePct": 10.0138,
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "fda",
+            "regulatory",
+            "growth"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/02-top-mover-mrna-02.mp3",
+          "durationInFrames": 353
+        },
+        {
+          "kind": "beat",
+          "vo": "This robust performance comes as some Wall Street analysts hold an average price target suggesting the stock could fall by 44% from current levels. However, even Jim Cramer has noted he now likes having a position in Moderna after years of skepticism.",
+          "caption": "Analysts Diverge on MRNA",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "price": 79.76,
+          "changePct": 10.0138,
+          "sentiment": "neutral",
+          "keywords": [
+            "moderna",
+            "analysts",
+            "jim cramer",
+            "outlook"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/02-top-mover-mrna-03.mp3",
+          "durationInFrames": 489
+        },
+        {
+          "kind": "cta",
+          "vo": "Watching Moderna's next move?",
+          "text": "Watching Moderna's next move?",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-04/audio/02-top-mover-mrna-04.mp3",
+          "durationInFrames": 68
+        }
+      ]
+    },
+    {
+      "type": "headline",
+      "title": "Market Movers: Moderna Jumps, Tesla Dips",
+      "file": "03_headline-mrna.mp4",
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "Moderna jumped over 10% today – let's break down the market's biggest moves.",
+          "text": "Moderna jumped over 10% today – let's break down the market's biggest moves.",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-04/audio/03-headline-mrna-00.mp3",
+          "durationInFrames": 175
+        },
+        {
+          "kind": "beat",
+          "vo": "Moderna jumped over 10% after Jim Cramer voiced his confidence, with investor sentiment also boosted as oil prices dipped to pre-Iran war levels.",
+          "caption": "Moderna jumps 10%+",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "price": 79.76,
+          "changePct": 10.0138,
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "pharma",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/03-headline-mrna-01.mp3",
+          "durationInFrames": 294
+        },
+        {
+          "kind": "beat",
+          "vo": "Meanwhile, Tesla fell almost 7.5% today. This came as Barclays reiterated a cautious Equalweight rating on the stock, citing concerns around its robotaxi and Optimus developments.",
+          "caption": "Tesla drops on analyst caution",
+          "ticker": "TSLA",
+          "name": "Tesla",
+          "price": 393.45,
+          "changePct": -7.4888,
+          "sentiment": "down",
+          "keywords": [
+            "tesla",
+            "ev",
+            "down"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/03-headline-mrna-02.mp3",
+          "durationInFrames": 412
+        },
+        {
+          "kind": "beat",
+          "vo": "Apple climbed nearly 5%, driven by news of its plans for a significant expansion of its iPhone lineup, including its first foldable model, anticipated in late 2026.",
+          "caption": "Apple plans foldable iPhone",
+          "ticker": "AAPL",
+          "name": "Apple",
+          "price": 308.63,
+          "changePct": 4.8407,
+          "sentiment": "up",
+          "keywords": [
+            "apple",
+            "tech",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/03-headline-mrna-03.mp3",
+          "durationInFrames": 383
+        },
+        {
+          "kind": "beat",
+          "vo": "And Netflix was up almost 4.7%, following reports highlighting its robust cash-generating business model compared to competitors in the streaming space.",
+          "caption": "Netflix cash flow strong",
+          "ticker": "NFLX",
+          "name": "Netflix",
+          "price": 77.65,
+          "changePct": 4.6637,
+          "sentiment": "up",
+          "keywords": [
+            "netflix",
+            "streaming",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-04/audio/03-headline-mrna-04.mp3",
+          "durationInFrames": 325
+        },
+        {
+          "kind": "cta",
+          "vo": "Watching any of these stocks?",
+          "text": "Watching any of these stocks?",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-04/audio/03-headline-mrna-05.mp3",
+          "durationInFrames": 65
+        }
+      ]
+    }
+  ]
+}
