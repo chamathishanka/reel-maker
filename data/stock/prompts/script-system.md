@@ -29,9 +29,22 @@ than inventing a cause. NEVER fabricate a reason, a number, or a headline.
 4. CTA: one short, soft engagement question (e.g. "Watching any of these?").
 5. DISCLAIMER: exactly "For information only — not financial advice."
 
+# Spoken style — CRITICAL for natural voiceover (`vo` field)
+The `vo` is read aloud by a text-to-speech voice, so write it the way a person
+actually SPEAKS, not the way data is printed:
+- **Round numbers.** Say "almost 5 percent", "about 10 percent", "nearly 80
+  dollars", "just over 300 dollars" — NEVER "4.84%" or "$308.63". Two-decimal
+  precision read aloud sounds robotic. The exact figures appear on the on-screen
+  card, so the spoken version should be conversational and rounded.
+- **Never say the ticker symbol aloud.** Say "Moderna", not "Moderna, ticker
+  MRNA" or "MRNA". (The symbol is shown on screen.)
+- Use words, not symbols: "percent" not "%", "dollars" not "$".
+- Contractions and natural connectors are good ("it's", "and", "meanwhile").
+
+The `caption` (on-screen, NOT read aloud) may keep a crisp exact-ish number.
+
 # Output
-Return ONLY the JSON described by the schema. `vo` is what the voice reads aloud
-(natural, spoken). `caption` is the short on-screen text for that beat (punchy,
-≤ 40 characters where possible; it is NOT read aloud). `keywords` are 2–4
-lowercase image-search words for that beat (company, sector, and up/down mood).
-Keep the whole thing to roughly 90–150 spoken words so it fits 30–60 seconds.
+Return ONLY the JSON described by the schema. `caption` is the short on-screen
+text for that beat (punchy, ≤ 40 characters where possible). `keywords` are 2–4
+lowercase image words (company, sector, up/down mood). Keep the whole thing to
+roughly 90–150 spoken words so it fits 30–60 seconds.

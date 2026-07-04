@@ -297,7 +297,6 @@ const DisclaimerStrip = ({text}) =>
 	) : null;
 
 export const StockVideo = ({data}) => {
-	const {fps} = useVideoConfig();
 	let startFrame = 0;
 
 	const sequences = data.segments.map((seg, i) => {
@@ -305,11 +304,14 @@ export const StockVideo = ({data}) => {
 		const content =
 			seg.kind === 'hook' ? (
 				<AbsoluteFill>
-					<Backdrop sentiment={seg.sentiment} durationInFrames={durationInFrames} />
+					<Backdrop image={seg.image} sentiment={seg.sentiment} durationInFrames={durationInFrames} />
 					<HookCard text={seg.text} durationInFrames={durationInFrames} />
 				</AbsoluteFill>
 			) : seg.kind === 'cta' ? (
-				<OutroCard cta={seg.text} disclaimer={data.disclaimer} channelName={data.channelName} />
+				<AbsoluteFill>
+					<Backdrop image={seg.image} sentiment="neutral" durationInFrames={durationInFrames} />
+					<OutroCard cta={seg.text} disclaimer={data.disclaimer} channelName={data.channelName} />
+				</AbsoluteFill>
 			) : (
 				<AbsoluteFill>
 					<Backdrop image={seg.image} sentiment={seg.sentiment} durationInFrames={durationInFrames} />

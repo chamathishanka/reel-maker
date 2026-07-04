@@ -8,10 +8,39 @@
 import fs from 'fs';
 import path from 'path';
 import {MsEdgeTTS, OUTPUT_FORMAT} from 'msedge-tts';
-import {optionalEnv} from './env.mjs';
+import {optionalEnv, requireEnv} from './env.mjs';
 
 // Confident US news voice suited to finance. Override with STOCK_TTS_VOICE.
 const EDGE_VOICE = optionalEnv('STOCK_TTS_VOICE', 'en-US-ChristopherNeural');
+
+// ElevenLabs (higher quality). voice_id + model are configurable.
+const ELEVEN_VOICE_ID = optionalEnv('STOCK_ELEVEN_VOICE_ID', '');
+const ELEVEN_MODEL = optionalEnv('STOCK_ELEVEN_MODEL', 'eleven_multilingual_v2');
+
+async function elevenSynthesize(text, outPath) {
+	const key = requireEnv('ELEVENLAB_API_KEY');
+	if (!ELEVEN_VOICE_ID) {
+		throw new Error('Missing STOCK_ELEVEN_VOICE_ID (the Charles voice id).');
+	}
+	const url = `https://api.elevenlabs.io/v1/text-to-speech/${ELEVEN_VOICE_ID}?output_format=mp3_44100_128`;
+	const res = await fetch(url, {
+		method: 'POST',
+		headers: {'xi-api-key': key, 'content-type': 'application/json', accept: 'audio/mpeg'},
+		body: JSON.stringify({
+			text,
+			model_id: ELEVEN_MODEL,
+			voice_settings: {stability: 0.5, similarity_boost: 0.75, style: 0.0, use_speaker_boost: true},
+		}),
+	});
+	if (!res.ok) {
+		const err = await res.text().catch(() => '');
+		throw new Error(`ElevenLabs failed: ${res.status} ${res.statusText}${err ? ` — ${err.slice(0, 300)}` : ''}`);
+	}
+	fs.mkdirSync(path.dirname(outPath), {recursive: true});
+	fs.writeFileSync(outPath, Buffer.from(await res.arrayBuffer()));
+	// ElevenLabs doesn't stream word boundaries here; captions use estimated timing.
+	return {path: outPath, wordBoundaries: []};
+}
 
 async function edgeSynthesize(text, outPath) {
 	const tts = new MsEdgeTTS();
@@ -63,6 +92,7 @@ async function piperSynthesize(text, outPath) {
 // Public entry — dispatch on STOCK_TTS_ENGINE (default edge).
 export async function synthesize(text, outPath) {
 	const engine = optionalEnv('STOCK_TTS_ENGINE', 'edge').toLowerCase();
+	if (engine === 'elevenlabs') return elevenSynthesize(text, outPath);
 	if (engine === 'piper') return piperSynthesize(text, outPath);
 	return edgeSynthesize(text, outPath);
 }

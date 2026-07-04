@@ -20,12 +20,11 @@ const SYSTEM_PROMPT = fs.readFileSync(
 	'utf8',
 );
 
-export const DEFAULT_DAY_SET = ['market-recap', 'top-mover', 'headline'];
-
-// JSON contract the model must return (Gemini responseSchema).
-const SCRIPT_SCHEMA = {
+// JSON contract for a single reel (Gemini responseSchema).
+const REEL_SCHEMA = {
 	type: 'object',
 	properties: {
+		type: {type: 'string', enum: ['market-recap', 'top-mover', 'headline']},
 		title: {type: 'string'},
 		hook: {type: 'string'},
 		beats: {
@@ -43,11 +42,18 @@ const SCRIPT_SCHEMA = {
 			},
 		},
 		cta: {type: 'string'},
-		disclaimer: {type: 'string'},
 		fbCaption: {type: 'string'},
 		hashtags: {type: 'array', items: {type: 'string'}},
 	},
-	required: ['title', 'hook', 'beats', 'cta', 'fbCaption', 'hashtags'],
+	required: ['type', 'title', 'hook', 'beats', 'cta', 'fbCaption', 'hashtags'],
+};
+
+// The whole day's set is generated in ONE call so the reels can be made aware
+// of each other (distinct leads, distinct focus) and the count can adapt.
+const DAYSET_SCHEMA = {
+	type: 'object',
+	properties: {reels: {type: 'array', items: REEL_SCHEMA}},
+	required: ['reels'],
 };
 
 const fmtPct = (p) =>
@@ -79,51 +85,36 @@ function moverNewsBlock(quotes, moverNews) {
 		: '';
 }
 
-// Build the per-type user prompt from real data.
-function buildUserPrompt(type, data) {
-	const {movers, marketNews, topMoverNews, moverNews} = data;
-	const common =
-		`Date: ${data.date}. Use only the facts below; do not invent numbers, tickers, or reasons. ` +
-		`If a stock has no per-stock news, attribute its move to the relevant sector or the broader market — ` +
-		`do NOT say "no catalyst" or "no reason reported" (that reads as low-effort).\n`;
+// Build ONE prompt describing the whole day's data plus the lane rules that
+// keep the reels distinct and let the set shrink to 2 on a thin-news day.
+function buildDaySetPrompt(data) {
+	const {movers, marketNews, moverNews} = data;
+	const tm = movers.topMover;
+	const allMovers = [...movers.gainers, ...movers.losers];
 
-	if (type === 'market-recap') {
-		return (
-			common +
-			`\nMake a MARKET RECAP reel: a fast tour of the day's notable moves.\n\n` +
-			`Top gainers:\n${movers.gainers.map(moverLine).join('\n')}\n\n` +
-			`Top losers:\n${movers.losers.map(moverLine).join('\n')}\n` +
-			moverNewsBlock([...movers.gainers, ...movers.losers], moverNews) +
-			`\nMarket headlines (macro context):\n${newsBlock(marketNews)}\n\n` +
-			`Pick 3–4 of the most story-worthy moves for the beats. Open on the single biggest move.`
-		);
-	}
-
-	if (type === 'top-mover') {
-		const tm = movers.topMover;
-		return (
-			common +
-			`\nMake a SINGLE-STOCK STORY reel about the day's biggest mover.\n\n` +
-			`Stock: ${tm ? moverLine(tm) : 'n/a'}\n\n` +
-			`Company news for this stock (use for the "why"):\n${newsBlock(topMoverNews)}\n\n` +
-			`Broader market headlines for context:\n${newsBlock(marketNews, 3)}\n\n` +
-			`3 beats: the move, the reason, and one line of factual context. Hook on the number.`
-		);
-	}
-
-	if (type === 'headline') {
-		const relatedMoves = [...movers.gainers, ...movers.losers].slice(0, 6);
-		return (
-			common +
-			`\nMake a MARKET HEADLINE reel built around the day's most significant news.\n\n` +
-			`Headlines:\n${newsBlock(marketNews, 6)}\n\n` +
-			`Related notable moves you may reference:\n${relatedMoves.map(moverLine).join('\n')}\n` +
-			moverNewsBlock(relatedMoves, moverNews) +
-			`\nPick the single most market-relevant headline. Explain what happened and, factually, which stocks/sectors it touched.`
-		);
-	}
-
-	throw new Error(`Unknown reel type "${type}".`);
+	return (
+		`Date: ${data.date}. Use ONLY the facts below; never invent numbers, tickers, or reasons. ` +
+		`If a stock has no per-stock news, attribute its move to its sector or the broader market — ` +
+		`do NOT say "no catalyst" / "no reason reported" (reads as low-effort).\n\n` +
+		`Today's biggest mover: ${tm ? moverLine(tm) : 'n/a'}\n\n` +
+		`Top gainers:\n${movers.gainers.map(moverLine).join('\n')}\n\n` +
+		`Top losers:\n${movers.losers.map(moverLine).join('\n')}\n` +
+		moverNewsBlock(allMovers, moverNews) +
+		`\nMarket headlines:\n${newsBlock(marketNews, 8)}\n\n` +
+		`TASK: produce a SET of 2 OR 3 short reels for this trading day. They post ` +
+		`together, so they MUST read as clearly different videos — different opening ` +
+		`line, different lead stock/topic, different focus. No two reels may lead with ` +
+		`the same stock. Assign these lanes:\n` +
+		`1. "top-mover" (ALWAYS): a single-stock deep story on ${tm ? tm.name + ' (' + tm.ticker + ')' : 'the biggest mover'}. ` +
+		`Only THIS reel may lead with that stock. Break the one story into 3 beats — the move, ` +
+		`the reason/why, and one line of factual context (all the same stock, each its own beat).\n` +
+		`2. "market-recap" (ALWAYS): a broader tour. It must NOT lead with ${tm ? tm.ticker : 'the top mover'}; ` +
+		`open with a market-wide framing or a gainer-vs-loser contrast and cover 3–4 DIFFERENT names.\n` +
+		`3. "headline" (ONLY IF there is genuinely market-moving news today): lead with the ` +
+		`news event itself, not a stock price. If today's headlines are NOT clearly ` +
+		`market-moving (e.g. a holiday / thin news day), OMIT this reel and return only 2.\n\n` +
+		`Return {"reels": [...]} with each reel's "type" set to its lane.`
+	);
 }
 
 function normalizeScript(script, type) {
@@ -151,24 +142,36 @@ function normalizeScript(script, type) {
 	};
 }
 
-export async function generateScript(type, data) {
-	const user = buildUserPrompt(type, data);
-	const raw = await generateJson(SYSTEM_PROMPT, user, SCRIPT_SCHEMA);
-	return normalizeScript(raw, type);
-}
+// Order reels consistently (top-mover, recap, headline) regardless of the
+// order the model returned them in.
+const LANE_ORDER = {'top-mover': 0, 'market-recap': 1, headline: 2};
 
-export async function generateDaySet(data, types = DEFAULT_DAY_SET) {
-	const scripts = [];
-	for (const type of types) {
-		scripts.push(await generateScript(type, data));
-	}
-	return scripts;
+export async function generateDaySet(data) {
+	const user = buildDaySetPrompt(data);
+	const raw = await generateJson(SYSTEM_PROMPT, user, DAYSET_SCHEMA);
+	let reels = (raw.reels || []).map((r) => normalizeScript(r, r.type));
+
+	// Safety net: drop a reel whose lead stock duplicates an earlier reel's, so
+	// the set never ships two near-identical videos even if the model slips.
+	const seenLead = new Set();
+	reels = reels.filter((r) => {
+		const lead = (r.beats.find((b) => b.ticker)?.ticker || r.type).toUpperCase();
+		if (seenLead.has(lead)) {
+			console.warn(`[script] dropping duplicate-lead reel (${r.type}, lead ${lead}).`);
+			return false;
+		}
+		seenLead.add(lead);
+		return true;
+	});
+
+	reels.sort((a, b) => (LANE_ORDER[a.type] ?? 9) - (LANE_ORDER[b.type] ?? 9));
+	return reels;
 }
 
 // Generate scripts for a date, using cached fetch data (fetches if missing).
-export async function generateAndSave({date = todayStr(), types} = {}) {
+export async function generateAndSave({date = todayStr()} = {}) {
 	const data = await fetchDailyData({date, useCache: true});
-	const scripts = await generateDaySet(data, types);
+	const scripts = await generateDaySet(data);
 	const dayDir = path.join(PROJECTS_DIR, date);
 	fs.mkdirSync(dayDir, {recursive: true});
 	const out = {date, model: GEMINI_MODEL, generatedAt: new Date().toISOString(), scripts};

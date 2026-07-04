@@ -13,6 +13,7 @@ import {bundle} from '@remotion/bundler';
 import {renderMedia, selectComposition} from '@remotion/renderer';
 import {ROOT, optionalEnv} from './env.mjs';
 import {synthesize} from './tts.mjs';
+import {generateBeatImage} from './images.mjs';
 import {todayStr} from './fetch.mjs';
 
 const execFileP = promisify(execFile);
@@ -49,6 +50,21 @@ async function audioDuration(absPath) {
 
 const slugify = (s) =>
 	(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40);
+
+const KNOWN_TICKERS = Object.keys(tickerMap);
+
+// Make VO read naturally: drop spoken ticker symbols ("Netflix, NFLX," / "ticker
+// MRNA") — the company name is already said and the symbol shows on the card.
+// (Number phrasing is handled upstream in the script prompt.)
+function speechFriendly(text) {
+	let t = text || '';
+	t = t.replace(/,?\s*ticker\s+[A-Za-z]{1,6}\b/gi, '');
+	for (const tk of KNOWN_TICKERS) {
+		t = t.replace(new RegExp(`,\\s*${tk}\\s*,`, 'g'), ', ');
+		t = t.replace(new RegExp(`\\(\\s*${tk}\\s*\\)`, 'g'), '');
+	}
+	return t.replace(/\s{2,}/g, ' ').replace(/\s+([,.])/g, '$1').trim();
+}
 
 // Look up live price/%/name for a ticker from the day's fetched quotes.
 function quoteFor(ticker, quotesByTicker) {
@@ -88,19 +104,36 @@ function planSegments(script, quotesByTicker) {
 	return segments;
 }
 
-// Synthesize VO per segment and fit each segment's frame length to its audio.
-async function voiceSegments(segments, audioDir, publicAudioRel, reelSlug) {
+// Synthesize VO per segment (fit frames to audio) and generate a backdrop image
+// for each content beat. Both write under public/ before bundling.
+async function prepareSegments(segments, dirs, reelSlug) {
+	const {audioDir, publicAudioRel, imageDir, publicImageRel} = dirs;
 	fs.mkdirSync(audioDir, {recursive: true});
 	const out = [];
 	for (let i = 0; i < segments.length; i++) {
 		const seg = segments[i];
-		const fileName = `${reelSlug}-${String(i).padStart(2, '0')}.mp3`;
-		const abs = path.join(audioDir, fileName);
-		await synthesize(seg.vo || seg.text || '.', abs);
-		const dur = await audioDuration(abs);
+		const idx = String(i).padStart(2, '0');
+
+		const audioFile = `${reelSlug}-${idx}.mp3`;
+		await synthesize(speechFriendly(seg.vo || seg.text || '.'), path.join(audioDir, audioFile));
+		const dur = await audioDuration(path.join(audioDir, audioFile));
+
+		// Every segment gets a dimmed backdrop image (no more flat-black hook/cta).
+		// Beats use their stock's sector; hook/cta use generic "markets" scenes.
+		const sector = seg.kind === 'beat' ? tickerMap[seg.ticker]?.sector || 'markets' : 'markets';
+		const img = await generateBeatImage({
+			sector,
+			sentiment: seg.sentiment,
+			variant: i,
+			cacheKey: `${reelSlug}-${idx}`,
+			outDir: imageDir,
+		});
+		const image = img ? `${publicImageRel}/${img.fileName}` : undefined;
+
 		out.push({
 			...seg,
-			audio: `${publicAudioRel}/${fileName}`,
+			audio: `${publicAudioRel}/${audioFile}`,
+			image,
 			durationInFrames: Math.max(1, Math.round((dur + SEGMENT_TAIL) * FPS)),
 		});
 	}
@@ -120,10 +153,14 @@ export async function renderDay({date = todayStr(), onProgress} = {}) {
 		marketData.quotes.map((q) => [q.ticker.toUpperCase(), q]),
 	);
 
-	// Audio lives under public/ so Remotion's staticFile can serve it.
+	// Audio + images live under public/ so Remotion's staticFile can serve them.
 	const publicDayDir = path.join(PUBLIC_DIR, 'projects', 'stock', date);
-	const audioDir = path.join(publicDayDir, 'audio');
-	const publicAudioRel = `projects/stock/${date}/audio`;
+	const dirs = {
+		audioDir: path.join(publicDayDir, 'audio'),
+		publicAudioRel: `projects/stock/${date}/audio`,
+		imageDir: path.join(publicDayDir, 'images'),
+		publicImageRel: `projects/stock/${date}/images`,
+	};
 
 	const outDir = path.join(OUTPUT_DIR, date);
 	fs.mkdirSync(outDir, {recursive: true});
@@ -140,7 +177,7 @@ export async function renderDay({date = todayStr(), onProgress} = {}) {
 
 		onProgress?.({stage: 'voicing', reel: r + 1, of: scripts.length, type: script.type});
 		const planned = planSegments(script, quotesByTicker);
-		const segments = await voiceSegments(planned, audioDir, publicAudioRel, `${num}-${reelSlug}`);
+		const segments = await prepareSegments(planned, dirs, `${num}-${reelSlug}`);
 
 		reels.push({
 			script,
@@ -192,11 +229,45 @@ export async function renderDay({date = todayStr(), onProgress} = {}) {
 			onProgress: ({progress}) => onProgress?.({stage: 'rendering', reel: r + 1, of: scripts.length, progress}),
 		});
 
-		results.push({type: script.type, title: script.title, outputFileName, outputLocation, data});
+		const tickers = [...new Set(data.segments.filter((s) => s.ticker).map((s) => s.ticker))];
+		results.push({
+			type: script.type,
+			title: script.title,
+			outputFileName,
+			outputLocation,
+			hook: script.hook,
+			cta: script.cta,
+			fbCaption: script.fbCaption,
+			hashtags: script.hashtags,
+			disclaimer: script.disclaimer,
+			tickers,
+			data,
+		});
 	}
 
-	// Persist the resolved (audio-fitted) reels for reference / delivery step.
-	fs.writeFileSync(path.join(dayDir, 'reels.resolved.json'), JSON.stringify({date, results: results.map((x) => ({type: x.type, title: x.title, file: x.outputFileName, segments: x.data.segments})) }, null, 2));
+	// Persist the resolved reels (everything the delivery step needs) for reference.
+	fs.writeFileSync(
+		path.join(dayDir, 'reels.resolved.json'),
+		JSON.stringify(
+			{
+				date,
+				results: results.map((x) => ({
+					type: x.type,
+					title: x.title,
+					file: x.outputFileName,
+					hook: x.hook,
+					cta: x.cta,
+					fbCaption: x.fbCaption,
+					hashtags: x.hashtags,
+					disclaimer: x.disclaimer,
+					tickers: x.tickers,
+					segments: x.data.segments,
+				})),
+			},
+			null,
+			2,
+		),
+	);
 
 	return {date, outDir, results};
 }
