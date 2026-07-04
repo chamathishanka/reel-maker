@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Aussie Nostalgia — Video Pipeline</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>Aussie Nostalgia Pipeline</h1>
+  <div class="voice-note">🎙 Voice: <strong>Charles</strong> — Expressive, Mature, Clear</div>
+  <div class="project-row">
+    <select id="projectSelect"></select>
+    <input id="newProjectTitle" placeholder="New story title (e.g. The Hills Hoist Clothesline)" />
+    <button id="newProjectBtn">Create</button>
+  </div>
+</header>
+
+<main id="app" class="hidden">
+  <section class="panel">
+    <div class="panel-header-row">
+      <h2>1. Images + captions <span class="subtle">— drag a card to reorder (that's the video order)</span></h2>
+      <div class="btn-group">
+        <button id="undoBtn" class="secondary" disabled title="Undo last change (Ctrl+Z)">↶ Undo</button>
+        <button id="pasteCaptionsBtn" class="secondary">Paste captions (JSON)</button>
+        <button id="copyFormatBtn" class="secondary">Copy format</button>
+        <button id="copyCaptionsBtn" class="secondary">Copy captions for ElevenLabs</button>
+      </div>
+    </div>
+    <p class="hint">Paste a <strong>JSON list</strong> to fill every slide's caption, year/header, length and motion in one go (fields: <code>caption</code>, <code>year</code>, <code>duration</code>, <code>kenBurns</code>) — use <em>Copy format</em> to grab the exact shape. Click anywhere on a photo to mark the point the camera should zoom or pan toward. Drop a new image onto any card — or use its <em>Replace</em> button — to swap that slide's photo.</p>
+    <div id="pasteArea" class="paste-area hidden">
+      <textarea id="pasteJsonInput" spellcheck="false" placeholder='Paste JSON here, e.g.
+[
+  {"caption": "The first line…", "year": "1950s", "duration": 4, "kenBurns": "zoom-in"},
+  {"caption": "The next slide…", "year": "1963", "duration": 5.5, "kenBurns": "pan-left"}
+]'></textarea>
+      <div class="paste-actions">
+        <button id="applyPasteBtn">Apply to slides</button>
+        <button id="cancelPasteBtn" class="secondary">Cancel</button>
+      </div>
+    </div>
+    <div id="dropZone" class="drop-zone">
+      <p class="hint">Drag &amp; drop image files here, or <label class="file-link">browse<input type="file" id="imageInput" accept="image/*" multiple /></label></p>
+      <div id="slideCards" class="card-list"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>2. Audio (from ElevenLabs, etc.)</h2>
+    <label>Narration voiceover<input type="file" id="narrationInput" accept="audio/*" /></label>
+    <label>Background music (optional)<input type="file" id="musicInput" accept="audio/*" /></label>
+    <label>Music volume
+      <input type="range" id="musicVolume" min="0" max="0.4" step="0.01" value="0.12" />
+    </label>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header-row">
+      <h2>3. Slide timing (drag the dividers to match the audio)</h2>
+      <button id="autoFitBtn" class="secondary">Auto-fit to captions</button>
+    </div>
+    <p class="hint">Upload a narration track above to see its waveform here. Drag a divider to give a slide more or less time — the total always stays locked to the audio length. Press play to preview.</p>
+    <div id="timelineWrap" class="timeline-wrap hidden">
+      <audio id="timelineAudio" controls></audio>
+      <div id="timeline" class="timeline">
+        <img id="timelineWaveform" class="timeline-waveform" />
+        <div id="timelinePlayhead" class="timeline-playhead"></div>
+        <div id="timelineSegments" class="timeline-segments"></div>
+        <div id="timelineHandles" class="timeline-handles"></div>
+      </div>
+      <div id="timelineLabels" class="timeline-labels"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>4. Engagement prompt (shown as the last card)</h2>
+    <input id="engagementPrompt" placeholder="e.g. Did your family have one? Tell us in the comments." />
+    <label>Channel name<input id="channelName" placeholder="Remember Australia" /></label>
+  </section>
+
+  <section class="panel">
+    <h2>5. Generate</h2>
+    <button id="saveBtn">Save</button>
+    <button id="generateBtn">Generate video</button>
+    <div id="progressWrap" class="progress-wrap hidden">
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+      <div id="progressLabel" class="progress-label"></div>
+    </div>
+    <div id="status"></div>
+    <video id="preview" controls class="hidden"></video>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

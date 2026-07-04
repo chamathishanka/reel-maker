@@ -1,0 +1,43 @@
+{
+  "projectTitle": "The Hills Hoist Clothesline",
+  "channelName": "Remember Australia",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "autoFitAudio": true,
+  "narrationAudio": "projects/hills-hoist/audio/narration.mp3",
+  "musicAudio": "projects/hills-hoist/audio/music.mp3",
+  "musicVolume": 0.12,
+  "outroDuration": 2.2,
+  "engagementPrompt": "Did your family have one? Tell us what colour it was.",
+  "slides": [
+    {
+      "image": "projects/hills-hoist/images/01.jpg",
+      "year": "1945",
+      "caption": "Lance Hill built a rotary clothesline in his Adelaide backyard.",
+      "kenBurns": "zoom-in",
+      "duration": 4
+    },
+    {
+      "image": "projects/hills-hoist/images/02.jpg",
+      "year": "1950s",
+      "caption": "By the 1950s, the Hills Hoist stood in suburban yards across the country.",
+      "kenBurns": "pan-right",
+      "duration": 4
+    },
+    {
+      "image": "projects/hills-hoist/images/03.jpg",
+      "year": "1950s-60s",
+      "caption": "Kids used the frame as monkey bars and a merry-go-round when the washing was in.",
+      "kenBurns": "zoom-out",
+      "duration": 4
+    },
+    {
+      "image": "projects/hills-hoist/images/04.jpg",
+      "year": "Today",
+      "caption": "Millions were sold. Many are still turning in backyards today.",
+      "kenBurns": "pan-left",
+      "duration": 4
+    }
+  ]
+}

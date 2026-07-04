@@ -1,0 +1,44 @@
+{
+  "projectTitle": "The Hills Hoist Clothesline",
+  "channelName": "Remember Australia",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "autoFitAudio": false,
+  "narrationAudio": "projects/hills-hoist/audio/ElevenLabs_2026-07-04T07_58_36_Charles - Expressive, Mature and Clear_pvc_sp100_s50_sb100_se0_b_m2.mp3",
+  "narrationAudioDuration": 12.773875,
+  "narrationWaveformUrl": "/projects-raw/hills-hoist/audio/ElevenLabs_2026-07-04T07_58_36_Charles - Expressive, Mature and Clear_pvc_sp100_s50_sb100_se0_b_m2.waveform.png",
+  "musicAudio": "projects/hills-hoist/audio/Gas Cap Parasite (but it's only the best part and looped) - Nobody.mp3",
+  "musicVolume": 0.12,
+  "outroDuration": 2.2,
+  "engagementPrompt": "Did your family have one? Tell us what colour it was.",
+  "slides": [
+    {
+      "image": "projects/hills-hoist/images/images (1).jpg",
+      "caption": "Lance Hill built a rotary clothesline in his Adelaide backyard.",
+      "year": "1234",
+      "kenBurns": "zoom-in",
+      "duration": 3.4,
+      "focalX": 50,
+      "focalY": 50
+    },
+    {
+      "image": "projects/hills-hoist/images/hills-hoist-shade.jpg",
+      "caption": "Lance Hill built a rotary clothesline in his Adelaide backyard.",
+      "year": "4444",
+      "kenBurns": "pan-left",
+      "duration": 4.21,
+      "focalX": 70.1,
+      "focalY": 54.4
+    },
+    {
+      "image": "projects/hills-hoist/images/ae4c804691103145723e3d7a8c0ae975.avif",
+      "caption": "Kids used the frame as monkey bars and a merry-go-round when the washing was in.Millions were sold. Many are still turning in backyards today.",
+      "year": "yeahhh",
+      "kenBurns": "zoom-in",
+      "duration": 4.39,
+      "focalX": 80.3,
+      "focalY": 40.1
+    }
+  ]
+}

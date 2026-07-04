@@ -1,0 +1,14 @@
+{
+  "projectTitle": "test",
+  "channelName": "Remember Australia",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "autoFitAudio": true,
+  "narrationAudio": "",
+  "musicAudio": "",
+  "musicVolume": 0.12,
+  "outroDuration": 2.2,
+  "engagementPrompt": "",
+  "slides": []
+}
