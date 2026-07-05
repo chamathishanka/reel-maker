@@ -1,127 +1,122 @@
 {
   "date": "2026-07-04",
-  "generatedAt": "2026-07-04T22:45:36.778Z",
+  "generatedAt": "2026-07-05T07:50:42.211Z",
   "scripts": [
     {
       "type": "top-mover",
-      "title": "Moderna's Big Jump",
-      "hook": "Moderna jumped over 10 percent today, leading the market.",
+      "title": "Moderna's Big Boost",
+      "hook": "Moderna surged over 10 percent today, catching Jim Cramer's eye.",
       "beats": [
         {
-          "vo": "Moderna shares climbed by just over 10 percent, closing near 80 dollars.",
-          "caption": "Moderna JUMPS 10%",
+          "vo": "Moderna shares were up about 10 percent, after Jim Cramer expressed his liking for the stock, advising investors on market rotation.",
+          "caption": "Moderna +10%",
           "ticker": "MRNA",
           "sentiment": "up",
           "keywords": [
             "moderna",
-            "pharma",
-            "up"
+            "up",
+            "biotech"
           ]
         },
         {
-          "vo": "This move came after investor Jim Cramer expressed his renewed confidence in the stock, telling investors he likes having a position.",
-          "caption": "Cramer \"Likes\" Moderna",
-          "ticker": "MRNA",
-          "sentiment": "up",
-          "keywords": [
-            "jim cramer",
-            "investor",
-            "confidence"
-          ]
-        },
-        {
-          "vo": "He highlighted Moderna’s significant gains throughout the year, noting its strong performance leading into the final week before Q2 earnings.",
-          "caption": "Strong Year, Q2 Earnings Ahead",
+          "vo": "Cramer specifically highlighted Moderna's significant gains this year, seeing opportunity in the current market shift.",
+          "caption": "Cramer Likes MRNA",
           "ticker": "MRNA",
           "sentiment": "up",
           "keywords": [
             "moderna",
-            "earnings",
-            "growth"
+            "cramer",
+            "positive"
+          ]
+        },
+        {
+          "vo": "This positive sentiment comes as the market heads into its final week before second-quarter earnings reports.",
+          "caption": "Ahead of Q2 Earnings",
+          "ticker": "MRNA",
+          "sentiment": "neutral",
+          "keywords": [
+            "moderna",
+            "market",
+            "earnings"
           ]
         }
       ],
-      "cta": "What do you think of Moderna's move?",
+      "cta": "What's your take on Moderna?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "Moderna's stock surged today after Jim Cramer shared his positive outlook on the company. We break down the reasons behind the biotech's jump. For information only — not financial advice.",
+      "fbCaption": "Moderna took center stage today after a big jump! Find out why Jim Cramer is talking about it and what's next for the biotech giant. #Moderna #StockMarket #JimCramer #MarketNews",
       "hashtags": [
         "#Moderna",
         "#MRNA",
         "#StockMarket",
+        "#TopMover",
         "#JimCramer",
-        "#Biotech",
-        "#MarketNews"
+        "#MarketNews",
+        "#Reels"
       ]
     },
     {
       "type": "market-recap",
-      "title": "Tech Swings: Apple, Netflix Up; Tesla, Arm Down",
-      "hook": "Tech and consumer stocks saw big moves today, both up and down.",
+      "title": "Tech Mixed, Apple Gains",
+      "hook": "Tech stocks saw big swings today, with Apple making headlines.",
       "beats": [
         {
-          "vo": "Apple rose nearly 5 percent, with news of its plans for a major iPhone lineup expansion between late 2026 and early 2027, including its first foldable iPhone.",
-          "caption": "Apple plans Foldable iPhone",
+          "vo": "Apple shares climbed nearly 5 percent, following news of its plans for a major iPhone lineup expansion, including its first foldable model.",
+          "caption": "Apple +5% on Foldable iPhone",
           "ticker": "AAPL",
           "sentiment": "up",
           "keywords": [
             "apple",
             "iphone",
-            "tech",
-            "up"
+            "up",
+            "tech"
           ]
         },
         {
-          "vo": "Netflix also gained almost 5 percent. The streaming giant's latest earnings report showed it delivering an asset-light cash haul, contrasting with Disney's heavier investment in parks.",
-          "caption": "Netflix posts Cash Haul",
+          "vo": "Meanwhile, Netflix also rose almost 5 percent. The streaming giant highlighted its asset-light business model, generating strong cash flow compared to competitors.",
+          "caption": "Netflix +5% Strong Cash Flow",
           "ticker": "NFLX",
           "sentiment": "up",
           "keywords": [
             "netflix",
             "streaming",
-            "earnings",
             "up"
           ]
         },
         {
-          "vo": "Meanwhile, Tesla dropped about 7 and a half percent. This followed investor Bill Ackman explaining why he wouldn't buy the stock, and a cautious analyst outlook amid robotaxi and Optimus developments.",
-          "caption": "Tesla Drops on Analyst Caution",
+          "vo": "On the downside, Tesla dropped over 7 percent. This came after Barclays reiterated an Equalweight rating on the stock, citing cautious outlook concerns.",
+          "caption": "Tesla -7% on Cautious Outlook",
           "ticker": "TSLA",
           "sentiment": "down",
           "keywords": [
             "tesla",
-            "ev",
             "down",
-            "robotics"
+            "ev"
           ]
         },
         {
-          "vo": "Arm Holdings fell just under 7 percent, pulling back from its peak levels despite reporting another quarter of solid revenue growth, driven by its robust licensing business and AI-fueled demand.",
-          "caption": "Arm Pulls Back from Peak",
+          "vo": "And Arm Holdings fell about 6 and a half percent, continuing its pullback after reaching peak levels earlier this year.",
+          "caption": "Arm Holdings -6.5% Pullback",
           "ticker": "ARM",
           "sentiment": "down",
           "keywords": [
             "arm",
-            "semiconductors",
-            "ai",
-            "down"
+            "down",
+            "chips"
           ]
         }
       ],
-      "cta": "Watching any of these names?",
+      "cta": "Watching any of these moves?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "From Apple's foldable iPhone plans to Tesla's slide and Arm Holdings' pullback, we recap today's big movers in tech and consumer stocks. For information only — not financial advice.",
+      "fbCaption": "A mixed day for tech! Apple and Netflix saw gains, while Tesla and Arm Holdings pulled back. We break down the key movers and shakers. #StockMarket #TechStocks #Apple #Netflix #Tesla #ArmHoldings",
       "hashtags": [
-        "#Apple",
-        "#AAPL",
-        "#Netflix",
-        "#NFLX",
-        "#Tesla",
-        "#TSLA",
-        "#ArmHoldings",
-        "#ARM",
         "#StockMarket",
         "#MarketRecap",
-        "#TechStocks"
+        "#TechStocks",
+        "#Apple",
+        "#Netflix",
+        "#Tesla",
+        "#ArmHoldings",
+        "#Reels"
       ]
     }
   ]

@@ -7,6 +7,7 @@ import {fileURLToPath} from 'url';
 import {execFile} from 'child_process';
 import {promisify} from 'util';
 import {renderProject} from './render.mjs';
+import {runPipeline} from './stock/pipeline.mjs';
 
 const execFileP = promisify(execFile);
 
@@ -218,6 +219,82 @@ app.post('/api/projects/:slug/generate', (req, res) => {
 
 app.get('/api/projects/:slug/generate/status', (req, res) => {
 	res.json(jobs[req.params.slug] || {stage: 'idle', progress: 0, done: false, error: null, outputUrl: null});
+});
+
+// --- US Stock News workflow ----------------------------------------------------
+// One fire-and-forget job at a time (single-user local tool). Progress maps the
+// pipeline stages (fetch → script → voice → render → deliver) onto 0–1.
+const stockJobs = {};
+const todayStr = () => new Date().toISOString().slice(0, 10);
+
+function stockProgress(p) {
+	switch (p.stage) {
+		case 'fetching':
+			return 0.05;
+		case 'scripting':
+			return 0.15;
+		case 'voicing':
+			return 0.2 + (p.of ? ((p.reel - 1) / p.of) * 0.15 : 0);
+		case 'bundling':
+			return 0.4;
+		case 'selecting-composition':
+			return 0.45;
+		case 'rendering':
+			return 0.45 + (p.of ? ((p.reel - 1 + (p.progress ?? 0)) / p.of) * 0.5 : 0);
+		case 'delivering':
+			return 0.97;
+		default:
+			return 0;
+	}
+}
+
+app.post('/api/stock/generate', (req, res) => {
+	const date = (req.body && req.body.date) || todayStr();
+	if (stockJobs[date] && !stockJobs[date].done && !stockJobs[date].error) {
+		return res.status(409).json({error: 'A stock render is already running for this day.'});
+	}
+	stockJobs[date] = {stage: 'starting', progress: 0, done: false, error: null, date, reels: null};
+
+	runPipeline({
+		date,
+		onProgress: (p) => {
+			stockJobs[date] = {
+				...stockJobs[date],
+				stage: p.stage,
+				progress: Math.min(0.99, Math.max(stockJobs[date].progress, stockProgress(p))),
+			};
+		},
+	})
+		.then(() => {
+			// Attach the resolved reels (captions/hashtags/tickers) for the UI.
+			let reels = [];
+			try {
+				const resolved = path.join(PROJECTS_DIR, 'stock', date, 'reels.resolved.json');
+				if (fs.existsSync(resolved)) reels = JSON.parse(fs.readFileSync(resolved, 'utf8')).results;
+			} catch {
+				/* ignore */
+			}
+			stockJobs[date] = {
+				stage: 'done',
+				progress: 1,
+				done: true,
+				error: null,
+				date,
+				reels,
+				indexUrl: `/output/stock/${date}/index.md`,
+			};
+		})
+		.catch((err) => {
+			console.error(err);
+			stockJobs[date] = {stage: 'error', progress: 0, done: true, error: String(err.message || err), date, reels: null};
+		});
+
+	res.json({started: true, date});
+});
+
+app.get('/api/stock/status', (req, res) => {
+	const date = req.query.date || todayStr();
+	res.json(stockJobs[date] || {stage: 'idle', progress: 0, done: false, error: null, date, reels: null});
 });
 
 const PORT = process.env.PORT || 4321;

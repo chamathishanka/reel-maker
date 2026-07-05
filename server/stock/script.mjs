@@ -85,35 +85,44 @@ function moverNewsBlock(quotes, moverNews) {
 		: '';
 }
 
-// Build ONE prompt describing the whole day's data plus the lane rules that
-// keep the reels distinct and let the set shrink to 2 on a thin-news day.
-function buildDaySetPrompt(data) {
+// Build ONE prompt describing the period's data plus the lane rules that keep
+// the reels distinct. mode 'weekly' frames everything as a week-in-review (US
+// markets are closed on weekends) using weekly % moves.
+function buildDaySetPrompt(data, mode = 'daily') {
 	const {movers, marketNews, moverNews} = data;
 	const tm = movers.topMover;
 	const allMovers = [...movers.gainers, ...movers.losers];
+	const weekly = mode === 'weekly';
+	const period = weekly ? 'this week' : 'today';
+	const Period = weekly ? 'This week' : 'Today';
+	const moves = weekly ? 'moves are WEEKLY (Mon–Fri)' : 'moves are for the latest session';
 
 	return (
-		`Date: ${data.date}. Use ONLY the facts below; never invent numbers, tickers, or reasons. ` +
+		`Date: ${data.date}. ${weekly ? 'WEEKLY WRAP — US markets are closed today; summarize THE WEEK. ' : ''}` +
+		`All ${moves}. Use ONLY the facts below; never invent numbers, tickers, or reasons. ` +
 		`If a stock has no per-stock news, attribute its move to its sector or the broader market — ` +
-		`do NOT say "no catalyst" / "no reason reported" (reads as low-effort).\n\n` +
-		`Today's biggest mover: ${tm ? moverLine(tm) : 'n/a'}\n\n` +
+		`do NOT say "no catalyst" / "no reason reported" (reads as low-effort). Say "${period}", not the other.\n\n` +
+		`${Period}'s biggest mover: ${tm ? moverLine(tm) : 'n/a'}\n\n` +
 		`Top gainers:\n${movers.gainers.map(moverLine).join('\n')}\n\n` +
 		`Top losers:\n${movers.losers.map(moverLine).join('\n')}\n` +
 		moverNewsBlock(allMovers, moverNews) +
 		`\nMarket headlines:\n${newsBlock(marketNews, 8)}\n\n` +
-		`TASK: produce a SET of 2 OR 3 short reels for this trading day. They post ` +
+		`TASK: produce a SET of ${weekly ? '1 OR 2' : '2 OR 3'} short reels for ${period}. They post ` +
 		`together, so they MUST read as clearly different videos — different opening ` +
 		`line, different lead stock/topic, different focus. No two reels may lead with ` +
 		`the same stock. Assign these lanes:\n` +
-		`1. "top-mover" (ALWAYS): a single-stock deep story on ${tm ? tm.name + ' (' + tm.ticker + ')' : 'the biggest mover'}. ` +
-		`Only THIS reel may lead with that stock. Break the one story into 3 beats — the move, ` +
+		`1. "top-mover" (ALWAYS): a single-stock deep story on ${tm ? tm.name + ' (' + tm.ticker + ')' : 'the biggest mover'}, ` +
+		`framed as ${period}'s standout. Only THIS reel may lead with that stock. Break the one story into 3 beats — the move, ` +
 		`the reason/why, and one line of factual context (all the same stock, each its own beat).\n` +
-		`2. "market-recap" (ALWAYS): a broader tour. It must NOT lead with ${tm ? tm.ticker : 'the top mover'}; ` +
-		`open with a market-wide framing or a gainer-vs-loser contrast and cover 3–4 DIFFERENT names.\n` +
-		`3. "headline" (ONLY IF there is genuinely market-moving news today): lead with the ` +
-		`news event itself, not a stock price. If today's headlines are NOT clearly ` +
-		`market-moving (e.g. a holiday / thin news day), OMIT this reel and return only 2.\n\n` +
-		`Return {"reels": [...]} with each reel's "type" set to its lane.`
+		`2. "market-recap" (ALWAYS): a broader ${weekly ? 'week-in-review' : 'tour'}. It must NOT lead with ${tm ? tm.ticker : 'the top mover'}; ` +
+		`instead open the HOOK on ONE specific standout — a named stock (not the top mover) and its exact ` +
+		`number — then cover 3–4 DIFFERENT names. Do NOT open with a vague "mixed market" / "several stocks moved" line.\n` +
+		(weekly
+			? ''
+			: `3. "headline" (ONLY IF there is genuinely market-moving news today): lead with the ` +
+				`news event itself, not a stock price. If today's headlines are NOT clearly ` +
+				`market-moving (e.g. a holiday / thin news day), OMIT this reel and return only 2.\n`) +
+		`\nReturn {"reels": [...]} with each reel's "type" set to its lane.`
 	);
 }
 
@@ -146,8 +155,8 @@ function normalizeScript(script, type) {
 // order the model returned them in.
 const LANE_ORDER = {'top-mover': 0, 'market-recap': 1, headline: 2};
 
-export async function generateDaySet(data) {
-	const user = buildDaySetPrompt(data);
+export async function generateDaySet(data, {mode = data.mode || 'daily'} = {}) {
+	const user = buildDaySetPrompt(data, mode);
 	const raw = await generateJson(SYSTEM_PROMPT, user, DAYSET_SCHEMA);
 	let reels = (raw.reels || []).map((r) => normalizeScript(r, r.type));
 
@@ -180,7 +189,7 @@ export async function generateAndSave({date = todayStr()} = {}) {
 }
 
 // CLI: `node server/stock/script.mjs`
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 	generateAndSave()
 		.then((out) => {
 			console.log(`\nModel: ${out.model} | scripts: ${out.scripts.length}\n`);

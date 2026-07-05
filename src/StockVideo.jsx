@@ -181,6 +181,128 @@ const TickerCard = ({ticker, name, price, changePct, sentiment}) => {
 	);
 };
 
+const fmtDate = (iso) => {
+	if (!iso) return '';
+	const d = new Date(`${iso}T00:00:00`);
+	return d.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'});
+};
+
+// Small, low-key date stamp shown top-centre across the whole reel.
+const DateStamp = ({date}) => {
+	if (!date) return null;
+	return (
+		<AbsoluteFill style={{alignItems: 'center', top: 70, pointerEvents: 'none'}}>
+			<div
+				style={{
+					fontFamily: MONO,
+					fontSize: 26,
+					letterSpacing: 2,
+					color: 'rgba(244,247,251,0.42)',
+					textTransform: 'uppercase',
+				}}
+			>
+				{fmtDate(date)}
+			</div>
+		</AbsoluteFill>
+	);
+};
+
+// A brief "market board" — a compact table of the day's top movers with their
+// price and % move, rows staggering in. Uses real fetched data.
+const MarketBoard = ({rows = [], date, weekly}) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+	return (
+		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', padding: 60}}>
+			<div
+				style={{
+					width: 900,
+					background: 'rgba(12,17,30,0.74)',
+					border: '1px solid rgba(255,255,255,0.10)',
+					borderRadius: 28,
+					padding: '40px 44px',
+					boxShadow: '0 24px 60px rgba(0,0,0,0.45)',
+				}}
+			>
+				<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 22}}>
+					<div style={{fontFamily: SANS, fontWeight: 800, fontSize: 46, color: INK}}>{weekly ? 'This Week' : 'Market Board'}</div>
+					<div style={{fontFamily: MONO, fontSize: 26, color: 'rgba(244,247,251,0.5)'}}>{fmtDate(date)}</div>
+				</div>
+				{rows.map((r, i) => {
+					const color = sentimentColor(r.changePct >= 0 ? 'up' : 'down');
+					const enter = spring({frame: frame - i * 4, fps, config: {damping: 200}, durationInFrames: Math.round(fps * 0.4)});
+					return (
+						<div
+							key={r.ticker}
+							style={{
+								opacity: enter,
+								transform: `translateX(${interpolate(enter, [0, 1], [30, 0])}px)`,
+								display: 'flex',
+								alignItems: 'center',
+								justifyContent: 'space-between',
+								padding: '16px 4px',
+								borderTop: i ? '1px solid rgba(255,255,255,0.07)' : 'none',
+							}}
+						>
+							<div style={{fontFamily: MONO, fontWeight: 700, fontSize: 44, color: INK, width: 180}}>{r.ticker}</div>
+							<div style={{fontFamily: MONO, fontSize: 40, color: 'rgba(244,247,251,0.85)'}}>{fmtPrice(r.price)}</div>
+							<div style={{fontFamily: MONO, fontWeight: 700, fontSize: 40, color, width: 200, textAlign: 'right'}}>
+								{fmtPct(r.changePct)}
+							</div>
+						</div>
+					);
+				})}
+			</div>
+		</AbsoluteFill>
+	);
+};
+
+// Word-for-word karaoke captions — for the ~70% of viewers who watch on mute.
+// Shows a short group of words at a time and highlights the one being spoken,
+// timed to the real per-word timestamps from edge-tts.
+const WordCaptions = ({words = [], groupSize = 3}) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+	if (!words.length) return null;
+	const t = frame / fps;
+
+	let active = 0;
+	for (let i = 0; i < words.length; i++) {
+		if (t >= words[i].start) active = i;
+		else break;
+	}
+	// Only show once the first word actually starts (avoids a caption before VO).
+	if (t < words[0].start - 0.05) return null;
+
+	const lineStart = Math.floor(active / groupSize) * groupSize;
+	const line = words.slice(lineStart, lineStart + groupSize);
+
+	return (
+		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 340}}>
+			<div
+				style={{
+					maxWidth: 960,
+					textAlign: 'center',
+					fontFamily: SANS,
+					fontWeight: 800,
+					fontSize: 68,
+					lineHeight: 1.2,
+					textShadow: '0 3px 20px rgba(0,0,0,0.95), 0 0 6px rgba(0,0,0,0.9)',
+				}}
+			>
+				{line.map((w, i) => {
+					const isActive = lineStart + i === active;
+					return (
+						<span key={lineStart + i} style={{color: isActive ? UP : INK, padding: '0 8px'}}>
+							{w.text}
+						</span>
+					);
+				})}
+			</div>
+		</AbsoluteFill>
+	);
+};
+
 // Lower caption, timed to fade over its segment. Segment captions are short
 // (≤ ~40 chars) so we show the whole line with a fade in/out.
 const Caption = ({text, durationInFrames}) => {
@@ -296,6 +418,27 @@ const DisclaimerStrip = ({text}) =>
 		</AbsoluteFill>
 	) : null;
 
+// Background music bed: low volume under the voiceover, fading in at the start
+// and out over the final second so it never ends abruptly.
+const MusicBed = ({src, volume = 0.09}) => {
+	const {durationInFrames, fps} = useVideoConfig();
+	const fadeF = Math.round(fps * 0.8);
+	return (
+		<Audio
+			src={staticFile(src)}
+			loop
+			volume={(f) =>
+				interpolate(
+					f,
+					[0, fadeF, durationInFrames - fadeF, durationInFrames],
+					[0, volume, volume, 0],
+					{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
+				)
+			}
+		/>
+	);
+};
+
 export const StockVideo = ({data}) => {
 	let startFrame = 0;
 
@@ -312,6 +455,12 @@ export const StockVideo = ({data}) => {
 					<Backdrop image={seg.image} sentiment="neutral" durationInFrames={durationInFrames} />
 					<OutroCard cta={seg.text} disclaimer={data.disclaimer} channelName={data.channelName} />
 				</AbsoluteFill>
+			) : seg.kind === 'board' ? (
+				<AbsoluteFill>
+					<Backdrop image={seg.image} sentiment="neutral" durationInFrames={durationInFrames} />
+					<MarketBoard rows={seg.rows} date={data.date} weekly={data.weekly} />
+					<DisclaimerStrip text={data.disclaimer} />
+				</AbsoluteFill>
 			) : (
 				<AbsoluteFill>
 					<Backdrop image={seg.image} sentiment={seg.sentiment} durationInFrames={durationInFrames} />
@@ -326,7 +475,7 @@ export const StockVideo = ({data}) => {
 							sentiment={seg.sentiment}
 						/>
 					</AbsoluteFill>
-					<Caption text={seg.caption} durationInFrames={durationInFrames} />
+					<WordCaptions words={seg.words} />
 					<DisclaimerStrip text={data.disclaimer} />
 				</AbsoluteFill>
 			);
@@ -341,5 +490,11 @@ export const StockVideo = ({data}) => {
 		return seq;
 	});
 
-	return <AbsoluteFill style={{backgroundColor: '#070A12'}}>{sequences}</AbsoluteFill>;
+	return (
+		<AbsoluteFill style={{backgroundColor: '#070A12'}}>
+			{sequences}
+			<DateStamp date={data.date} />
+			{data.musicAudio ? <MusicBed src={data.musicAudio} volume={data.musicVolume} /> : null}
+		</AbsoluteFill>
+	);
 };

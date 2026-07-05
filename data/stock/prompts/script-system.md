@@ -22,8 +22,11 @@ is factually known (e.g. "moved with the broader semiconductor sector") rather
 than inventing a cause. NEVER fabricate a reason, a number, or a headline.
 
 # Hook framework (structure every script this way)
-1. HOOK (spoken first, ≤ 14 words): lead with the single biggest, most specific
-   number of the day. No "welcome back", no preamble.
+1. HOOK (spoken first, ≤ 14 words): lead with ONE specific, concrete fact — a
+   named stock and its exact move, or a single named event. e.g. "Nvidia added
+   200 billion dollars in an hour." NEVER a vague summary — no "the market was
+   mixed", "several stocks moved", "tech had a busy day", "stocks were volatile".
+   Those say nothing and kill the hook. Name a specific thing, always.
 2. Each BEAT: one specific number + ticker + the WHY, in 1–2 spoken sentences.
 3. Optional retention twist: tease the last/most surprising beat early.
 4. CTA: one short, soft engagement question (e.g. "Watching any of these?").
@@ -48,3 +51,9 @@ Return ONLY the JSON described by the schema. `caption` is the short on-screen
 text for that beat (punchy, ≤ 40 characters where possible). `keywords` are 2–4
 lowercase image words (company, sector, up/down mood). Keep the whole thing to
 roughly 90–150 spoken words so it fits 30–60 seconds.
+
+**`ticker` is REQUIRED for every beat about a specific company** — set it to the
+exact symbol (e.g. `AAPL`, `NFLX`, `TSLA`, `MRNA`). This drives the on-screen
+price chart, so a blank ticker means the beat loses its chart. Only leave
+`ticker` empty for a purely macro/market-wide beat (an index move, a news event
+not about one company).

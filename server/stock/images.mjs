@@ -137,7 +137,7 @@ export async function generateBeatImage({
 }
 
 // CLI smoke test: `node server/stock/images.mjs`
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 	const outDir = path.join(process.cwd(), 'output', 'stock', '_img-test');
 	const cases = [
 		{sector: 'healthcare', sentiment: 'up', keywords: ['moderna', 'pharma'], cacheKey: 'health-up'},

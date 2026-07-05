@@ -75,7 +75,7 @@ export async function deliverDay({date = todayStr()} = {}) {
 }
 
 // CLI: `node server/stock/deliver.mjs [YYYY-MM-DD]`
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 	const date = process.argv[2] || todayStr();
 	deliverDay({date})
 		.then((r) => console.log(`Wrote ${r.indexPath} (${r.reelCount} reels).`))

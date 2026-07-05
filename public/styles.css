@@ -359,3 +359,75 @@ video { width: 280px; border-radius: 10px; margin-top: 12px; box-shadow: var(--s
   padding: 5px 14px;
 }
 .voice-note strong { color: var(--accent-2); }
+
+/* ---- Workflow tabs (Aussie / Stock) ------------------------------------- */
+.workflow-tabs { display: flex; gap: 8px; margin: 4px 0 12px; }
+.wf-tab {
+  background: var(--panel);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.wf-tab.active {
+  color: var(--stamp);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+/* Mode switching: CSS drives which workflow is visible, so app.js keeps full
+   control of #app internally without the two flows fighting. */
+#stockApp { display: none; }
+body.mode-stock #app,
+body.mode-stock #aussieHeader { display: none !important; }
+body.mode-stock #stockApp { display: block; }
+body.mode-stock #stockHeader { display: block; }
+
+/* ---- Stock panel -------------------------------------------------------- */
+.stock-controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 6px 0 4px; }
+.stock-controls label { display: flex; gap: 8px; align-items: center; }
+#stockGenerateBtn { font-size: 15px; padding: 10px 20px; }
+.secondary-link { color: var(--accent-2); text-decoration: none; font-size: 14px; }
+.secondary-link:hover { text-decoration: underline; }
+#stockStatus { margin-top: 10px; color: var(--muted); font-size: 14px; }
+
+.stock-reels { display: flex; flex-direction: column; gap: 16px; }
+.stock-reel-card {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--panel);
+  overflow: hidden;
+}
+.stock-reel-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line-soft);
+}
+.stock-reel-title { font-weight: 600; }
+.stock-badge {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
+  padding: 3px 10px; border-radius: 999px; text-transform: uppercase;
+  background: var(--accent-soft); color: var(--accent-2);
+}
+.stock-badge-top-mover { background: rgba(22,199,132,0.16); color: #35d69a; }
+.stock-badge-market-recap { background: rgba(99,140,255,0.16); color: #8aa6ff; }
+.stock-badge-headline { background: rgba(224,184,102,0.16); color: var(--accent-2); }
+.stock-reel-body { display: flex; gap: 16px; padding: 16px; flex-wrap: wrap; }
+.stock-reel-video {
+  width: 200px; max-width: 40vw; border-radius: 8px;
+  background: #000; aspect-ratio: 9/16;
+}
+.stock-reel-meta { flex: 1; min-width: 240px; display: flex; flex-direction: column; gap: 8px; }
+.stock-tickers { display: flex; gap: 6px; flex-wrap: wrap; }
+.stock-tick {
+  font-family: 'Consolas', monospace; font-size: 13px;
+  background: var(--bg-2); border: 1px solid var(--line-soft);
+  padding: 2px 8px; border-radius: 6px; color: var(--stamp);
+}
+.stock-cap-label { display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--muted); }
+.stock-copy { padding: 4px 12px; font-size: 12px; }
+.stock-caption {
+  width: 100%; resize: vertical; font-family: var(--ui); font-size: 13px;
+  background: var(--bg-2); color: var(--stamp);
+  border: 1px solid var(--line-soft); border-radius: 8px; padding: 10px;
+}
+.stock-reel-links a { color: var(--accent-2); text-decoration: none; font-size: 13px; }
+.stock-reel-links a:hover { text-decoration: underline; }

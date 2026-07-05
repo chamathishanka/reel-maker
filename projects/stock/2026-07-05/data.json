@@ -1,0 +1,913 @@
+{
+  "date": "2026-07-05",
+  "mode": "weekly",
+  "provider": "yahoo+finnhub",
+  "fetchedAt": "2026-07-05T12:34:53.181Z",
+  "quoteCount": 50,
+  "quotes": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": 308.63,
+      "change": 24.85,
+      "changePct": 8.756785612238346,
+      "prevClose": 283.78
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": 390.49,
+      "change": 17.52,
+      "changePct": 4.697425786612932,
+      "prevClose": 372.97
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia",
+      "price": 194.83,
+      "change": 2.3,
+      "changePct": 1.1946206130683965,
+      "prevClose": 192.53
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "price": 359.91,
+      "change": 22.52,
+      "changePct": 6.674764526489571,
+      "prevClose": 337.39
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": 242.67,
+      "change": 9.98,
+      "changePct": 4.288966273938705,
+      "prevClose": 232.69
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "price": 582.9,
+      "change": 32.65,
+      "changePct": 5.933670952124034,
+      "prevClose": 550.25
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": 393.45,
+      "change": 13.74,
+      "changePct": 3.6185565460893723,
+      "prevClose": 379.71
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "price": 360.45,
+      "change": -4.57,
+      "changePct": -1.2519798762224652,
+      "prevClose": 365.02
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "price": 517.82,
+      "change": -3.76,
+      "changePct": -0.72088838575603,
+      "prevClose": 521.58
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "price": 77.65,
+      "change": 3.84,
+      "changePct": 5.202552627422573,
+      "prevClose": 73.81
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "price": 120.35,
+      "change": -7.97,
+      "changePct": -6.211041455102395,
+      "prevClose": 128.32
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron",
+      "price": 975.56,
+      "change": -156.77,
+      "changePct": -13.844900742740954,
+      "prevClose": 1132.33
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "price": 176.25,
+      "change": -13.14,
+      "changePct": -6.9380640118248165,
+      "prevClose": 189.39
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "price": 140.27,
+      "change": -8.26,
+      "changePct": -5.561162441743231,
+      "prevClose": 148.53
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "price": 166.11,
+      "change": 7.74,
+      "changePct": 4.887292878576378,
+      "prevClose": 158.37
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe",
+      "price": 219.72,
+      "change": 16.99,
+      "changePct": 8.380607631441944,
+      "prevClose": 202.73
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "price": 129.3,
+      "change": 16.37,
+      "changePct": 14.495707697108513,
+      "prevClose": 112.93
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro",
+      "price": 27.22,
+      "change": -3.41,
+      "changePct": -11.132876071965143,
+      "prevClose": 30.63
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "price": 315.28,
+      "change": -18.99,
+      "changePct": -5.681033553268911,
+      "prevClose": 334.27
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell",
+      "price": 394.32,
+      "change": -5.17,
+      "changePct": -1.2941457950230733,
+      "prevClose": 399.49
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan",
+      "price": 334.47,
+      "change": 5.42,
+      "changePct": 1.6471702260461814,
+      "prevClose": 329.05
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "price": 58.73,
+      "change": 0.85,
+      "changePct": 1.4685529689620866,
+      "prevClose": 57.88
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "price": 1021,
+      "change": 1.39,
+      "changePct": 0.13632807332288155,
+      "prevClose": 1019.61
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "price": 213.93,
+      "change": 1.9,
+      "changePct": 0.8960967350955317,
+      "prevClose": 212.03
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "price": 362.13,
+      "change": 25.9,
+      "changePct": 7.703058338102224,
+      "prevClose": 336.23
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "price": 539.39,
+      "change": 40.37,
+      "changePct": 8.08986143311778,
+      "prevClose": 499.02
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "price": 45.47,
+      "change": 1.18,
+      "changePct": 2.664258931550603,
+      "prevClose": 44.29
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "price": 165.48,
+      "change": 16.42,
+      "changePct": 11.015697328514179,
+      "prevClose": 149.06
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "price": 137.09,
+      "change": 0.55,
+      "changePct": 0.40281461754961984,
+      "prevClose": 136.54
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "price": 169.2,
+      "change": -1.86,
+      "changePct": -1.0873381485431453,
+      "prevClose": 171.06
+    },
+    {
+      "ticker": "OXY",
+      "name": "Occidental",
+      "price": 48.91,
+      "change": -1.08,
+      "changePct": -2.1604356767203283,
+      "prevClose": 49.99
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "price": 263.04,
+      "change": 8.38,
+      "changePct": 3.290663929280133,
+      "prevClose": 254.66
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "price": 24.32,
+      "change": 0.03,
+      "changePct": 0.12350258611023078,
+      "prevClose": 24.29
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "price": 1213.91,
+      "change": 5.79,
+      "changePct": 0.47926026271408306,
+      "prevClose": 1208.12
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "price": 425.36,
+      "change": -2.53,
+      "changePct": -0.5912802847137528,
+      "prevClose": 427.89
+    },
+    {
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "price": 79.76,
+      "change": 12.49,
+      "changePct": 18.566978023554608,
+      "prevClose": 67.27
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "price": 111.84,
+      "change": -3.85,
+      "changePct": -3.3278641388788506,
+      "prevClose": 115.69
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "price": 951.67,
+      "change": -0.87,
+      "changePct": -0.09133423659437481,
+      "prevClose": 952.54
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "price": 357.9,
+      "change": 9.04,
+      "changePct": 2.591299926763408,
+      "prevClose": 348.86
+    },
+    {
+      "ticker": "NKE",
+      "name": "Nike",
+      "price": 44.09,
+      "change": 3.34,
+      "changePct": 8.19631939285372,
+      "prevClose": 40.75
+    },
+    {
+      "ticker": "SBUX",
+      "name": "Starbucks",
+      "price": 104.27,
+      "change": -0.33,
+      "changePct": -0.315489326834295,
+      "prevClose": 104.6
+    },
+    {
+      "ticker": "MCD",
+      "name": "McDonald's",
+      "price": 280.63,
+      "change": 10.87,
+      "changePct": 4.029505754626735,
+      "prevClose": 269.76
+    },
+    {
+      "ticker": "DIS",
+      "name": "Disney",
+      "price": 99.5,
+      "change": 0.71,
+      "changePct": 0.7186952909128498,
+      "prevClose": 98.79
+    },
+    {
+      "ticker": "BA",
+      "name": "Boeing",
+      "price": 226.49,
+      "change": 9.24,
+      "changePct": 4.253167085461018,
+      "prevClose": 217.25
+    },
+    {
+      "ticker": "GE",
+      "name": "GE Aerospace",
+      "price": 377.52,
+      "change": 8.52,
+      "changePct": 2.308940112106199,
+      "prevClose": 369
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "price": 963.53,
+      "change": -33.94,
+      "changePct": -3.402602825459041,
+      "prevClose": 997.47
+    },
+    {
+      "ticker": "F",
+      "name": "Ford",
+      "price": 13.36,
+      "change": -0.77,
+      "changePct": -5.449401638551497,
+      "prevClose": 14.13
+    },
+    {
+      "ticker": "GM",
+      "name": "General Motors",
+      "price": 76,
+      "change": -2.1,
+      "changePct": -2.6888585341226876,
+      "prevClose": 78.1
+    },
+    {
+      "ticker": "UBER",
+      "name": "Uber",
+      "price": 74.43,
+      "change": -1.77,
+      "changePct": -2.3228303332723916,
+      "prevClose": 76.2
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb",
+      "price": 148.93,
+      "change": 3.37,
+      "changePct": 2.315193166880167,
+      "prevClose": 145.56
+    }
+  ],
+  "movers": {
+    "gainers": [
+      {
+        "ticker": "MRNA",
+        "name": "Moderna",
+        "price": 79.76,
+        "change": 12.49,
+        "changePct": 18.566978023554608,
+        "prevClose": 67.27
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir",
+        "price": 129.3,
+        "change": 16.37,
+        "changePct": 14.495707697108513,
+        "prevClose": 112.93
+      },
+      {
+        "ticker": "COIN",
+        "name": "Coinbase",
+        "price": 165.48,
+        "change": 16.42,
+        "changePct": 11.015697328514179,
+        "prevClose": 149.06
+      },
+      {
+        "ticker": "AAPL",
+        "name": "Apple",
+        "price": 308.63,
+        "change": 24.85,
+        "changePct": 8.756785612238346,
+        "prevClose": 283.78
+      },
+      {
+        "ticker": "ADBE",
+        "name": "Adobe",
+        "price": 219.72,
+        "change": 16.99,
+        "changePct": 8.380607631441944,
+        "prevClose": 202.73
+      }
+    ],
+    "losers": [
+      {
+        "ticker": "MU",
+        "name": "Micron",
+        "price": 975.56,
+        "change": -156.77,
+        "changePct": -13.844900742740954,
+        "prevClose": 1132.33
+      },
+      {
+        "ticker": "SMCI",
+        "name": "Super Micro",
+        "price": 27.22,
+        "change": -3.41,
+        "changePct": -11.132876071965143,
+        "prevClose": 30.63
+      },
+      {
+        "ticker": "QCOM",
+        "name": "Qualcomm",
+        "price": 176.25,
+        "change": -13.14,
+        "changePct": -6.9380640118248165,
+        "prevClose": 189.39
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel",
+        "price": 120.35,
+        "change": -7.97,
+        "changePct": -6.211041455102395,
+        "prevClose": 128.32
+      },
+      {
+        "ticker": "ARM",
+        "name": "Arm Holdings",
+        "price": 315.28,
+        "change": -18.99,
+        "changePct": -5.681033553268911,
+        "prevClose": 334.27
+      }
+    ],
+    "mostActive": [
+      {
+        "ticker": "MRNA",
+        "name": "Moderna",
+        "price": 79.76,
+        "change": 12.49,
+        "changePct": 18.566978023554608,
+        "prevClose": 67.27
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir",
+        "price": 129.3,
+        "change": 16.37,
+        "changePct": 14.495707697108513,
+        "prevClose": 112.93
+      },
+      {
+        "ticker": "MU",
+        "name": "Micron",
+        "price": 975.56,
+        "change": -156.77,
+        "changePct": -13.844900742740954,
+        "prevClose": 1132.33
+      },
+      {
+        "ticker": "SMCI",
+        "name": "Super Micro",
+        "price": 27.22,
+        "change": -3.41,
+        "changePct": -11.132876071965143,
+        "prevClose": 30.63
+      },
+      {
+        "ticker": "COIN",
+        "name": "Coinbase",
+        "price": 165.48,
+        "change": 16.42,
+        "changePct": 11.015697328514179,
+        "prevClose": 149.06
+      }
+    ],
+    "topMover": {
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "price": 79.76,
+      "change": 12.49,
+      "changePct": 18.566978023554608,
+      "prevClose": 67.27
+    }
+  },
+  "marketNews": [
+    {
+      "headline": "Three sons of Iran's slain leader Khamenei appear at funeral, not his successor - Reuters",
+      "summary": "Three sons of Iran's slain leader Khamenei appear at funeral, not his successor  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRmcyb0xaUjZMcUNjSDFQODFUX0Y1TDg0bDlHUkxLZE5FeWZQajJtZnRKYjRWdzZjN0RmRWcwdFN1dWtkLXdhUWFGNGJKVTFSSDJVRnV4Yy05YWJVbjh4RjJyS1YxdnBOMW9jQVp5Uk9aa1hxYmd1RndVZER6dTBSa0V2cnQxTTFscG5rY1hpV3NEMVNIeWJ0TFF4WE9XcEdoanFyVmtkenhSbXhvdnU1c3BQNEVOVmM1OHgyVmJvdGR3aWc?oc=5",
+      "datetime": "2026-07-05T11:05:36.000Z"
+    },
+    {
+      "headline": "Qatar says all maritime activities will resume immediately - Reuters",
+      "summary": "Qatar says all maritime activities will resume immediately  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRm9xUXRWakZ5djZlZXZzSkhyZkxHbG1NU0U4eGJ3TlpncjhUXzFNSUM1VUp4bC1ZOGZFaGdvaTYxajczcWgtelNsa1o2UlV3Zm5penBNUVQ5clVpdFdzOTN1Wkp2MHV3MmFYS3JldkJDUHF0UUJscDBkVURDcUhfdmU4bk9ja0FxWVZqQ1RDZFB5cy1wVnlRZjNMTzJsY1BoZVdWMlVkZjRYOUY5elI2Rnp3?oc=5",
+      "datetime": "2026-07-05T08:05:43.000Z"
+    },
+    {
+      "headline": "Photos of the week - Reuters",
+      "summary": "Photos of the week  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13ZXp6OWxrX0JSQnVYQU5YVVdiRlFqUUlPdkg1X3oxMHVXdVMtS0FSMTZQQ0dJM2hwV2tUaU1nU1pzeFhOekhnV3RhcHM5dENaaEVnbjdGdXExOWs1bUZCaGN1b19YMEE?oc=5",
+      "datetime": "2026-07-04T18:35:36.000Z"
+    },
+    {
+      "headline": "India withdraws gas curbs as Middle East LNG supply resumes - Reuters",
+      "summary": "India withdraws gas curbs as Middle East LNG supply resumes  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUUhNa0VmU05LVzl6WE1MZmZKUmRoRmU5Q1hSZy0yUnhKOU9JUE9vMmtaN21wYVZGVk5nTFB0ZDJlU2xtbkEyaUl6QlE5Y1ZPVUhXUFdGVDFRSlBKVTRteHdGaGo0YVFILTBKVmZxTWxPcy1TMVZQWjhwWFhQZTNKMXk3WEZYTVJqX0xjYjY4d0szeURGSnkwUWxWRlRXYUI4Q043VVk5M0pkMF9L?oc=5",
+      "datetime": "2026-07-04T16:25:11.000Z"
+    },
+    {
+      "headline": "Israel hasn't said who its soldiers abused. Two Gaza mothers think it's their son - Reuters",
+      "summary": "Israel hasn't said who its soldiers abused. Two Gaza mothers think it's their son  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYkNqR2ZZT3dEUWRLYTlhcFA2b2x1b3ZsazFnaGZWTGtVYUc2NmVyZ0VaOE9ySDdoUmFSY1hVanBxdkNCWHEwVTUydHQxRTJFMmxOVHcxRVIzcUMtMTN0RmRVdW5kUlhEVlBPLU82X2hWVk8yME13RkhhcXNYR3ZscEQ5UElEM016U0lEN1ZxeDJLMEJBUFJqWUVCM1JXR2oyTkpkdldsUk9mNDVFY21JcmdnWWYyWTNiMkZrVnIwdFUtVXZBaGpQYk9SdlE?oc=5",
+      "datetime": "2026-07-04T15:38:02.000Z"
+    },
+    {
+      "headline": "Turkey's Erdogan says Israel must not scupper US-Iran deal - Reuters",
+      "summary": "Turkey's Erdogan says Israel must not scupper US-Iran deal  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPa0ViRlNyVWgyNWhQRFFuQ3A3SHhQV3VyRmxDQlBEQnVZVU1jdk5ZdEhMVHhSeHZZR2FYTk94cFM5THdSRHV5c25EQjJ4cFJaZHhFVTNWaG1IUEQxTDBGYU5Ca2syUE5oQUM5UUJ6bm1IeEdBS0phcjl1MUVhd1VFV3k5VDN5MG9Ea0lQNzZvSTY0MHlzTVMycWJpSWgwNGZjUGlVVVhRSjQ0VHo2bG5tYm93?oc=5",
+      "datetime": "2026-07-04T15:19:25.000Z"
+    },
+    {
+      "headline": "U.S. turns 250, Taylor-Travis wed and Iran mourns Khamenei - Reuters",
+      "summary": "U.S. turns 250, Taylor-Travis wed and Iran mourns Khamenei  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSDlEcEtGRENYaVljVGVCbVNxSjd5UW1nOTFsUWhkRTFGb2g2T2ZoaDY3WnJrOEwydVlmQ0dNZ2IzMHNmZlpfdE9meG5HZ3FWUXlnLWtNRURqZ1IyRklkVHJ2QkRUblFPOWpyUlRZQjVlbWxjNEJYVjJ0cjgzcXNtM3lzbjFzaEJzeUdnYVpjTzluUnFUN19vMG5iZDg?oc=5",
+      "datetime": "2026-07-04T14:56:10.000Z"
+    },
+    {
+      "headline": "The World Cup sends prediction market volumes soaring to record highs",
+      "summary": "Trading volumes on Kalshi and Polymarket both hit record highs in June. Rothera, a new prediction market platform, was also able to manage $2 billion in volume.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/04/2026-fifa-world-cup-boosts-prediction-market-volumes.html",
+      "datetime": "2026-07-04T12:54:04.000Z"
+    },
+    {
+      "headline": "Ukraine says Russia damaged more than 200 railway locomotives in 2026 - Reuters",
+      "summary": "Ukraine says Russia damaged more than 200 railway locomotives in 2026  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPeFQwdlh0cWRleHdwbVpJQ2E3cnNvUzE0TGE3RHZiVlZ3SlhDemlsLWlfOG81a1dWX0Iwc0Z4NEk1cmxxc3pCMFh3TDA3X3pVWTcyN0ZQMGRXazFiNlZiblRtblllT2hHUkhxa0VCNTlYWnh2aDZSQUQtY1NjWlRkVFlWbVROZjBjNzRzaGtMMTBwa0g2VDFneU5sc2h6MVlrZkJGcHhmUFdXaGtP?oc=5",
+      "datetime": "2026-07-04T11:12:08.000Z"
+    },
+    {
+      "headline": "Mass grief in Iran at Khamenei funeral after US, Israel war killing - Reuters",
+      "summary": "Mass grief in Iran at Khamenei funeral after US, Israel war killing  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS1NHb181V19lQUxyWlFMQnU5WjNucmZBZHl3NlQtUzZTRFN6aVgweE4tdVJrNVlOYVQzQTExdllpN3NHaWlHcXZTSENOa3hWeEpycTBHdGJLRVhzYlhRdEs1UVk4VE1pR3ZnTzEyb0Z3YmxBUUV5cHJEV2VLMjAzUXp1Q1FfVWY1aWNmYVo3TUgxOXdEdExNenNKT1RyQlRFVWlrakprSWV0Zw?oc=5",
+      "datetime": "2026-07-04T11:02:00.000Z"
+    },
+    {
+      "headline": "Oil is little changed as Persian Gulf flows near pre-war levels",
+      "summary": "Brent futures traded just above $72 a barrel, while West Texas Intermediate was below $69, with volumes depressed due to the US Independence Day holiday",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-02/latest-oil-market-news-and-analysis-for-july-1",
+      "datetime": "2026-07-04T04:50:17.000Z"
+    },
+    {
+      "headline": "Russian defence ministry says its forces captured Kostiantynivka in eastern Ukraine - Reuters",
+      "summary": "Russian defence ministry says its forces captured Kostiantynivka in eastern Ukraine  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ0RBRmlpN2UtbDdMQUpmZDNuaXozSW1uMm1qWTBoT3lWc25yamFFUklpYW81bFk4ZHY4cVVqdGtIU0o2bGlpeldFcjJ4b1d4aGxxQTlzS1R0T2JxRXplR1M0MGphWnpTdVFzcFJQUGFPVWhmNUFISVNHSURvYnpOMnBUVVhHWlpOekJNUkxKS3N3cEZlYUlJZzhScllvc29yVFV6UmFNa2Q0cGRqQ2dkSUhERHoyS1dxelBGVS1NM0lwOE5iN1VZSWlxaXUwZzdtQmFGenJHaVVKalE?oc=5",
+      "datetime": "2026-07-03T22:08:00.000Z"
+    },
+    {
+      "headline": "Oil prices little changed as US-Iran peace efforts hold - Reuters",
+      "summary": "Oil prices little changed as US-Iran peace efforts hold  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQ0NjRDBBT1J0ZC1KY0c5R1huTjYyNzk4NTg4VU1aa2dmMDVGeHNQcl92Tm1vY3FnQks5ZmE4bWU0YUpwdlFBZjYybVgwQ2FlU1U4TkFBWG9SbHZ6ejZiT0lYdTdVM21VR1JOVk05Qm0yb19pcjk2WEhyZUxjbmV2RklXcGNDVmF2ZURTWkQxNERESHBFcE1LN082a1lYc0MwNDJFUEQzM0J3WkNH?oc=5",
+      "datetime": "2026-07-03T19:09:23.000Z"
+    },
+    {
+      "headline": "Airbus CEO 'not necessarily optimistic' on European defence cooperation - Reuters",
+      "summary": "Airbus CEO 'not necessarily optimistic' on European defence cooperation  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSW4wZWRGdGpLaGd0bVZxOVl0aXh2SERKcFJPRFFVRF9BclRPUFI2X05kNy1KTFNPZ0oySnplNTRkY3YtQUpvZ1J1WDZDU0tCdUJnTThoX1B5ZTd3eXZpcXducW5hT01hc3U3a3hwNGRxUEV4Y0ZoYWROMXV1YXVDQnVlSEVXc3U1ekhZNVpDMGZRMmpGNHlmNXZjZTdLX2Y4QW5sTXBYeVRrWTMwYlFibHBRdl9FS0dicG1sYnIwV3JHXzhlSTdpcw?oc=5",
+      "datetime": "2026-07-03T18:21:44.000Z"
+    },
+    {
+      "headline": "EXCLUSIVE: Iran exploring oil sales to Japan, buyers seek longer sanctions waiver, sources say - Reuters",
+      "summary": "EXCLUSIVE: Iran exploring oil sales to Japan, buyers seek longer sanctions waiver, sources say  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONlpxZVF6RnlianRMXzVTT05hLXpuT3FCY3pCRzMweXJjUDF5N2pJa3hYOXJzdTFpMTJpWUhKckZZWlllM2pVbzRFcGQ3SUlKZWRyNmRNaW9hNWdBNEU1d2JLYnp2YWJxU2doQXl2bVdZTDlMaWJFbHJiR19VZFVwTHAydHZudzdEN0xJWTdsczNkSmQtZVNUb0FJcjVhV0NSWWJDNEVvcFE1M0RTM2VnSFFPRm1tNGpwTklqSXdUYklQZWIy?oc=5",
+      "datetime": "2026-07-03T16:59:44.000Z"
+    }
+  ],
+  "moverNews": {
+    "MRNA": [
+      {
+        "headline": "Jim Cramer Says “For the First Time in Ages, I Like Having a Position in Moderna”",
+        "summary": "Moderna, Inc. (NASDAQ:MRNA) was among the stocks Jim Cramer commented on as he advised investors on how to take advantage of Wednesday’s market rotation. Cramer highlighted the stock’s significant gains during the year, as he said: If you look at the market’s best performers year to date, nearly all of them are either companies that […]",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=7210549475fc6a0d7463ca6e3d657226af06eac09f2959a9b729342bfd346624",
+        "datetime": "2026-07-04T14:30:14.000Z"
+      },
+      {
+        "headline": "Stock Market Week Ahead: Oil Hints At A Paradigm Shift",
+        "summary": "The stock market trades largely sideways and oil dips to pre-Iran war prices heading into the final week before Q2 earnings. Here's what to watch.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=840cf4c4b248a268fb56ef7d1b5a446690efab5b6af1a96de06409dd422450bf",
+        "datetime": "2026-07-04T14:04:47.000Z"
+      },
+      {
+        "headline": "MarketBeat Week in Review – 06/29 - 07/03",
+        "summary": "MarketBeat's weekly roundup covers a weaker June jobs report, tech sector rotation, and top analyst picks including TSLA, AVGO, PLTR, MRNA, and NEE heading into Q2 earnings season.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=d406aced064f84d135af82cd08c77df47c6e66da5a89e0d7894f6ab5dd22a3a8",
+        "datetime": "2026-07-04T11:00:00.000Z"
+      },
+      {
+        "headline": "Moderna Is Up More Than 70% in a Month After a 9-0 FDA Vote. Wall Street's Average Price Target Says It Should Fall 44%. What Gives?",
+        "summary": "When a stock and the analysts covering it disagree this sharply, one of them is about to be wrong.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=d4da7690014aec5ca3d6621051a6b421f5efe051d0949a3619f68c2596f13244",
+        "datetime": "2026-07-03T17:27:00.000Z"
+      },
+      {
+        "headline": "Jim Cramer turns bullish on health care stock after years of doubt",
+        "summary": "For most of the past three years, Jim Cramer kept his distance from Moderna, treating the biotech stock with skepticism bordering on avoidance. The Cambridge, Massachusetts, company had become synonymous with the pandemic trade, and Cramer’s enthusiasm faded as demand for Covid-era vaccines dried ...",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=a9f7a9e0b40d2f656a855f2e74f975952bde653e4cea66f35587704bf5bb4f8a",
+        "datetime": "2026-07-03T16:03:00.000Z"
+      }
+    ],
+    "PLTR": [
+      {
+        "headline": "Axon and Rocket Lab rallied while chip stocks sank",
+        "summary": "SanDisk Corp. (SNDK) closed out the holiday-shortened week as the Nasdaq’s biggest loser, ending Thursday at $1,745 a share, down 26% for the week, according to Seeking Alpha. Micron (MU), Western Digital (WDC), Seagate (STX) and Teradyne (TER) fell alongside it, each posting double-digit weekly ...",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=bca2f6e27883012d64fd6ec763bda85c61eb0b86c49421c327fc5aac9bff2395",
+        "datetime": "2026-07-05T03:17:00.000Z"
+      },
+      {
+        "headline": "Palantir CEO Alex Karp Says AI Labs Are Chasing 'Tokens' While Enterprises Fear for Their IP: 'Something Has Gone Completely Wrong'",
+        "summary": "On Wednesday, Palantir Technologies Inc. CEO Alex Karp argued that many enterprise customers are growing increasingly skeptical of frontier AI companies, warning that businesses fear sacrificing their intellectual property and competitive advantage in exchange for AI services. Alex Karp Says...",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=40e19a572539f34a3fefd14583a13b7ddd9cf9d6dd62fe5563db01dc32a7d59b",
+        "datetime": "2026-07-04T22:32:26.000Z"
+      },
+      {
+        "headline": "America’s 250th Birthday Bash and Severe Weather Spark Travel Chaos",
+        "summary": "Both air and rail travelers can expect delays as a result of airspace restrictions and extreme weather.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=d8e6e608d0ad5d474e9b4bc1d3cacfc839f813243b7e6ea296c9b277de55d8a4",
+        "datetime": "2026-07-04T15:46:00.000Z"
+      },
+      {
+        "headline": "Palantir doubles down on national security with Nvidia AI alliance",
+        "summary": "Palantir Technologies is betting big on a simple idea: The U.S. government should never have to depend on someone else's AI model to protect the country. That idea is now a formal partnership. Palantir (PLTR) recently announced it is teaming with NVIDIA to give federal agencies and companies that ...",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=137f950a215d4c4db756b5742a161fc6f5a90c3cb0cdb17bd14c4534d976dc5d",
+        "datetime": "2026-07-04T15:07:00.000Z"
+      },
+      {
+        "headline": "Jim Cramer on Palantir: “This Is the Fastest Grower of the Stocks I Follow, and It’s Been Crushed”",
+        "summary": "Palantir Technologies Inc. (NASDAQ:PLTR) was among the stocks Jim Cramer commented on as he advised investors on how to take advantage of Wednesday’s market rotation. During the episode, Cramer was bullish on the company, as he said: The only one right now that I actually trust is Palantir. This is the fastest grower of the […]",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=22dc1ab4f097f08fc3bbc541fb1a90b9a0de89d8e0e95b1adf1a04dadae556e6",
+        "datetime": "2026-07-04T14:20:10.000Z"
+      }
+    ],
+    "COIN": [
+      {
+        "headline": "Bitcoin trades above $62K as U.S. crypto bill gains fresh traction",
+        "summary": "Investing.com -- Bitcoin traded above $62,000 on Sunday as investors weighed renewed momentum for U.S. cryptocurrency legislation, growing institutional support and fresh reminders that security remains a key risk across the digital asset industry.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=6c44a6c2726cd3d90f06b1415ccabcbb73c06741acd5f99a5e0db532b742c141",
+        "datetime": "2026-07-05T10:21:59.000Z"
+      },
+      {
+        "headline": "Congress Is Trying to Ban the Digital Dollar. What Does That Mean for Crypto Stocks?",
+        "summary": "Digital dollars lost momentum years ago; the real competition for crypto stocks is traditional finance, not government on-chain money.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=55b9ee1b8e93672b4d7604d1bd4fa010974ac5d35e441637ae084c5cdfe24db4",
+        "datetime": "2026-07-05T08:44:00.000Z"
+      },
+      {
+        "headline": "Coinbase (COIN) Joins Visa And Mastercard To Launch Open Standard Stablecoin Network",
+        "summary": "Coinbase Global (NasdaqGS:COIN) has teamed up with Visa and Mastercard to launch the Open Standard stablecoin network, including a new USD-backed stablecoin. The collaboration focuses on using stablecoins for everyday payments across card networks and digital wallets. Coinbase has also become one of the largest corporate political spenders in the 2026 U.S. midterm elections, targeting crypto-related policy and regulation. Coinbase Global enters this phase with a share price of $165.48 and a...",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=0963d8821eb7817471c3693e321bdbd644dc6ae7cd176e8cc5330ce5f6e41af8",
+        "datetime": "2026-07-05T06:11:27.000Z"
+      },
+      {
+        "headline": "Coinbase CEO has a radical fix for America's $36 trillion debt",
+        "summary": "Brian Armstrong co-founded Coinbase (Nasdaq: COIN) in 2012 and turned it into the largest cryptocurrency exchange in the United States within a span of a few years. The billionaire, best known for aggressively pushing for clearer crypto regulation in Washington, doesn't shy away from voicing his ...",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=30a6d671e2e13ec72fd3dbd75776ae08b99a667139c70c33cdb55422685a4412",
+        "datetime": "2026-07-04T15:30:00.000Z"
+      },
+      {
+        "headline": "Prediction: Coinbase Has Over 100% Upside as Cost Cuts and Volume Recovery Drive The Stock Higher",
+        "summary": "Our Coinbase (NASDAQ:COIN) call is unabashedly constructive. Shares have been battered in 2026, but the setup into the back half of the year looks compelling if crypto volumes normalize and the cost-out plan sticks. The 24/7 Wall St. price target for Coinbase is $360.19 over the next 12 months, implying 117.66% upside from $165.48. Our ... Prediction: Coinbase Has Over 100% Upside as Cost Cuts and Volume Recovery Drive The Stock Higher",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=3dec2165d2092ba6a046d8fb7cc237f0169bc331d2470f14c052246ec432db5e",
+        "datetime": "2026-07-04T15:26:23.000Z"
+      }
+    ],
+    "MU": [
+      {
+        "headline": "Micron Stock Investors Just Got Good News From Wall Street and Nvidia CEO Jensen Huang",
+        "summary": "Massive AI-driven demand for memory chips could persist for several years.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=95d7a5512eca648a010abff3676b4cb2028483fd47adc51bcd67e28f30b99672",
+        "datetime": "2026-07-05T09:32:00.000Z"
+      },
+      {
+        "headline": "Wall Street Veteran Visser Says Bitcoin Break Above 200-Day Average Would Start 'Next Phase' — Flags Micron Sell-Off As AI Warning",
+        "summary": "Markets overreacted to Warsh’s comments, Visser said, and expects the Fed to hold, citing AI-driven productivity as the rationale against near-term rate rises.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=5bc81e9b25fa6d42b6aa9a52de05ce41c51d4e7e1b11d3ee266942afb1a6b51a",
+        "datetime": "2026-07-05T08:21:37.000Z"
+      },
+      {
+        "headline": "Micron: The AI Infrastructure Winner Trapped By Its Own Success",
+        "summary": "Micron's capital intensity is surging, with net capex set to reach $10B in Q4 and a $40B run rate by fiscal 2027. Read why I maintain a Hold rating on MU stock.",
+        "source": "SeekingAlpha",
+        "url": "https://finnhub.io/api/news?id=812a120d0c93088891e4f24796106267a9482c5b31e408186670e18f8e9d79cf",
+        "datetime": "2026-07-05T06:17:56.000Z"
+      },
+      {
+        "headline": "\"Big Short\" Investor Michael Burry Is Now Betting Against Micron, Nvidia, and Tesla. Should You Be Worried?",
+        "summary": "The investor who called the housing crash just published his bets against three of the market's favorite stocks.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=5e517e07573d9ba553d151d73de1d3e66eba8cfc3d48f4198e3eec314020ab95",
+        "datetime": "2026-07-05T04:10:00.000Z"
+      },
+      {
+        "headline": "Axon and Rocket Lab rallied while chip stocks sank",
+        "summary": "SanDisk Corp. (SNDK) closed out the holiday-shortened week as the Nasdaq’s biggest loser, ending Thursday at $1,745 a share, down 26% for the week, according to Seeking Alpha. Micron (MU), Western Digital (WDC), Seagate (STX) and Teradyne (TER) fell alongside it, each posting double-digit weekly ...",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=bca2f6e27883012d64fd6ec763bda85c61eb0b86c49421c327fc5aac9bff2395",
+        "datetime": "2026-07-05T03:17:00.000Z"
+      }
+    ],
+    "SMCI": [
+      {
+        "headline": "Supermicro (SMCI) Expands AI Reach With StorMagic And Odine Partnerships",
+        "summary": "Super Micro Computer (NasdaqGS:SMCI) has partnered with StorMagic to offer virtualized, energy efficient infrastructure solutions aimed at edge computing, remote offices, and small data centers. The company has also entered a partnership with Odine to support AI infrastructure and sovereign AI data center management in Türkiye. These partnerships expand SMCI's presence in global AI and edge computing markets, with a focus on sectors such as retail, healthcare, and manufacturing. Super Micro...",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=e8ff1e9afa4d32c6c8a207f2a559a246dc43d2a99f1fb9ab079fb9153640aa5e",
+        "datetime": "2026-07-03T22:16:39.000Z"
+      },
+      {
+        "headline": "Super Micro: Are Hyperscalers Taking Advantage?",
+        "summary": "",
+        "source": "SeekingAlpha",
+        "url": "https://finnhub.io/api/news?id=b84da0c608b6a77acbb3e2c7d35f44f9919a868332d9f17f375698ecdb9835fc",
+        "datetime": "2026-07-03T11:50:13.000Z"
+      },
+      {
+        "headline": "SpaceX Stock Is Joining the Nasdaq 100 Soon. What History Says Happens Next.",
+        "summary": "Elon Musk's rocket and satellite company had a good start to life in the Russell 1000 this week and joins another major index on Tuesday.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=5d5166941ad8339fccccc55da5e6a772440fde6d87178d7edaebf677834b1479",
+        "datetime": "2026-07-03T09:44:00.000Z"
+      },
+      {
+        "headline": "Amdocs, (DOX), 1Finity, Supermicro (SMCI) Validate AI-RAN Blueprint with NVIDIA (NVDA) Infrastructure",
+        "summary": "Amdocs Limited (NASDAQ:DOX) is one of the cheap stocks that are about to explode. On June 23, Amdocs, 1Finity, and Supermicro (NASDAQ:SMCI) validated an AI-RAN blueprint using NVIDIA-accelerated infrastructure to create a unified, multivendor foundation for autonomous network operations. This integration enables enhanced performance, anomaly detection, and optimization, providing a cloud-native platform designed to support […]",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=598ec91311b3f2b1280ba1817cf76120a12fb035cfa2a127c69507a983ccc29c",
+        "datetime": "2026-07-02T22:12:52.000Z"
+      },
+      {
+        "headline": "Super Micro’s Comments on Chip Smuggling Inquiry Lift the Stock",
+        "summary": "Super Micro Computer  has written an open letter to reassure customers after two employees were detained in Taiwan as part of an investigation into alleged smuggling of  Nvidia  chips to China.  In an open letter to customers and partners, Super Micro said it is not a target of the Taiwanese investigation and it has been assisting authorities for several months.  The company confirmed that four of its employees were detained for questioning on Monday over the sale of its products to a technology company in Taiwan.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=ef9aec3978c4ba8be1d9c921d41ca26d8abc9238cf633abbddc930d68847570d",
+        "datetime": "2026-07-02T20:25:00.000Z"
+      }
+    ],
+    "QCOM": [
+      {
+        "headline": "This AI Chip Stock Just Signed Massive Deals With 3 Hyperscalers, and It Still Looks Like a Great Buy Right Now (Hint: Not Nvidia or Intel)",
+        "summary": "Data center chip sales could go from $0 to $15 billion in four years.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=8484ccabd40cc4a5d84ef31ca4635293cea74623e6f927c520febf430948ed0b",
+        "datetime": "2026-07-05T08:50:00.000Z"
+      },
+      {
+        "headline": "Why Arm Is a Strong Buy Despite the 35% Pullback From Peak Levels",
+        "summary": "Arm Holdings (NASDAQ:ARM) has been one of 2026’s most dramatic stories, ripping from a January low near $105 to a record $452.70 in June before giving back gains. With shares now near $315, the question is whether the AI CPU thesis still has room to run or if the easy money has already been made. ... Why Arm Is a Strong Buy Despite the 35% Pullback From Peak Levels",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=3491ab125f792d968c93907aa22d7fec7237474cfc75a6c64f26bd8aff58268a",
+        "datetime": "2026-07-04T16:30:56.000Z"
+      },
+      {
+        "headline": "Qualcomm (QCOM), Hugging Face Expand Partnership to Accelerate Open AI Development",
+        "summary": "Qualcomm Inc. (NASDAQ:QCOM) is one of the best NASDAQ stocks to invest in for long term. On June 25, Qualcomm and Hugging Face announced an expanded partnership to accelerate open, developer-driven AI across the entire compute continuum, from edge devices to data center infrastructure. The collaboration aims to unite Qualcomm’s high-performance hardware with Hugging Face’s […]",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=885314a90ef709ed4005686e44a04dac3644ef258b2c7f1584719fb1b39ba93d",
+        "datetime": "2026-07-04T12:54:50.000Z"
+      },
+      {
+        "headline": "Qualcomm (QCOM), Meta (META) Announce Multi-Generation Data Center CPU Supply Agreement",
+        "summary": "Meta Platforms Inc. (NASDAQ:META) is one of the best NASDAQ stocks to invest in for long term. On June 24, Qualcomm and Meta announced a strategic, multi-generation agreement for Qualcomm to supply data center CPUs for Meta’s server infrastructure. The partnership will feature the debut of the Qualcomm Dragonfly C1000 CPU, which is scheduled to […]",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=5346b9a173beb0f4c5a44a9009e35cb597a42f533f0fba0f1d5baea5adaaacb3",
+        "datetime": "2026-07-04T12:54:31.000Z"
+      },
+      {
+        "headline": "QUALCOMM INC (NASDAQ:QCOM) Earns Top Spot on Best Dividend Stocks Screener",
+        "summary": "QCOM offers a sustainable 1.80% dividend yield with 6.56% annual growth, strong profitability ratings, and a low P/E of 14.79, making it a standout dividend stock for income-focused investors.",
+        "source": "ChartMill",
+        "url": "https://finnhub.io/api/news?id=39eec7a70af095eb393823e3c47ee6009dfeaf39e9884e84b206428a3c29b2e5",
+        "datetime": "2026-07-04T09:40:29.000Z"
+      }
+    ]
+  },
+  "topMoverNews": [
+    {
+      "headline": "Jim Cramer Says “For the First Time in Ages, I Like Having a Position in Moderna”",
+      "summary": "Moderna, Inc. (NASDAQ:MRNA) was among the stocks Jim Cramer commented on as he advised investors on how to take advantage of Wednesday’s market rotation. Cramer highlighted the stock’s significant gains during the year, as he said: If you look at the market’s best performers year to date, nearly all of them are either companies that […]",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=7210549475fc6a0d7463ca6e3d657226af06eac09f2959a9b729342bfd346624",
+      "datetime": "2026-07-04T14:30:14.000Z"
+    },
+    {
+      "headline": "Stock Market Week Ahead: Oil Hints At A Paradigm Shift",
+      "summary": "The stock market trades largely sideways and oil dips to pre-Iran war prices heading into the final week before Q2 earnings. Here's what to watch.",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=840cf4c4b248a268fb56ef7d1b5a446690efab5b6af1a96de06409dd422450bf",
+      "datetime": "2026-07-04T14:04:47.000Z"
+    },
+    {
+      "headline": "MarketBeat Week in Review – 06/29 - 07/03",
+      "summary": "MarketBeat's weekly roundup covers a weaker June jobs report, tech sector rotation, and top analyst picks including TSLA, AVGO, PLTR, MRNA, and NEE heading into Q2 earnings season.",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=d406aced064f84d135af82cd08c77df47c6e66da5a89e0d7894f6ab5dd22a3a8",
+      "datetime": "2026-07-04T11:00:00.000Z"
+    },
+    {
+      "headline": "Moderna Is Up More Than 70% in a Month After a 9-0 FDA Vote. Wall Street's Average Price Target Says It Should Fall 44%. What Gives?",
+      "summary": "When a stock and the analysts covering it disagree this sharply, one of them is about to be wrong.",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=d4da7690014aec5ca3d6621051a6b421f5efe051d0949a3619f68c2596f13244",
+      "datetime": "2026-07-03T17:27:00.000Z"
+    },
+    {
+      "headline": "Jim Cramer turns bullish on health care stock after years of doubt",
+      "summary": "For most of the past three years, Jim Cramer kept his distance from Moderna, treating the biotech stock with skepticism bordering on avoidance. The Cambridge, Massachusetts, company had become synonymous with the pandemic trade, and Cramer’s enthusiasm faded as demand for Covid-era vaccines dried ...",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=a9f7a9e0b40d2f656a855f2e74f975952bde653e4cea66f35587704bf5bb4f8a",
+      "datetime": "2026-07-03T16:03:00.000Z"
+    }
+  ]
+}

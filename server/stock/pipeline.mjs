@@ -3,7 +3,7 @@
 
 import path from 'path';
 import {pathToFileURL} from 'url';
-import {fetchDailyData, todayStr} from './fetch.mjs';
+import {fetchDailyData, fetchWeeklyData, isMarketWeekend, todayStr} from './fetch.mjs';
 import {generateDaySet} from './script.mjs';
 import {renderDay} from './renderStock.mjs';
 import {deliverDay} from './deliver.mjs';
@@ -15,11 +15,16 @@ const PROJECTS_DIR = path.join(ROOT, 'projects', 'stock');
 export async function runPipeline({date = todayStr(), onProgress, forceRefetch = false} = {}) {
 	const step = (stage, extra = {}) => onProgress?.({stage, ...extra});
 
-	step('fetching');
-	const data = await fetchDailyData({date, useCache: !forceRefetch});
+	// On US market weekends, produce a weekly wrap instead of a (stale) daily one.
+	const weekly = isMarketWeekend(date);
+
+	step('fetching', {mode: weekly ? 'weekly' : 'daily'});
+	const data = weekly
+		? await fetchWeeklyData({date, useCache: !forceRefetch})
+		: await fetchDailyData({date, useCache: !forceRefetch});
 
 	step('scripting');
-	const scripts = await generateDaySet(data);
+	const scripts = await generateDaySet(data, {mode: weekly ? 'weekly' : 'daily'});
 	const dayDir = path.join(PROJECTS_DIR, date);
 	fs.mkdirSync(dayDir, {recursive: true});
 	fs.writeFileSync(
@@ -37,7 +42,7 @@ export async function runPipeline({date = todayStr(), onProgress, forceRefetch =
 }
 
 // CLI: `node server/stock/pipeline.mjs [YYYY-MM-DD]`
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 	const date = process.argv[2] || todayStr();
 	runPipeline({date, onProgress: (p) => console.log(JSON.stringify(p))})
 		.then((r) => {

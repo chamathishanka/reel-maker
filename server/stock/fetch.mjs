@@ -12,7 +12,10 @@
 import fs from 'fs';
 import path from 'path';
 import {pathToFileURL} from 'url';
+import YahooFinance from 'yahoo-finance2';
 import {requireEnv, optionalEnv, ROOT} from './env.mjs';
+
+const yf = new YahooFinance({suppressNotices: ['yahooSurvey']});
 
 const DATA_DIR = path.join(ROOT, 'data', 'stock');
 const PROJECTS_DIR = path.join(ROOT, 'projects', 'stock');
@@ -271,6 +274,7 @@ export async function fetchDailyData({date = todayStr(), useCache = true} = {}) 
 
 	const data = {
 		date,
+		mode: 'daily',
 		provider: providerName,
 		fetchedAt: new Date().toISOString(),
 		quoteCount: quotes.length,
@@ -286,12 +290,104 @@ export async function fetchDailyData({date = todayStr(), useCache = true} = {}) 
 	return data;
 }
 
+// True when the given YYYY-MM-DD is a US market weekend (Sat/Sun). Used to
+// switch the pipeline into weekly-report mode.
+export function isMarketWeekend(date = todayStr()) {
+	const day = new Date(`${date}T12:00:00Z`).getUTCDay();
+	return day === 0 || day === 6;
+}
+
+// Weekly change (%) per ticker from Yahoo's daily closes over ~a week, ranked
+// into movers. News still comes from Finnhub. Same shape as daily data so the
+// whole downstream pipeline (script → board → render) works unchanged.
+async function weeklyQuotes(tickers) {
+	const now = new Date();
+	const from = new Date(now.getTime() - 9 * 864e5);
+	const out = [];
+	const CHUNK = 8;
+	for (let i = 0; i < tickers.length; i += CHUNK) {
+		const batch = tickers.slice(i, i + CHUNK);
+		const results = await Promise.all(
+			batch.map(async (ticker) => {
+				try {
+					const h = await yf.chart(ticker, {period1: from, period2: now, interval: '1d'});
+					const closes = (h?.quotes || []).filter((x) => x.close != null).map((x) => x.close);
+					if (closes.length > 1) {
+						const first = closes[0];
+						const last = closes[closes.length - 1];
+						return {
+							ticker,
+							name: friendlyName(ticker),
+							price: Math.round(last * 100) / 100,
+							change: Math.round((last - first) * 100) / 100,
+							changePct: ((last - first) / first) * 100,
+							prevClose: Math.round(first * 100) / 100,
+						};
+					}
+					return null;
+				} catch (err) {
+					console.warn(`[fetch] weekly ${ticker}: ${err.message}`);
+					return null;
+				}
+			}),
+		);
+		out.push(...results.filter(Boolean));
+		if (i + CHUNK < tickers.length) await sleep(400);
+	}
+	return out;
+}
+
+export async function fetchWeeklyData({date = todayStr(), useCache = true} = {}) {
+	const dayDir = path.join(PROJECTS_DIR, date);
+	const cachePath = path.join(dayDir, 'data.json');
+	if (useCache && fs.existsSync(cachePath)) {
+		const cached = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+		if (cached.mode === 'weekly') return cached;
+	}
+
+	const quotes = await weeklyQuotes(universe);
+	if (!quotes.length) throw new Error('No weekly quotes returned from Yahoo.');
+	const movers = rankMovers(quotes);
+	const marketNews = await finnhub.getMarketNews().catch(() => []);
+
+	const featured = [
+		...movers.gainers.slice(0, 3),
+		...movers.losers.slice(0, 3),
+		...(movers.topMover ? [movers.topMover] : []),
+	];
+	const featuredTickers = [...new Set(featured.map((q) => q.ticker))];
+	const moverNews = {};
+	for (const ticker of featuredTickers) {
+		try {
+			moverNews[ticker] = await finnhub.getCompanyNews(ticker);
+		} catch {
+			moverNews[ticker] = [];
+		}
+	}
+
+	const data = {
+		date,
+		mode: 'weekly',
+		provider: 'yahoo+finnhub',
+		fetchedAt: new Date().toISOString(),
+		quoteCount: quotes.length,
+		quotes,
+		movers,
+		marketNews,
+		moverNews,
+		topMoverNews: movers.topMover ? moverNews[movers.topMover.ticker] || [] : [],
+	};
+	fs.mkdirSync(dayDir, {recursive: true});
+	fs.writeFileSync(cachePath, JSON.stringify(data, null, 2));
+	return data;
+}
+
 export function todayStr(d = new Date()) {
 	return d.toISOString().slice(0, 10);
 }
 
 // Allow running directly: `node server/stock/fetch.mjs`
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 	fetchDailyData({useCache: false})
 		.then((data) => {
 			const {gainers, losers, topMover} = data.movers;

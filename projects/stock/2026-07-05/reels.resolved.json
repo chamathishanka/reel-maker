@@ -1,0 +1,254 @@
+{
+  "date": "2026-07-05",
+  "results": [
+    {
+      "type": "top-mover",
+      "title": "Moderna Soars This Week",
+      "file": "01_top-mover-mrna.mp4",
+      "hook": "Moderna jumped almost nineteen percent this week, making it a standout.",
+      "cta": "Watching Moderna? Let us know!",
+      "fbCaption": "Moderna led the pack this week with a significant jump. Here's why. For information only — not financial advice.",
+      "hashtags": [
+        "#Moderna",
+        "#StockMarket",
+        "#WeeklyRecap",
+        "#TopMover"
+      ],
+      "disclaimer": "For information only — not financial advice.",
+      "tickers": [
+        "MRNA"
+      ],
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "Moderna jumped almost nineteen percent this week, making it a standout.",
+          "text": "Moderna jumped almost nineteen percent this week, making it a standout.",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-05/audio/01-top-mover-mrna-00.mp3",
+          "image": "projects/stock/2026-07-05/images/01-top-mover-mrna-00.jpg",
+          "durationInFrames": 160
+        },
+        {
+          "kind": "beat",
+          "vo": "Moderna surged almost nineteen percent this week, closing near eighty dollars a share.",
+          "caption": "Moderna +18.57%",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "price": 79.76,
+          "changePct": 18.566978023554608,
+          "sentiment": "up",
+          "keywords": [
+            "modera",
+            "pharma",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-05/audio/01-top-mover-mrna-01.mp3",
+          "image": "projects/stock/2026-07-05/images/01-top-mover-mrna-01.jpg",
+          "durationInFrames": 192
+        },
+        {
+          "kind": "beat",
+          "vo": "The company saw renewed investor interest after market commentator Jim Cramer expressed liking his position in the stock for the first time in ages.",
+          "caption": "Cramer likes MRNA",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "price": 79.76,
+          "changePct": 18.566978023554608,
+          "sentiment": "up",
+          "keywords": [
+            "modera",
+            "stock",
+            "opinion"
+          ],
+          "audio": "projects/stock/2026-07-05/audio/01-top-mover-mrna-02.mp3",
+          "image": "projects/stock/2026-07-05/images/01-top-mover-mrna-02.jpg",
+          "durationInFrames": 287
+        },
+        {
+          "kind": "beat",
+          "vo": "This came as oil prices dipped and the market saw a rotation into certain stocks ahead of the second quarter earnings season.",
+          "caption": "Market rotation, oil dips",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "price": 79.76,
+          "changePct": 18.566978023554608,
+          "sentiment": "neutral",
+          "keywords": [
+            "modera",
+            "market",
+            "oil",
+            "earnings"
+          ],
+          "audio": "projects/stock/2026-07-05/audio/01-top-mover-mrna-03.mp3",
+          "image": "projects/stock/2026-07-05/images/01-top-mover-mrna-03.jpg",
+          "durationInFrames": 234
+        },
+        {
+          "kind": "cta",
+          "vo": "Watching Moderna? Let us know!",
+          "text": "Watching Moderna? Let us know!",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-05/audio/01-top-mover-mrna-04.mp3",
+          "image": "projects/stock/2026-07-05/images/01-top-mover-mrna-04.jpg",
+          "durationInFrames": 74
+        }
+      ]
+    },
+    {
+      "type": "market-recap",
+      "title": "Weekly Market Movers: AI and Crypto",
+      "file": "02_market-recap-pltr.mp4",
+      "hook": "Palantir shares rose just over fourteen percent this week.",
+      "cta": "What caught your eye this week?",
+      "fbCaption": "A look at this week's notable stock moves, from Palantir's AI insights to Micron's dip. For information only — not financial advice.",
+      "hashtags": [
+        "#MarketRecap",
+        "#Palantir",
+        "#Coinbase",
+        "#Micron",
+        "#AIStocks"
+      ],
+      "disclaimer": "For information only — not financial advice.",
+      "tickers": [
+        "PLTR",
+        "COIN",
+        "MU",
+        "SMCI"
+      ],
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "Palantir shares rose just over fourteen percent this week.",
+          "text": "Palantir shares rose just over fourteen percent this week.",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-05/audio/02-market-recap-pltr-00.mp3",
+          "image": "projects/stock/2026-07-05/images/02-market-recap-pltr-00.jpg",
+          "durationInFrames": 142
+        },
+        {
+          "kind": "board",
+          "vo": "Here's how this week's movers stack up.",
+          "sentiment": "neutral",
+          "rows": [
+            {
+              "ticker": "MRNA",
+              "price": 79.76,
+              "changePct": 18.566978023554608
+            },
+            {
+              "ticker": "PLTR",
+              "price": 129.3,
+              "changePct": 14.495707697108513
+            },
+            {
+              "ticker": "COIN",
+              "price": 165.48,
+              "changePct": 11.015697328514179
+            },
+            {
+              "ticker": "MU",
+              "price": 975.56,
+              "changePct": -13.844900742740954
+            },
+            {
+              "ticker": "SMCI",
+              "price": 27.22,
+              "changePct": -11.132876071965143
+            },
+            {
+              "ticker": "QCOM",
+              "price": 176.25,
+              "changePct": -6.9380640118248165
+            }
+          ],
+          "audio": "projects/stock/2026-07-05/audio/02-market-recap-pltr-01.mp3",
+          "image": "projects/stock/2026-07-05/images/02-market-recap-pltr-01.jpg",
+          "durationInFrames": 82
+        },
+        {
+          "kind": "beat",
+          "vo": "Palantir shares rose just over fourteen percent this week after CEO Alex Karp voiced concerns that enterprise customers are wary of frontier AI companies fearing for their intellectual property.",
+          "caption": "Palantir +14.50%",
+          "ticker": "PLTR",
+          "name": "Palantir",
+          "price": 129.3,
+          "changePct": 14.495707697108513,
+          "sentiment": "up",
+          "keywords": [
+            "palantir",
+            "ai",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-05/audio/02-market-recap-pltr-02.mp3",
+          "image": "projects/stock/2026-07-05/images/02-market-recap-pltr-02.jpg",
+          "durationInFrames": 396
+        },
+        {
+          "kind": "beat",
+          "vo": "Meanwhile, Coinbase climbed over eleven percent as Bitcoin traded above sixty-two thousand dollars, fueled by renewed momentum for US cryptocurrency legislation.",
+          "caption": "Coinbase +11.02%",
+          "ticker": "COIN",
+          "name": "Coinbase",
+          "price": 165.48,
+          "changePct": 11.015697328514179,
+          "sentiment": "up",
+          "keywords": [
+            "coinbase",
+            "crypto",
+            "bitcoin",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-05/audio/02-market-recap-pltr-03.mp3",
+          "image": "projects/stock/2026-07-05/images/02-market-recap-pltr-03.jpg",
+          "durationInFrames": 350
+        },
+        {
+          "kind": "beat",
+          "vo": "On the downside, Micron fell nearly fourteen percent. This came as Wall Street veterans flagged the chip maker's sell-off as a potential warning sign for the broader AI sector.",
+          "caption": "Micron -13.84%",
+          "ticker": "MU",
+          "name": "Micron",
+          "price": 975.56,
+          "changePct": -13.844900742740954,
+          "sentiment": "down",
+          "keywords": [
+            "micron",
+            "chips",
+            "ai",
+            "down"
+          ],
+          "audio": "projects/stock/2026-07-05/audio/02-market-recap-pltr-04.mp3",
+          "image": "projects/stock/2026-07-05/images/02-market-recap-pltr-04.jpg",
+          "durationInFrames": 342
+        },
+        {
+          "kind": "beat",
+          "vo": "And Super Micro Computer dropped over eleven percent, moving with the broader semiconductor sector this week.",
+          "caption": "Super Micro -11.13%",
+          "ticker": "SMCI",
+          "name": "Super Micro",
+          "price": 27.22,
+          "changePct": -11.132876071965143,
+          "sentiment": "down",
+          "keywords": [
+            "supermicro",
+            "chips",
+            "down"
+          ],
+          "audio": "projects/stock/2026-07-05/audio/02-market-recap-pltr-05.mp3",
+          "image": "projects/stock/2026-07-05/images/02-market-recap-pltr-05.jpg",
+          "durationInFrames": 231
+        },
+        {
+          "kind": "cta",
+          "vo": "What caught your eye this week?",
+          "text": "What caught your eye this week?",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-05/audio/02-market-recap-pltr-06.mp3",
+          "image": "projects/stock/2026-07-05/images/02-market-recap-pltr-06.jpg",
+          "durationInFrames": 52
+        }
+      ]
+    }
+  ]
+}

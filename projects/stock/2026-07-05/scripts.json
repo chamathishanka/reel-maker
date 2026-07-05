@@ -1,0 +1,119 @@
+{
+  "date": "2026-07-05",
+  "generatedAt": "2026-07-05T12:35:06.443Z",
+  "scripts": [
+    {
+      "type": "top-mover",
+      "title": "Moderna Soars This Week",
+      "hook": "Moderna jumped almost nineteen percent this week, making it a standout.",
+      "beats": [
+        {
+          "vo": "Moderna surged almost nineteen percent this week, closing near eighty dollars a share.",
+          "caption": "Moderna +18.57%",
+          "ticker": "MRNA",
+          "sentiment": "up",
+          "keywords": [
+            "modera",
+            "pharma",
+            "up"
+          ]
+        },
+        {
+          "vo": "The company saw renewed investor interest after market commentator Jim Cramer expressed liking his position in the stock for the first time in ages.",
+          "caption": "Cramer likes MRNA",
+          "ticker": "MRNA",
+          "sentiment": "up",
+          "keywords": [
+            "modera",
+            "stock",
+            "opinion"
+          ]
+        },
+        {
+          "vo": "This came as oil prices dipped and the market saw a rotation into certain stocks ahead of the second quarter earnings season.",
+          "caption": "Market rotation, oil dips",
+          "ticker": "MRNA",
+          "sentiment": "neutral",
+          "keywords": [
+            "modera",
+            "market",
+            "oil",
+            "earnings"
+          ]
+        }
+      ],
+      "cta": "Watching Moderna? Let us know!",
+      "disclaimer": "For information only — not financial advice.",
+      "fbCaption": "Moderna led the pack this week with a significant jump. Here's why. For information only — not financial advice.",
+      "hashtags": [
+        "#Moderna",
+        "#StockMarket",
+        "#WeeklyRecap",
+        "#TopMover"
+      ]
+    },
+    {
+      "type": "market-recap",
+      "title": "Weekly Market Movers: AI and Crypto",
+      "hook": "Palantir shares rose just over fourteen percent this week.",
+      "beats": [
+        {
+          "vo": "Palantir shares rose just over fourteen percent this week after CEO Alex Karp voiced concerns that enterprise customers are wary of frontier AI companies fearing for their intellectual property.",
+          "caption": "Palantir +14.50%",
+          "ticker": "PLTR",
+          "sentiment": "up",
+          "keywords": [
+            "palantir",
+            "ai",
+            "up"
+          ]
+        },
+        {
+          "vo": "Meanwhile, Coinbase climbed over eleven percent as Bitcoin traded above sixty-two thousand dollars, fueled by renewed momentum for US cryptocurrency legislation.",
+          "caption": "Coinbase +11.02%",
+          "ticker": "COIN",
+          "sentiment": "up",
+          "keywords": [
+            "coinbase",
+            "crypto",
+            "bitcoin",
+            "up"
+          ]
+        },
+        {
+          "vo": "On the downside, Micron fell nearly fourteen percent. This came as Wall Street veterans flagged the chip maker's sell-off as a potential warning sign for the broader AI sector.",
+          "caption": "Micron -13.84%",
+          "ticker": "MU",
+          "sentiment": "down",
+          "keywords": [
+            "micron",
+            "chips",
+            "ai",
+            "down"
+          ]
+        },
+        {
+          "vo": "And Super Micro Computer dropped over eleven percent, moving with the broader semiconductor sector this week.",
+          "caption": "Super Micro -11.13%",
+          "ticker": "SMCI",
+          "sentiment": "down",
+          "keywords": [
+            "supermicro",
+            "chips",
+            "down"
+          ]
+        }
+      ],
+      "cta": "What caught your eye this week?",
+      "disclaimer": "For information only — not financial advice.",
+      "fbCaption": "A look at this week's notable stock moves, from Palantir's AI insights to Micron's dip. For information only — not financial advice.",
+      "hashtags": [
+        "#MarketRecap",
+        "#Palantir",
+        "#Coinbase",
+        "#Micron",
+        "#AIStocks"
+      ]
+    }
+  ]
+}

@@ -10,6 +10,11 @@ projects/**/images/
 projects/**/audio/
 public/projects/
 
+# Music tracks — binary/licensed audio stays local (README + .gitkeep tracked)
+assets/stock/music/*
+!assets/stock/music/README.md
+!assets/stock/music/.gitkeep
+
 # Per-render / generated project artefacts
 **/slides.resolved.json
 **/*.waveform.png

@@ -7,12 +7,21 @@
 </head>
 <body>
 <header>
-  <h1>Aussie Nostalgia Pipeline</h1>
-  <div class="voice-note">🎙 Voice: <strong>Charles</strong> — Expressive, Mature, Clear</div>
-  <div class="project-row">
-    <select id="projectSelect"></select>
-    <input id="newProjectTitle" placeholder="New story title (e.g. The Hills Hoist Clothesline)" />
-    <button id="newProjectBtn">Create</button>
+  <h1 id="appTitle">Aussie Nostalgia Pipeline</h1>
+  <div class="workflow-tabs">
+    <button class="wf-tab active" data-wf="aussie">🎞 Aussie Nostalgia</button>
+    <button class="wf-tab" data-wf="stock">📈 US Stock News</button>
+  </div>
+  <div id="aussieHeader">
+    <div class="voice-note">🎙 Voice: <strong>Charles</strong> — Expressive, Mature, Clear</div>
+    <div class="project-row">
+      <select id="projectSelect"></select>
+      <input id="newProjectTitle" placeholder="New story title (e.g. The Hills Hoist Clothesline)" />
+      <button id="newProjectBtn">Create</button>
+    </div>
+  </div>
+  <div id="stockHeader" class="hidden">
+    <div class="voice-note">🎙 Voice: <strong>Andrew</strong> (edge-tts) · US market reels · factual recap, not advice</div>
   </div>
 </header>
 
@@ -91,6 +100,32 @@
   </section>
 </main>
 
+<main id="stockApp" class="hidden">
+  <section class="panel">
+    <h2>US Stock News — daily reels</h2>
+    <p class="hint">Pulls today's US market movers &amp; news, writes coordinated scripts (2–3 distinct reels), voices them, generates backdrops, and renders vertical 1080×1920 videos. Everything lands in <code>output/stock/&lt;date&gt;/</code> with an <code>index.md</code>.</p>
+    <div class="stock-controls">
+      <label>Day <input type="date" id="stockDate" /></label>
+      <button id="stockGenerateBtn">⚡ Generate reels</button>
+      <a id="stockFolderLink" class="secondary-link hidden" target="_blank">Open index.md ↗</a>
+    </div>
+    <div id="stockProgressWrap" class="progress-wrap hidden">
+      <div class="progress-bar"><div id="stockProgressFill" class="progress-fill"></div></div>
+      <div id="stockProgressLabel" class="progress-label"></div>
+    </div>
+    <div id="stockStatus"></div>
+  </section>
+
+  <section class="panel hidden" id="stockResultsPanel">
+    <div class="panel-header-row">
+      <h2>Today's reels</h2>
+      <span class="subtle" id="stockDisclosure">⚠ Toggle "AI-generated / altered content" disclosure when posting</span>
+    </div>
+    <div id="stockReels" class="stock-reels"></div>
+  </section>
+</main>
+
 <script src="app.js"></script>
+<script src="stock.js"></script>
 </body>
 </html>

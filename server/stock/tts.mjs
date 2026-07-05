@@ -44,7 +44,10 @@ async function elevenSynthesize(text, outPath) {
 
 async function edgeSynthesize(text, outPath) {
 	const tts = new MsEdgeTTS();
-	await tts.setMetadata(EDGE_VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
+	// wordBoundaryEnabled gives per-word timestamps → real karaoke captions.
+	await tts.setMetadata(EDGE_VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3, {
+		wordBoundaryEnabled: true,
+	});
 
 	fs.mkdirSync(path.dirname(outPath), {recursive: true});
 	const {audioStream, metadataStream} = tts.toStream(text);
@@ -52,16 +55,16 @@ async function edgeSynthesize(text, outPath) {
 	const wordBoundaries = [];
 	if (metadataStream) {
 		metadataStream.on('data', (chunk) => {
-			// Each metadata chunk describes a word boundary with an offset (100ns
-			// ticks) and duration. Normalise to seconds.
+			// Each frame is a WordBoundary with Offset/Duration in 100ns ticks.
 			try {
-				const meta = typeof chunk === 'string' ? JSON.parse(chunk) : chunk;
-				const boundary = meta?.Metadata?.[0]?.Data;
-				if (boundary?.Offset != null) {
+				const s = Buffer.isBuffer(chunk) ? chunk.toString('utf8') : chunk;
+				const meta = typeof s === 'string' ? JSON.parse(s) : s;
+				const b = meta?.Metadata?.[0]?.Data;
+				if (b?.Offset != null && b.text?.Text) {
 					wordBoundaries.push({
-						text: boundary.text?.Text ?? '',
-						start: boundary.Offset / 1e7,
-						duration: (boundary.Duration ?? 0) / 1e7,
+						text: b.text.Text,
+						start: b.Offset / 1e7,
+						duration: (b.Duration ?? 0) / 1e7,
 					});
 				}
 			} catch {
