@@ -233,10 +233,15 @@ function stockProgress(p) {
 			return 0.05;
 		case 'scripting':
 			return 0.15;
-		case 'voicing':
-			return 0.2 + (p.of ? ((p.reel - 1) / p.of) * 0.15 : 0);
+		case 'voicing': {
+			// Include per-segment progress so the bar keeps moving while images
+			// generate (which can be slow when the image service is degraded).
+			if (!p.of) return 0.2;
+			const segFrac = p.segments ? (p.segment - 1) / p.segments : 0;
+			return 0.2 + ((p.reel - 1 + segFrac) / p.of) * 0.2;
+		}
 		case 'bundling':
-			return 0.4;
+			return 0.42;
 		case 'selecting-composition':
 			return 0.45;
 		case 'rendering':
@@ -248,12 +253,25 @@ function stockProgress(p) {
 	}
 }
 
+// Human-readable "what is it doing right now" line for the UI.
+function stockDetail(p) {
+	if (p.stage === 'voicing' && p.segment) {
+		const what = p.phase === 'image' ? 'generating image' : 'generating voiceover';
+		return `Reel ${p.reel}/${p.of} — ${what} ${p.segment}/${p.segments}`;
+	}
+	if (p.stage === 'rendering' && p.reel) {
+		return `Reel ${p.reel}/${p.of} — ${Math.round((p.progress ?? 0) * 100)}%`;
+	}
+	if (p.stage === 'fetching' && p.mode) return `Fetching ${p.mode} market data…`;
+	return '';
+}
+
 app.post('/api/stock/generate', (req, res) => {
 	const date = (req.body && req.body.date) || todayStr();
 	if (stockJobs[date] && !stockJobs[date].done && !stockJobs[date].error) {
 		return res.status(409).json({error: 'A stock render is already running for this day.'});
 	}
-	stockJobs[date] = {stage: 'starting', progress: 0, done: false, error: null, date, reels: null};
+	stockJobs[date] = {stage: 'starting', progress: 0, done: false, error: null, date, reels: null, detail: ''};
 
 	runPipeline({
 		date,
@@ -261,6 +279,7 @@ app.post('/api/stock/generate', (req, res) => {
 			stockJobs[date] = {
 				...stockJobs[date],
 				stage: p.stage,
+				detail: stockDetail(p) || stockJobs[date].detail,
 				progress: Math.min(0.99, Math.max(stockJobs[date].progress, stockProgress(p))),
 			};
 		},
@@ -294,7 +313,18 @@ app.post('/api/stock/generate', (req, res) => {
 
 app.get('/api/stock/status', (req, res) => {
 	const date = req.query.date || todayStr();
-	res.json(stockJobs[date] || {stage: 'idle', progress: 0, done: false, error: null, date, reels: null});
+	res.json(stockJobs[date] || {stage: 'idle', progress: 0, done: false, error: null, date, reels: null, detail: ''});
+});
+
+// Tail of the day's pipeline log — so you can see exactly what a run is doing
+// (or where it stalled) without watching the server terminal.
+app.get('/api/stock/log', (req, res) => {
+	const date = req.query.date || todayStr();
+	const lines = Number(req.query.lines) || 60;
+	const logPath = path.join(OUTPUT_DIR, 'stock', date, 'pipeline.log');
+	if (!fs.existsSync(logPath)) return res.type('text/plain').send('(no log yet for this day)');
+	const all = fs.readFileSync(logPath, 'utf8').trim().split('\n');
+	res.type('text/plain').send(all.slice(-lines).join('\n'));
 });
 
 const PORT = process.env.PORT || 4321;

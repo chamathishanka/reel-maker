@@ -42,7 +42,28 @@ async function elevenSynthesize(text, outPath) {
 	return {path: outPath, wordBoundaries: []};
 }
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// edge-tts is a free WebSocket service and occasionally drops / fails DNS. Retry
+// with backoff so one transient blip doesn't kill an unattended (cron) render.
 async function edgeSynthesize(text, outPath) {
+	const MAX_ATTEMPTS = 4;
+	let lastErr;
+	for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+		try {
+			return await edgeSynthesizeOnce(text, outPath);
+		} catch (err) {
+			lastErr = err;
+			if (attempt === MAX_ATTEMPTS) break;
+			const waitMs = 1500 * 2 ** (attempt - 1); // 1.5s, 3s, 6s
+			console.warn(`[tts] edge attempt ${attempt} failed (${err.message}) — retrying in ${waitMs}ms`);
+			await sleep(waitMs);
+		}
+	}
+	throw lastErr;
+}
+
+async function edgeSynthesizeOnce(text, outPath) {
 	const tts = new MsEdgeTTS();
 	// wordBoundaryEnabled gives per-word timestamps → real karaoke captions.
 	await tts.setMetadata(EDGE_VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3, {

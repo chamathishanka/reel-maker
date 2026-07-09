@@ -7,38 +7,62 @@ import {fetchDailyData, fetchWeeklyData, isMarketWeekend, todayStr} from './fetc
 import {generateDaySet} from './script.mjs';
 import {renderDay} from './renderStock.mjs';
 import {deliverDay} from './deliver.mjs';
+import {attachFileLogger} from './logger.mjs';
 import {ROOT} from './env.mjs';
 import fs from 'fs';
 
 const PROJECTS_DIR = path.join(ROOT, 'projects', 'stock');
+const OUTPUT_DIR = path.join(ROOT, 'output', 'stock');
 
 export async function runPipeline({date = todayStr(), onProgress, forceRefetch = false} = {}) {
-	const step = (stage, extra = {}) => onProgress?.({stage, ...extra});
+	// Everything this run prints also lands in output/stock/<date>/pipeline.log
+	const detach = attachFileLogger(path.join(OUTPUT_DIR, date, 'pipeline.log'));
+	const started = Date.now();
+	const step = (stage, extra = {}) => {
+		const secs = ((Date.now() - started) / 1000).toFixed(0);
+		console.log(`[pipeline +${secs}s] ${stage}`, Object.keys(extra).length ? extra : '');
+		onProgress?.({stage, ...extra});
+	};
 
-	// On US market weekends, produce a weekly wrap instead of a (stale) daily one.
-	const weekly = isMarketWeekend(date);
+	try {
+		// On US market weekends, produce a weekly wrap instead of a (stale) daily one.
+		const weekly = isMarketWeekend(date);
 
-	step('fetching', {mode: weekly ? 'weekly' : 'daily'});
-	const data = weekly
-		? await fetchWeeklyData({date, useCache: !forceRefetch})
-		: await fetchDailyData({date, useCache: !forceRefetch});
+		step('fetching', {mode: weekly ? 'weekly' : 'daily'});
+		const data = weekly
+			? await fetchWeeklyData({date, useCache: !forceRefetch})
+			: await fetchDailyData({date, useCache: !forceRefetch});
 
-	step('scripting');
-	const scripts = await generateDaySet(data, {mode: weekly ? 'weekly' : 'daily'});
-	const dayDir = path.join(PROJECTS_DIR, date);
-	fs.mkdirSync(dayDir, {recursive: true});
-	fs.writeFileSync(
-		path.join(dayDir, 'scripts.json'),
-		JSON.stringify({date, generatedAt: new Date().toISOString(), scripts}, null, 2),
-	);
+		step('scripting');
+		const scripts = await generateDaySet(data, {mode: weekly ? 'weekly' : 'daily'});
+		const dayDir = path.join(PROJECTS_DIR, date);
+		fs.mkdirSync(dayDir, {recursive: true});
+		fs.writeFileSync(
+			path.join(dayDir, 'scripts.json'),
+			JSON.stringify({date, generatedAt: new Date().toISOString(), scripts}, null, 2),
+		);
 
-	const {outDir, results} = await renderDay({date, onProgress});
+		// Log render sub-steps too (voicing per segment, rendering %), but don't
+		// spam the file with every rendering tick.
+		const {outDir, results} = await renderDay({
+			date,
+			onProgress: (p) => {
+				if (p.stage !== 'rendering' || (p.progress ?? 0) === 0) {
+					const secs = ((Date.now() - started) / 1000).toFixed(0);
+					console.log(`[pipeline +${secs}s] ${p.stage}`, p);
+				}
+				onProgress?.(p);
+			},
+		});
 
-	step('delivering');
-	const {indexPath} = await deliverDay({date});
+		step('delivering');
+		const {indexPath} = await deliverDay({date});
 
-	step('done', {reelCount: results.length, outDir, indexPath});
-	return {date, outDir, indexPath, reels: results.map((r) => ({type: r.type, title: r.title, file: r.outputFileName}))};
+		step('done', {reelCount: results.length, outDir, indexPath});
+		return {date, outDir, indexPath, reels: results.map((r) => ({type: r.type, title: r.title, file: r.outputFileName}))};
+	} finally {
+		detach();
+	}
 }
 
 // CLI: `node server/stock/pipeline.mjs [YYYY-MM-DD]`

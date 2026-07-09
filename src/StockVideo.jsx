@@ -278,23 +278,34 @@ const WordCaptions = ({words = [], groupSize = 3}) => {
 	const line = words.slice(lineStart, lineStart + groupSize);
 
 	return (
-		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 340}}>
+		<AbsoluteFill
+			style={{
+				alignItems: 'center',
+				justifyContent: 'flex-end',
+				paddingBottom: 340,
+				paddingLeft: 70,
+				paddingRight: 70,
+			}}
+		>
 			<div
 				style={{
-					maxWidth: 960,
+					maxWidth: 940,
 					textAlign: 'center',
 					fontFamily: SANS,
 					fontWeight: 800,
-					fontSize: 68,
-					lineHeight: 1.2,
+					fontSize: 64,
+					lineHeight: 1.22,
+					overflowWrap: 'break-word',
+					wordBreak: 'break-word',
 					textShadow: '0 3px 20px rgba(0,0,0,0.95), 0 0 6px rgba(0,0,0,0.9)',
 				}}
 			>
 				{line.map((w, i) => {
 					const isActive = lineStart + i === active;
 					return (
-						<span key={lineStart + i} style={{color: isActive ? UP : INK, padding: '0 8px'}}>
+						<span key={lineStart + i} style={{color: isActive ? UP : INK}}>
 							{w.text}
+							{i < line.length - 1 ? ' ' : ''}
 						</span>
 					);
 				})}
@@ -336,32 +347,43 @@ const Caption = ({text, durationInFrames}) => {
 	);
 };
 
-const HookCard = ({text, durationInFrames}) => {
+const HookCard = ({text, words, durationInFrames}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const enter = spring({frame, fps, config: {damping: 200}, durationInFrames: Math.round(fps * 0.6)});
-	const opacity = interpolate(
-		frame,
-		[0, 8, durationInFrames - 8, durationInFrames],
-		[0, 1, 1, 1],
-		{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
-	);
+	const t = frame / fps;
+
+	let active = -1;
+	if (words?.length) {
+		for (let i = 0; i < words.length; i++) {
+			if (t >= words[i].start) active = i;
+			else break;
+		}
+	}
+
 	return (
-		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', padding: 90}}>
+		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', paddingLeft: 80, paddingRight: 80}}>
 			<div
 				style={{
-					opacity,
 					transform: `translateY(${interpolate(enter, [0, 1], [30, 0])}px)`,
+					maxWidth: 920,
 					fontFamily: SANS,
 					fontWeight: 800,
-					fontSize: 84,
-					lineHeight: 1.15,
+					fontSize: 80,
+					lineHeight: 1.18,
 					color: INK,
 					textAlign: 'center',
-					textShadow: '0 4px 24px rgba(0,0,0,0.8)',
+					overflowWrap: 'break-word',
+					textShadow: '0 4px 24px rgba(0,0,0,0.85)',
 				}}
 			>
-				{text}
+				{words?.length
+					? words.map((w, i) => (
+							<span key={i} style={{color: i === active ? UP : INK}}>
+								{w.text}{' '}
+							</span>
+						))
+					: text}
 			</div>
 		</AbsoluteFill>
 	);
@@ -448,7 +470,7 @@ export const StockVideo = ({data}) => {
 			seg.kind === 'hook' ? (
 				<AbsoluteFill>
 					<Backdrop image={seg.image} sentiment={seg.sentiment} durationInFrames={durationInFrames} />
-					<HookCard text={seg.text} durationInFrames={durationInFrames} />
+					<HookCard text={seg.text} words={seg.words} durationInFrames={durationInFrames} />
 				</AbsoluteFill>
 			) : seg.kind === 'cta' ? (
 				<AbsoluteFill>

@@ -1,0 +1,1111 @@
+{
+  "date": "2026-07-09",
+  "mode": "daily",
+  "provider": "finnhub",
+  "fetchedAt": "2026-07-09T16:06:08.922Z",
+  "quoteCount": 50,
+  "quotes": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": 315,
+      "change": 1.61,
+      "changePct": 0.5137,
+      "prevClose": 313.39,
+      "high": 315.07,
+      "low": 308.16,
+      "open": 311.875
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": 380.13,
+      "change": -3.21,
+      "changePct": -0.8374,
+      "prevClose": 383.34,
+      "high": 380.6,
+      "low": 373.35,
+      "open": 379.21
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia",
+      "price": 202.16,
+      "change": -1.96,
+      "changePct": -0.9602,
+      "prevClose": 204.12,
+      "high": 204.93,
+      "low": 198.96,
+      "open": 204.93
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "price": 353.09,
+      "change": -8.83,
+      "changePct": -2.4398,
+      "prevClose": 361.92,
+      "high": 359.65,
+      "low": 351.08,
+      "open": 358.19
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": 241.72,
+      "change": -1.9,
+      "changePct": -0.7799,
+      "prevClose": 243.62,
+      "high": 243.2199,
+      "low": 238.25,
+      "open": 241.735
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "price": 609.17,
+      "change": 6.05,
+      "changePct": 1.0031,
+      "prevClose": 603.12,
+      "high": 609.27,
+      "low": 577.07,
+      "open": 593.895
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": 399.97,
+      "change": 5.91,
+      "changePct": 1.4998,
+      "prevClose": 394.06,
+      "high": 400.46,
+      "low": 390.8631,
+      "open": 395.5
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "price": 400.95,
+      "change": 12.26,
+      "changePct": 3.1542,
+      "prevClose": 388.69,
+      "high": 403.73,
+      "low": 387.93,
+      "open": 397.9
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "price": 556.21,
+      "change": 38.805,
+      "changePct": 7.4999,
+      "prevClose": 517.405,
+      "high": 559.5,
+      "low": 532.6625,
+      "open": 532.6625
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "price": 74.51,
+      "change": -1.08,
+      "changePct": -1.4288,
+      "prevClose": 75.59,
+      "high": 75.48,
+      "low": 74.02,
+      "open": 74.9425
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "price": 113,
+      "change": 2.76,
+      "changePct": 2.5036,
+      "prevClose": 110.24,
+      "high": 116.7699,
+      "low": 112.25,
+      "open": 114.36
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron",
+      "price": 1017.64,
+      "change": 68.84,
+      "changePct": 7.2555,
+      "prevClose": 948.8,
+      "high": 1035.5,
+      "low": 999.945,
+      "open": 999.945
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "price": 194.87,
+      "change": 8.31,
+      "changePct": 4.4543,
+      "prevClose": 186.56,
+      "high": 196.09,
+      "low": 187.44,
+      "open": 190.7425
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "price": 146.41,
+      "change": 5.92,
+      "changePct": 4.2138,
+      "prevClose": 140.49,
+      "high": 149.07,
+      "low": 140.94,
+      "open": 141.42
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "price": 163.24,
+      "change": -3.34,
+      "changePct": -2.005,
+      "prevClose": 166.58,
+      "high": 163.7999,
+      "low": 156.48,
+      "open": 158.33
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe",
+      "price": 221.22,
+      "change": 0.28,
+      "changePct": 0.1267,
+      "prevClose": 220.94,
+      "high": 221.54,
+      "low": 213.09,
+      "open": 216.0325
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "price": 126.74,
+      "change": -5.48,
+      "changePct": -4.1446,
+      "prevClose": 132.22,
+      "high": 129.76,
+      "low": 124.81,
+      "open": 129.76
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro",
+      "price": 28.85,
+      "change": 0.68,
+      "changePct": 2.4139,
+      "prevClose": 28.17,
+      "high": 29.130000000000003,
+      "low": 28.185,
+      "open": 28.6
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "price": 333.64,
+      "change": 33.4,
+      "changePct": 11.1244,
+      "prevClose": 300.24,
+      "high": 339.44,
+      "low": 311.15,
+      "open": 313.2175
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell",
+      "price": 451.84,
+      "change": 19.87,
+      "changePct": 4.5999,
+      "prevClose": 431.97,
+      "high": 457,
+      "low": 434.15,
+      "open": 443.83
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan",
+      "price": 336.27,
+      "change": 5.65,
+      "changePct": 1.7089,
+      "prevClose": 330.62,
+      "high": 337,
+      "low": 330.8053,
+      "open": 331.46
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "price": 59.31,
+      "change": 1.01,
+      "changePct": 1.7324,
+      "prevClose": 58.3,
+      "high": 59.35,
+      "low": 58.41,
+      "open": 58.45
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "price": 1063.07,
+      "change": 33.43,
+      "changePct": 3.2468,
+      "prevClose": 1029.64,
+      "high": 1063.949,
+      "low": 1042.61,
+      "open": 1055
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "price": 223.77,
+      "change": 5.7,
+      "changePct": 2.6138,
+      "prevClose": 218.07,
+      "high": 224.44,
+      "low": 220.01,
+      "open": 221
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "price": 347.85,
+      "change": 0.32,
+      "changePct": 0.0921,
+      "prevClose": 347.53,
+      "high": 348.5,
+      "low": 344.42,
+      "open": 345.3
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "price": 521.69,
+      "change": 1.83,
+      "changePct": 0.352,
+      "prevClose": 519.86,
+      "high": 523.225,
+      "low": 515.11,
+      "open": 518.03
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "price": 44.99,
+      "change": 0.46,
+      "changePct": 1.033,
+      "prevClose": 44.53,
+      "high": 45.015,
+      "low": 43.82,
+      "open": 44.2
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "price": 159.39,
+      "change": -4.12,
+      "changePct": -2.5197,
+      "prevClose": 163.51,
+      "high": 161.6,
+      "low": 156.2,
+      "open": 160.0875
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "price": 137.97,
+      "change": -3.16,
+      "changePct": -2.2391,
+      "prevClose": 141.13,
+      "high": 140.05,
+      "low": 137.71,
+      "open": 139.66
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "price": 174.06,
+      "change": -1.91,
+      "changePct": -1.0854,
+      "prevClose": 175.97,
+      "high": 175.59,
+      "low": 173.9,
+      "open": 174.63
+    },
+    {
+      "ticker": "OXY",
+      "name": "Occidental",
+      "price": 52.2,
+      "change": -1.39,
+      "changePct": -2.5938,
+      "prevClose": 53.59,
+      "high": 52.94,
+      "low": 52,
+      "open": 52.87
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "price": 259.29,
+      "change": -4.11,
+      "changePct": -1.5604,
+      "prevClose": 263.4,
+      "high": 263.45,
+      "low": 258.95,
+      "open": 260.63
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "price": 24.27,
+      "change": 0.22,
+      "changePct": 0.9148,
+      "prevClose": 24.05,
+      "high": 24.3,
+      "low": 24.01,
+      "open": 24.105
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "price": 1201.04,
+      "change": -14.79,
+      "changePct": -1.2165,
+      "prevClose": 1215.83,
+      "high": 1230,
+      "low": 1200.37,
+      "open": 1211.64
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "price": 429.33,
+      "change": 3.73,
+      "changePct": 0.8764,
+      "prevClose": 425.6,
+      "high": 434.2999,
+      "low": 423.516,
+      "open": 427.11
+    },
+    {
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "price": 75.7,
+      "change": 1.9,
+      "changePct": 2.5745,
+      "prevClose": 73.8,
+      "high": 76.5,
+      "low": 73.14,
+      "open": 74.06
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "price": 111.96,
+      "change": -1.14,
+      "changePct": -1.008,
+      "prevClose": 113.1,
+      "high": 112.76,
+      "low": 111.04,
+      "open": 111.94
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "price": 909.95,
+      "change": -43.18,
+      "changePct": -4.5303,
+      "prevClose": 953.13,
+      "high": 939.41,
+      "low": 907.68,
+      "open": 939.41
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "price": 340.3,
+      "change": 4.09,
+      "changePct": 1.2165,
+      "prevClose": 336.21,
+      "high": 340.7,
+      "low": 335.61,
+      "open": 337.76
+    },
+    {
+      "ticker": "NKE",
+      "name": "Nike",
+      "price": 43.04,
+      "change": 0.15,
+      "changePct": 0.3497,
+      "prevClose": 42.89,
+      "high": 43.06,
+      "low": 42.13,
+      "open": 42.69
+    },
+    {
+      "ticker": "SBUX",
+      "name": "Starbucks",
+      "price": 107.1,
+      "change": 3.23,
+      "changePct": 3.1097,
+      "prevClose": 103.87,
+      "high": 107.28,
+      "low": 103.2063,
+      "open": 103.545
+    },
+    {
+      "ticker": "MCD",
+      "name": "McDonald's",
+      "price": 276.4,
+      "change": -1.85,
+      "changePct": -0.6649,
+      "prevClose": 278.25,
+      "high": 276.51,
+      "low": 272.92,
+      "open": 276.06
+    },
+    {
+      "ticker": "DIS",
+      "name": "Disney",
+      "price": 96.3,
+      "change": -0.4,
+      "changePct": -0.4137,
+      "prevClose": 96.7,
+      "high": 96.55,
+      "low": 94.78,
+      "open": 96.34
+    },
+    {
+      "ticker": "BA",
+      "name": "Boeing",
+      "price": 223.74,
+      "change": -1.21,
+      "changePct": -0.5379,
+      "prevClose": 224.95,
+      "high": 225.5,
+      "low": 222.69,
+      "open": 225.3
+    },
+    {
+      "ticker": "GE",
+      "name": "GE Aerospace",
+      "price": 360.83,
+      "change": 4.8,
+      "changePct": 1.3482,
+      "prevClose": 356.03,
+      "high": 362.26,
+      "low": 357.87,
+      "open": 361.59
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "price": 957.97,
+      "change": 9.89,
+      "changePct": 1.0432,
+      "prevClose": 948.08,
+      "high": 983.16,
+      "low": 947.92,
+      "open": 975.08
+    },
+    {
+      "ticker": "F",
+      "name": "Ford",
+      "price": 13.65,
+      "change": 0.15,
+      "changePct": 1.1111,
+      "prevClose": 13.5,
+      "high": 13.66,
+      "low": 13.435,
+      "open": 13.59
+    },
+    {
+      "ticker": "GM",
+      "name": "General Motors",
+      "price": 76.46,
+      "change": 0.22,
+      "changePct": 0.2886,
+      "prevClose": 76.24,
+      "high": 76.73,
+      "low": 75.45,
+      "open": 76.37
+    },
+    {
+      "ticker": "UBER",
+      "name": "Uber",
+      "price": 74,
+      "change": 0.4,
+      "changePct": 0.5435,
+      "prevClose": 73.6,
+      "high": 74.26,
+      "low": 72.31,
+      "open": 72.5
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb",
+      "price": 146.67,
+      "change": 3.72,
+      "changePct": 2.6023,
+      "prevClose": 142.95,
+      "high": 147.14,
+      "low": 141.25,
+      "open": 142.28
+    }
+  ],
+  "movers": {
+    "gainers": [
+      {
+        "ticker": "ARM",
+        "name": "Arm Holdings",
+        "price": 333.64,
+        "change": 33.4,
+        "changePct": 11.1244,
+        "prevClose": 300.24,
+        "high": 339.44,
+        "low": 311.15,
+        "open": 313.2175
+      },
+      {
+        "ticker": "AMD",
+        "name": "AMD",
+        "price": 556.21,
+        "change": 38.805,
+        "changePct": 7.4999,
+        "prevClose": 517.405,
+        "high": 559.5,
+        "low": 532.6625,
+        "open": 532.6625
+      },
+      {
+        "ticker": "MU",
+        "name": "Micron",
+        "price": 1017.64,
+        "change": 68.84,
+        "changePct": 7.2555,
+        "prevClose": 948.8,
+        "high": 1035.5,
+        "low": 999.945,
+        "open": 999.945
+      },
+      {
+        "ticker": "DELL",
+        "name": "Dell",
+        "price": 451.84,
+        "change": 19.87,
+        "changePct": 4.5999,
+        "prevClose": 431.97,
+        "high": 457,
+        "low": 434.15,
+        "open": 443.83
+      },
+      {
+        "ticker": "QCOM",
+        "name": "Qualcomm",
+        "price": 194.87,
+        "change": 8.31,
+        "changePct": 4.4543,
+        "prevClose": 186.56,
+        "high": 196.09,
+        "low": 187.44,
+        "open": 190.7425
+      }
+    ],
+    "losers": [
+      {
+        "ticker": "COST",
+        "name": "Costco",
+        "price": 909.95,
+        "change": -43.18,
+        "changePct": -4.5303,
+        "prevClose": 953.13,
+        "high": 939.41,
+        "low": 907.68,
+        "open": 939.41
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir",
+        "price": 126.74,
+        "change": -5.48,
+        "changePct": -4.1446,
+        "prevClose": 132.22,
+        "high": 129.76,
+        "low": 124.81,
+        "open": 129.76
+      },
+      {
+        "ticker": "OXY",
+        "name": "Occidental",
+        "price": 52.2,
+        "change": -1.39,
+        "changePct": -2.5938,
+        "prevClose": 53.59,
+        "high": 52.94,
+        "low": 52,
+        "open": 52.87
+      },
+      {
+        "ticker": "COIN",
+        "name": "Coinbase",
+        "price": 159.39,
+        "change": -4.12,
+        "changePct": -2.5197,
+        "prevClose": 163.51,
+        "high": 161.6,
+        "low": 156.2,
+        "open": 160.0875
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet",
+        "price": 353.09,
+        "change": -8.83,
+        "changePct": -2.4398,
+        "prevClose": 361.92,
+        "high": 359.65,
+        "low": 351.08,
+        "open": 358.19
+      }
+    ],
+    "mostActive": [
+      {
+        "ticker": "ARM",
+        "name": "Arm Holdings",
+        "price": 333.64,
+        "change": 33.4,
+        "changePct": 11.1244,
+        "prevClose": 300.24,
+        "high": 339.44,
+        "low": 311.15,
+        "open": 313.2175
+      },
+      {
+        "ticker": "AMD",
+        "name": "AMD",
+        "price": 556.21,
+        "change": 38.805,
+        "changePct": 7.4999,
+        "prevClose": 517.405,
+        "high": 559.5,
+        "low": 532.6625,
+        "open": 532.6625
+      },
+      {
+        "ticker": "MU",
+        "name": "Micron",
+        "price": 1017.64,
+        "change": 68.84,
+        "changePct": 7.2555,
+        "prevClose": 948.8,
+        "high": 1035.5,
+        "low": 999.945,
+        "open": 999.945
+      },
+      {
+        "ticker": "DELL",
+        "name": "Dell",
+        "price": 451.84,
+        "change": 19.87,
+        "changePct": 4.5999,
+        "prevClose": 431.97,
+        "high": 457,
+        "low": 434.15,
+        "open": 443.83
+      },
+      {
+        "ticker": "COST",
+        "name": "Costco",
+        "price": 909.95,
+        "change": -43.18,
+        "changePct": -4.5303,
+        "prevClose": 953.13,
+        "high": 939.41,
+        "low": 907.68,
+        "open": 939.41
+      }
+    ],
+    "topMover": {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "price": 333.64,
+      "change": 33.4,
+      "changePct": 11.1244,
+      "prevClose": 300.24,
+      "high": 339.44,
+      "low": 311.15,
+      "open": 313.2175
+    }
+  },
+  "marketNews": [
+    {
+      "headline": "Cramer defends a struggling tech giant and says another stock could soon be a buy",
+      "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/09/cramer-defends-a-tech-giant-says-another-stock-could-be-a-buy-soon.html",
+      "datetime": "2026-07-09T15:52:05.000Z"
+    },
+    {
+      "headline": "Body of slain Iranian Supreme Leader approaches Shi'ite shrine for burial - Reuters",
+      "summary": "Body of slain Iranian Supreme Leader approaches Shi'ite shrine for burial  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTHpfT3hyLXNRcDVsVDNZdk9uSDJsbU1KQXBqdWlaMVhXdGdHay0wN2k3bEthNlpHaHlVX2dKTEpIWHdncE5Ka0lIOGVsR04zLXNUVzB2M2VSNWJxVjVxRlRHYlUtcHUxUFJvVEZGTHUzMnJXeE1JanhjUHpDMGgzOWFZNUh0RHUxT2ViMHlyOWJ6d3YzdVBiT1cxeVRKbF9MbGRrQ0F0M3pJLUN5QXc?oc=5",
+      "datetime": "2026-07-09T14:54:51.000Z"
+    },
+    {
+      "headline": "Iran says it hits US military targets in Gulf, lays slain leader to rest - Reuters",
+      "summary": "Iran says it hits US military targets in Gulf, lays slain leader to rest  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOU0l1cEJNcjlUQjVYcXFjUVViTThKdnVqSGJMTUpEM2Jqem5HUGJyN1VvcEtyQUdrUnFBYWFhNXB3aEFUX2RmRHhCbXJxQ1JhX1Y1RXVyZUp3TXFlY1RFRXpLMWxHQnlQa3Q2OU1wekRWOEY4dGVzNVhQMnhYd1gyVEM0c080bUdGY01KNGJ2RW05MnlQMER1Q21EeUNfME1TVTh2aFk3TFZqMnpnOFowUzhmMWpXdUVHTmJtaXE1VkU?oc=5",
+      "datetime": "2026-07-09T14:36:36.000Z"
+    },
+    {
+      "headline": "Goldman Sachs wins $70 billion in asset management deals with Verizon, Lockheed Martin",
+      "summary": "Competition in the multitrillion-dollar market for retirement assets is fierce among managers like Goldman Sachs, BlackRock, Russell Investments and Mercer.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/09/goldman-sachs-asset-management-deals-verizon-lockheed-martin.html",
+      "datetime": "2026-07-09T14:11:19.000Z"
+    },
+    {
+      "headline": "June home sales disappoint as prices reach an all-time high",
+      "summary": "Home sales dropped in June month over month as mortgage rates remain stubbornly high. Prices hit an all-time high.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/09/june-home-sales-prices.html",
+      "datetime": "2026-07-09T14:00:01.000Z"
+    },
+    {
+      "headline": "S&P 500, Nasdaq open higher as chip stocks gain; US-Iran tensions in focus - Reuters",
+      "summary": "S&P 500, Nasdaq open higher as chip stocks gain; US-Iran tensions in focus  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWlJrcUhGNjUtY2dOX1RQcWxqNW1KNGtrZU9uYU5KSjZiaDdZM3ozU1BZUjR4WmJyLVJjLW9yYjJGRHdSSEo4T0NNVUQ1T2VHN19keUtvRklORURPYUhtS0hUR2NJWnRIcnd3VFRLdGpDTmcwSnA0WHcxSUJ2RHhrNG1hOWUycm5kUjl6OHhoTjhSNVZXRmFUVnRMclJYMW9FdXRJZ1VLSkFrbmxRWVg5N3Z5c3M?oc=5",
+      "datetime": "2026-07-09T13:39:44.000Z"
+    },
+    {
+      "headline": "Iran fired ten ballistic missiles on Jordan's Azraq military base - Reuters",
+      "summary": "Iran fired ten ballistic missiles on Jordan's Azraq military base  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQaEw3T3U5RHNmcmVFb2VhWGdmRExEb1VHVFYwbFBsX1UxWGlJRW5pM0R0NGwtQVVlUHAwckdpcHIyaXZ3dkFTR2ZvV3JKams0TzhvQ0NYVnRkOFlFa1EtR19nVHFDcTJYQVYtaG9wYWxoRjlaX3kxeW9tdTNkZ0d0MGpVNjljem9DRTJaN2pSTmtoMEhJd3ZFTzlMTmtQOHF2WWYxSVpWNmwteWZBVG5iY2F4ZUtHZw?oc=5",
+      "datetime": "2026-07-09T13:31:37.000Z"
+    },
+    {
+      "headline": "Jim Cramer's top 10 things to watch in the stock market Thursday",
+      "summary": "Chip stocks are jumping again, and Pepsi reported a mixed quarter.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/09/jim-cramers-top-10-things-to-watch-in-the-stock-market-thursday.html",
+      "datetime": "2026-07-09T13:06:47.000Z"
+    },
+    {
+      "headline": "Oil tanker traffic through Hormuz at near standstill as attacks strain Iran truce - Reuters",
+      "summary": "Oil tanker traffic through Hormuz at near standstill as attacks strain Iran truce  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPYWUtOFlPYmpMTHRWUjQ5ZTNjOFRaaVNCV0Z1aWZJY2E1UkcxV0t5M1dUYjExWWljV0lEbTd2ZE9semxVZjZQXzlYQnlQWjY0dWx0YUMyTXUtWnJsa3hYUlJGY3MxSWpuQmRUNmJxU19YZU41S0l5WDBLWlY1aTZHQVROdzNIcE1GYjlfTXJka3NNbGNTV2hvRFlxRllZd1AzOHlYRVJwSUtFUURha0NtbWdtWXBxb0MwaEEwNkFpaW9sQzlfajAwSQ?oc=5",
+      "datetime": "2026-07-09T12:45:45.000Z"
+    },
+    {
+      "headline": "BP CEO says company must sharpen financial discipline - Reuters",
+      "summary": "BP CEO says company must sharpen financial discipline  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOZGJmSENUeG41TjJkN1FoX3hBUXdabzFOdU9YdGE5MndJLUQzak5DXzBGR0lVNGcyaTdsNUNpWlBhMGJ5QXdFQmlsYkRYUUZVTk9OX2FRQzdJazFEN3dQaXBqcmJYRWF5cmJWbUl5RDhzNGJWcXdURjBERThMbUxhY2h1S1BpZXBCMmZ0amR3eEI2NkJRZEpkMHVNQVcyRzBvWUNOT3BTOVpONllXTlVwUXVpalZReHpjY1lsLWlkTzRtNHdR?oc=5",
+      "datetime": "2026-07-09T11:17:55.000Z"
+    },
+    {
+      "headline": "Platner out, US-Iran strikes, Air Force One and quantum leap - Reuters",
+      "summary": "Platner out, US-Iran strikes, Air Force One and quantum leap  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUk9sQ090UFlNaG1sdS1tRVlKbTVXNnJORGtIb0czLU9rbi1aam9CY2NEODNfMFNMVGRVM2dYZUtoTDh2TFkxT1VKdG9sU3d6c0dZYjFCZFc5VGJrZktXemV4THZkQV8tM01yMU0wNnliTUhtazF4QldUYTFlM3M0Y3FOSGpBLU9raTR0dlN4em94SENWQlB3SHNNU2M0elhL?oc=5",
+      "datetime": "2026-07-09T10:27:31.000Z"
+    },
+    {
+      "headline": "The Iran War threatened a food crisis. The next Gulf conflict could do the same. - Reuters",
+      "summary": "The Iran War threatened a food crisis. The next Gulf conflict could do the same.  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA1dEx6ekdtMWswNHBjUEhfbURVWTUwRnk4WS0xYVR1YVk4cEliZjl0NnpuazF2YnMyYXBKMzIweUkyV05XWjlncXFwQVFIa2h4Y1dMd1Frb0tYendTRGFVRzRXWGlidFJ2eUJWTDRSWnU4SG8?oc=5",
+      "datetime": "2026-07-09T10:00:00.000Z"
+    },
+    {
+      "headline": "As Iran war rolls on, some executives say the 'worst is behind us' - Reuters",
+      "summary": "As Iran war rolls on, some executives say the 'worst is behind us'  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNbFJOOWw1ZkV2VmM1SkoteXkwS1lnNXhnU2VFMzJMcG1SOUE0eUo4bkc1dTA1c25SYUlOWldOWkdaU2NaTk5qZmY1X1FPRlNGSkFTaFcwajRva0R0NGliUDBLSHBBaS1vZVFNWkkxaUJMWXZ2Y2MwLXFmS0V5M1pWVkFhZVlacnVrSjZlSnQyUzhJWmNocHB6VGRXX3NNSHRjUE9mRzNJX1A?oc=5",
+      "datetime": "2026-07-09T09:02:06.000Z"
+    },
+    {
+      "headline": "Bank of Japan sees growing inflation pressures from Iran war - Reuters",
+      "summary": "Bank of Japan sees growing inflation pressures from Iran war  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOSjhGY1RXd3JYMmRZN1hsYW45YlpIeVZEZTl2ekQtdlUzWU9XVmliUC1LVG9hY1NYZk92YjlwOThzam9XdGN1MjRlbDFMTV9fcTk1Q1psVVUyT04yUWRxcVN5S05XLTYwLXN0ZnBxSkZwMXl1NGtHLWlQYzNnZzFTVlVucGZ3NFJveUNOVzdUSzVPdlZvaEUyS1BGX2RLTjJMUXJFelZpd0I5TDUwNG1naDM0UFJIeWJ3NUpmUnhn?oc=5",
+      "datetime": "2026-07-09T05:14:00.000Z"
+    },
+    {
+      "headline": "Morning Bid: Chip euphoria vies with war weariness - Reuters",
+      "summary": "Morning Bid: Chip euphoria vies with war weariness  Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE51OTFhbF9Sc2hjZ0lSNEg3elhONXp6YVdGdlE1RVowSHlXcVJsWW1IYzZDbW5FeXVZR1lCRXNoS1lfUDlwLTVXYVBINzFDeGU5T1FMY0xTSmp5dWtMOXRRcUtXOGhVQVd3VXVsNGRZYWJzeGI0ZGMtdlNGaDgxalU?oc=5",
+      "datetime": "2026-07-09T04:32:00.000Z"
+    }
+  ],
+  "moverNews": {
+    "ARM": [
+      {
+        "headline": "The Motor Driving AMD’s Stock Rise Is Set to Stall",
+        "summary": "Advanced Micro Devices  has soared over the past year amid excitement over its central-processing units.  AMD shares were up 1.6% at $526.07 in Thursday’s premarket, adding to a 259% gain over the past 12 months through to Wednesday’s close.  “AMD’s 146% surge since April, versus 58% for the SOX [PHLX Semiconductor Index], has left the shares priced at a premium to peers with little room for error,” Naji wrote.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=ef67d94f4177cc86f797b0c9b866e57ba2ac525bc68909ee4b5ea54bd79fe2b2",
+        "datetime": "2026-07-09T12:26:00.000Z"
+      },
+      {
+        "headline": "Aehr Test Systems, Lam Research, Applied Materials And Other Big Stocks Moving Higher On Thursday",
+        "summary": "U.S. stocks higher, Nasdaq up 150+ points. Aehr Test Systems shares rose 13.6%. Other big gainers include FBRX, BBIO, TRAX, LASR, ONTO, ALNY, ICHR, LITE, ARM, LRCX, KLAC, and FORM.",
+        "source": "Benzinga",
+        "url": "https://finnhub.io/api/news?id=c8f54ab6c1fc89f4d8e38ddfa8c8e370c9fc203cddc4de6dfb8bd9619ac97b46",
+        "datetime": "2026-07-09T10:01:44.000Z"
+      },
+      {
+        "headline": "Arm Holdings' Licensing Momentum Continues to Fuel Revenue Growth",
+        "summary": "ARM's licensing revenues jump 29% in fiscal Q4, driving 20% overall revenue growth as demand for AI infrastructure, custom silicon and next-generation chip designs remains robust.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=aee24da90ee35abfb1dfe046a51672294c4d3ffa9233a92aa70aba0aa2689f92",
+        "datetime": "2026-07-08T15:26:00.000Z"
+      },
+      {
+        "headline": "Arm Announces Earnings Release Date for First Quarter Fiscal Year Ended 2027",
+        "summary": "CAMBRIDGE, England, July 08, 2026--Arm Holdings plc (NASDAQ: ARM) will report financial results for the first quarter of fiscal year 2027 on Wednesday, July 29, 2026, after market close. The company will host a conference call via audio webcast at 14:00 Pacific Time (17:00 Eastern Time / 22:00 British Summer Time) to review its financial results and business outlook.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=d412ba42e5d5938ae10687a5d7cb6d5d0fcd55f0f5e7103b13e73367eef5d06a",
+        "datetime": "2026-07-08T13:00:00.000Z"
+      },
+      {
+        "headline": "Dow Jones and Nasdaq start lower as Trump says Iran ceasefire 'over'",
+        "summary": "Oil prices spiked following an exchange of strikes between the US and Iran",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=961c0a32e8a2697dab9deacd629e37f144c77ccb61b2833357916b0c6031e247",
+        "datetime": "2026-07-08T12:12:00.000Z"
+      }
+    ],
+    "AMD": [
+      {
+        "headline": "Micron, Sandisk, Marvell stocks jump, leading chip sector gains",
+        "summary": "Micron and other chip-related stocks rose on Thursday as the AI trade reignited.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=335a5f96e8a378f3fa94cd0e397b1770d40fce8a8854bc0524b6c06647882fc4",
+        "datetime": "2026-07-09T13:54:33.000Z"
+      },
+      {
+        "headline": "The Line In The Sand For AVGO Stock",
+        "summary": "A semiconductor giant has fallen back to a price floor that has held firm four times before, forcing investors to decide if its explosive new growth is strong enough to support it again.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=d4ce22070e1ac2c902732a46f186e8e0268e1162c87d48bb70db80a57b50aa9b",
+        "datetime": "2026-07-09T13:29:23.000Z"
+      },
+      {
+        "headline": "What Owning Intel Stock Means In A Market Crash",
+        "summary": "The stock's history in downturns reveals a pattern of amplified losses that every shareholder should understand before the next one hits.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=31188f82be9fc753946d846235aa580e156f72947bb99825ded3eccc3eec1fd8",
+        "datetime": "2026-07-09T13:24:33.000Z"
+      },
+      {
+        "headline": "After The Tumble, Is Marvell Technology Stock A Trap Or A Treasure?",
+        "summary": "The chipmaker's business is accelerating, but its stock just hit a patch of turbulence. Here's how to think through the opportunity.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=0143322b5f711d9ee08e748f48bea19cce208e8fb3e8dfe7cf5ba4cf4abb5daf",
+        "datetime": "2026-07-09T13:19:09.000Z"
+      },
+      {
+        "headline": "Qualcomm Stock To 2x To $370?",
+        "summary": "For three years, the AI rally left Qualcomm behind.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=e896d8c1adc4ddc1ee8f736a10f5ef79cb5922370ed8a30fb264d94dc4543993",
+        "datetime": "2026-07-09T13:05:10.000Z"
+      }
+    ],
+    "MU": [
+      {
+        "headline": "Which S&P500 stocks are gapping on Thursday?",
+        "summary": "Wondering what's happening in today's session regarding gap up and gap down stocks? Explore the S&P500 index on Thursday to uncover the stocks that are gapping in the S&P500 index.",
+        "source": "ChartMill",
+        "url": "https://finnhub.io/api/news?id=3b26b8ecf7552f4629db4397e7180ca35fb2e7f6a23f639ed70d5f5d395d213d",
+        "datetime": "2026-07-09T14:35:01.000Z"
+      },
+      {
+        "headline": "Micron, Sandisk, Marvell stocks jump, leading chip sector gains",
+        "summary": "Micron and other chip-related stocks rose on Thursday as the AI trade reignited.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=335a5f96e8a378f3fa94cd0e397b1770d40fce8a8854bc0524b6c06647882fc4",
+        "datetime": "2026-07-09T13:54:33.000Z"
+      },
+      {
+        "headline": "Stock Market Today: Dow Rises Amid U.S.-Iran News; Micron, Sandisk Rally (Live Coverage)",
+        "summary": "Stock Market Today: The Dow Jones index fell Thursday amid the latest U.S.-Iran news. Micron stock and Sandisk rallied.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=0c3329176b576904453fd83b27c938e33be3c71a257da09f5c0ec293ae2e64ef",
+        "datetime": "2026-07-09T13:42:18.000Z"
+      },
+      {
+        "headline": "What Owning Intel Stock Means In A Market Crash",
+        "summary": "The stock's history in downturns reveals a pattern of amplified losses that every shareholder should understand before the next one hits.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=31188f82be9fc753946d846235aa580e156f72947bb99825ded3eccc3eec1fd8",
+        "datetime": "2026-07-09T13:24:33.000Z"
+      },
+      {
+        "headline": "Wall Street Futures Rise as Chip Stocks Gain Despite Middle East Tensions: Dow Jones, S&P, Nasdaq",
+        "summary": "Futures Signal Higher Opening for U. S.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=434a5aa6d3410101ef4868323bb401c91218e13c712c3997927b69ed232848f0",
+        "datetime": "2026-07-09T13:17:17.000Z"
+      }
+    ],
+    "COST": [
+      {
+        "headline": "Which S&P500 stocks are gapping on Thursday?",
+        "summary": "Wondering what's happening in today's session regarding gap up and gap down stocks? Explore the S&P500 index on Thursday to uncover the stocks that are gapping in the S&P500 index.",
+        "source": "ChartMill",
+        "url": "https://finnhub.io/api/news?id=3b26b8ecf7552f4629db4397e7180ca35fb2e7f6a23f639ed70d5f5d395d213d",
+        "datetime": "2026-07-09T14:35:01.000Z"
+      },
+      {
+        "headline": "Update: US Equity Futures Edge Higher Pre-Bell Amid Re-Escalation of Middle East Hostilities",
+        "summary": "(Updates with economic data, recent oil price movement, world markets' overview and corporate stock",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=fa8806c19b5df05fff39ea2bb15a7c7c6c04713ab13b8924bb332c5214ca1b68",
+        "datetime": "2026-07-09T12:55:19.000Z"
+      },
+      {
+        "headline": "Costco June Sales Rise",
+        "summary": "The warehouse retailer posted another month of double-digit sales growth.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=af67a84f01333ecb83f25ac5befd6d084e66bb0e776119a5529a888e64cd106e",
+        "datetime": "2026-07-09T12:42:19.000Z"
+      },
+      {
+        "headline": "Jim Cramer on Costco: “It Got a Little Too Expensive”",
+        "summary": "Costco Wholesale Corporation (NASDAQ:COST) was among Jim Cramer’s stock calls on Mad Money, as he highlighted the AI opportunities in neoclouds. Answering a caller’s query about the stock, Cramer said: The way we have to look at Costco is very important. There are periods of what I regard as underperformance coupled with huge spurts up […]",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=c6caea3df162db34b55f085d17fe4a2dea930ca16f83ea2fe8afa5d2d4730797",
+        "datetime": "2026-07-09T12:18:53.000Z"
+      },
+      {
+        "headline": "Netflix To $100? Here Are 10 Top Analyst Forecasts For Thursday",
+        "summary": "Wall Street analysts changed outlook for top names. Mizuho raised Chubb target, JP Morgan cut Costco target, B of A and Wells Fargo reduced targets.",
+        "source": "Benzinga",
+        "url": "https://finnhub.io/api/news?id=30c532cc740098aeaddf9596d1c38774f3f2dca276c76053b57d5d1fea86ec0a",
+        "datetime": "2026-07-09T09:24:18.000Z"
+      }
+    ],
+    "PLTR": [
+      {
+        "headline": "Which S&P500 stocks are gapping on Thursday?",
+        "summary": "Wondering what's happening in today's session regarding gap up and gap down stocks? Explore the S&P500 index on Thursday to uncover the stocks that are gapping in the S&P500 index.",
+        "source": "ChartMill",
+        "url": "https://finnhub.io/api/news?id=3b26b8ecf7552f4629db4397e7180ca35fb2e7f6a23f639ed70d5f5d395d213d",
+        "datetime": "2026-07-09T14:35:01.000Z"
+      },
+      {
+        "headline": "Palantir partnership fails to save Rackspace stock after brutal guidance slash",
+        "summary": "Investing.com -- A major AI team-up wasn’t enough to cushion the blow for Rackspace Technology (NASDAQ:RXT). Shares plummeted over 10% Thursday after the cloud operator severely dialed back its fiscal 2026 revenue projections, completely overshadowing a high-profile strategic partnership with Palantir Technologies (NASDAQ:PLTR) announced earlier in the day. The San Antonio-based enterprise AI infrastructure provider aggressively trimmed its fiscal 2026 revenue guidance to a range of $2.45 billio",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=1475be7d0a922d495ac7b3f764bd85357aa8ff4e0c5c31ebaa8937d916f01396",
+        "datetime": "2026-07-09T12:39:15.000Z"
+      },
+      {
+        "headline": "Rackspace Technology Sees Wider Q2 Adjusted Loss, Lower Revenue; Shares Down",
+        "summary": "Rackspace Technology (RXT) said Thursday that it expects a Q2 adjusted loss of between $0.11 and $0.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=cdbb480f5ca6a5741baa8933b09727150ea469386f8db1646c1cefa8cf09a464",
+        "datetime": "2026-07-09T12:35:44.000Z"
+      },
+      {
+        "headline": "Stay updated with the S&P500 stocks that are on the move in today's pre-market session.",
+        "summary": "Before the opening bell on Thursday, let's take a glimpse of the US markets and explore the S&P500 top gainers and losers in today's pre-market session.",
+        "source": "ChartMill",
+        "url": "https://finnhub.io/api/news?id=f17cdc3021d13b1ac21cfbfae772b29597a0a8b033df3ebc70b7bacb88a33d1b",
+        "datetime": "2026-07-09T12:35:00.000Z"
+      },
+      {
+        "headline": "Market Chatter: Palantir Challenges London Mayor's Move to Block Contract Over Perceived Values",
+        "summary": "Palantir Technologies (PLTR) is challenging London mayor Sadiq Khan's decision to block a contract w",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=8b0102c2cf8aeec6e7c65f13d967bdd9dba6f8bbc86ba257fb661a63e471e991",
+        "datetime": "2026-07-09T12:24:06.000Z"
+      }
+    ],
+    "OXY": [
+      {
+        "headline": "Evercore ISI Group Upgrades Occidental Petroleum (OXY)",
+        "summary": "",
+        "source": "Fintel",
+        "url": "https://finnhub.io/api/news?id=b99f8efa9b115875251449d4854a27c5a32a5df3f484563f83df3005973c0b9c",
+        "datetime": "2026-07-09T14:36:17.000Z"
+      },
+      {
+        "headline": "2 of Wall Street’s Favorite Stocks to Target This Week and 1 We Find Risky",
+        "summary": "Wall Street has set ambitious price targets for the stocks in this article. While this suggests attractive upside potential, it’s important to remain skeptical because analysts face institutional pressures that can sometimes lead to overly optimistic forecasts.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=806db4b930eb0a7cf1145f455323353e73dcb7a1e23d9e6101185881b2170e65",
+        "datetime": "2026-07-09T10:13:00.000Z"
+      },
+      {
+        "headline": "Why Occidental Petroleum Stock Crushed it on Wednesday",
+        "summary": "An analyst pulled the lever on a rare double upgrade of the oil company.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=64a73ce14f4dd9959db2184feac21b809876614d0eb57bac7e7a0b81f511aca6",
+        "datetime": "2026-07-08T22:27:32.000Z"
+      },
+      {
+        "headline": "Sector Update: Energy Stocks Gain Late Afternoon",
+        "summary": "Energy stocks were higher late Wednesday afternoon, with the NYSE Energy Sector Index and the State",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=3a53e21f7a509dc65491b98bac256ef3d22a4a6491dfef360db8fce9274bc8c7",
+        "datetime": "2026-07-08T19:56:47.000Z"
+      },
+      {
+        "headline": "Micron, Broadcom, Palantir, Delta, SpaceX, and More Stocks That Explain Today’s Market",
+        "summary": "Stocks fall broadly as the Iran war cease-fire appears to be over. Crude prices rise, pushing many oil stocks higher.",
+        "source": "Yahoo",
+        "url": "https://finnhub.io/api/news?id=45854c77af1654d14b7b09b1adeb3222998018077d44d2110fb62f8e56cb0224",
+        "datetime": "2026-07-08T18:39:00.000Z"
+      }
+    ]
+  },
+  "topMoverNews": [
+    {
+      "headline": "The Motor Driving AMD’s Stock Rise Is Set to Stall",
+      "summary": "Advanced Micro Devices  has soared over the past year amid excitement over its central-processing units.  AMD shares were up 1.6% at $526.07 in Thursday’s premarket, adding to a 259% gain over the past 12 months through to Wednesday’s close.  “AMD’s 146% surge since April, versus 58% for the SOX [PHLX Semiconductor Index], has left the shares priced at a premium to peers with little room for error,” Naji wrote.",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=ef67d94f4177cc86f797b0c9b866e57ba2ac525bc68909ee4b5ea54bd79fe2b2",
+      "datetime": "2026-07-09T12:26:00.000Z"
+    },
+    {
+      "headline": "Aehr Test Systems, Lam Research, Applied Materials And Other Big Stocks Moving Higher On Thursday",
+      "summary": "U.S. stocks higher, Nasdaq up 150+ points. Aehr Test Systems shares rose 13.6%. Other big gainers include FBRX, BBIO, TRAX, LASR, ONTO, ALNY, ICHR, LITE, ARM, LRCX, KLAC, and FORM.",
+      "source": "Benzinga",
+      "url": "https://finnhub.io/api/news?id=c8f54ab6c1fc89f4d8e38ddfa8c8e370c9fc203cddc4de6dfb8bd9619ac97b46",
+      "datetime": "2026-07-09T10:01:44.000Z"
+    },
+    {
+      "headline": "Arm Holdings' Licensing Momentum Continues to Fuel Revenue Growth",
+      "summary": "ARM's licensing revenues jump 29% in fiscal Q4, driving 20% overall revenue growth as demand for AI infrastructure, custom silicon and next-generation chip designs remains robust.",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=aee24da90ee35abfb1dfe046a51672294c4d3ffa9233a92aa70aba0aa2689f92",
+      "datetime": "2026-07-08T15:26:00.000Z"
+    },
+    {
+      "headline": "Arm Announces Earnings Release Date for First Quarter Fiscal Year Ended 2027",
+      "summary": "CAMBRIDGE, England, July 08, 2026--Arm Holdings plc (NASDAQ: ARM) will report financial results for the first quarter of fiscal year 2027 on Wednesday, July 29, 2026, after market close. The company will host a conference call via audio webcast at 14:00 Pacific Time (17:00 Eastern Time / 22:00 British Summer Time) to review its financial results and business outlook.",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=d412ba42e5d5938ae10687a5d7cb6d5d0fcd55f0f5e7103b13e73367eef5d06a",
+      "datetime": "2026-07-08T13:00:00.000Z"
+    },
+    {
+      "headline": "Dow Jones and Nasdaq start lower as Trump says Iran ceasefire 'over'",
+      "summary": "Oil prices spiked following an exchange of strikes between the US and Iran",
+      "source": "Yahoo",
+      "url": "https://finnhub.io/api/news?id=961c0a32e8a2697dab9deacd629e37f144c77ccb61b2833357916b0c6031e247",
+      "datetime": "2026-07-08T12:12:00.000Z"
+    }
+  ]
+}

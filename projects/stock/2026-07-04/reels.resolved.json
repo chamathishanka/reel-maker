@@ -3,19 +3,16 @@
   "results": [
     {
       "type": "top-mover",
-      "title": "Moderna's Big Boost",
+      "title": "Moderna Leads Today's Movers",
       "file": "01_top-mover-mrna.mp4",
-      "hook": "Moderna surged over 10 percent today, catching Jim Cramer's eye.",
-      "cta": "What's your take on Moderna?",
-      "fbCaption": "Moderna took center stage today after a big jump! Find out why Jim Cramer is talking about it and what's next for the biotech giant. #Moderna #StockMarket #JimCramer #MarketNews",
+      "hook": "Moderna jumped a strong 10 percent today.",
+      "cta": "Watching any of these?",
+      "fbCaption": "Moderna made a big move today! Here's why. For information only — not financial advice.",
       "hashtags": [
         "#Moderna",
-        "#MRNA",
         "#StockMarket",
-        "#TopMover",
         "#JimCramer",
-        "#MarketNews",
-        "#Reels"
+        "#MarketNews"
       ],
       "disclaimer": "For information only — not financial advice.",
       "tickers": [
@@ -24,64 +21,49 @@
       "segments": [
         {
           "kind": "hook",
-          "vo": "Moderna surged over 10 percent today, catching Jim Cramer's eye.",
-          "text": "Moderna surged over 10 percent today, catching Jim Cramer's eye.",
+          "vo": "Moderna jumped a strong 10 percent today.",
+          "text": "Moderna jumped a strong 10 percent today.",
           "sentiment": "up",
           "audio": "projects/stock/2026-07-04/audio/01-top-mover-mrna-00.mp3",
           "image": "projects/stock/2026-07-04/images/01-top-mover-mrna-00.jpg",
           "words": [
             {
               "text": "Moderna",
-              "start": 0.0875,
-              "duration": 0.4125
+              "start": 0.1,
+              "duration": 0.45
             },
             {
-              "text": "surged",
-              "start": 0.5,
-              "duration": 0.5125
+              "text": "jumped",
+              "start": 0.5625,
+              "duration": 0.3625
             },
             {
-              "text": "over",
-              "start": 1.1375,
-              "duration": 0.2125
+              "text": "a",
+              "start": 0.9375,
+              "duration": 0.0625
+            },
+            {
+              "text": "strong",
+              "start": 1,
+              "duration": 0.5625
             },
             {
               "text": "10 percent",
-              "start": 1.35,
+              "start": 1.5625,
               "duration": 0.6875
             },
             {
               "text": "today",
-              "start": 2.0375,
-              "duration": 0.375
-            },
-            {
-              "text": "catching",
-              "start": 2.675,
-              "duration": 0.4625
-            },
-            {
-              "text": "Jim",
-              "start": 3.15,
-              "duration": 0.325
-            },
-            {
-              "text": "Cramer's",
-              "start": 3.475,
-              "duration": 0.4625
-            },
-            {
-              "text": "eye",
-              "start": 3.9375,
-              "duration": 0.35
+              "start": 2.25,
+              "duration": 0.4
             }
           ],
-          "durationInFrames": 150
+          "durationInFrames": 101
         },
         {
           "kind": "beat",
-          "vo": "Moderna shares were up about 10 percent, after Jim Cramer expressed his liking for the stock, advising investors on market rotation.",
-          "caption": "Moderna +10%",
+          "vo": "That rally followed positive comments from Jim Cramer, who said he liked having a position in Moderna for the first time in ages.",
+          "caption": "Cramer likes MRNA",
           "ticker": "MRNA",
           "name": "Moderna",
           "price": 79.76,
@@ -89,119 +71,135 @@
           "sentiment": "up",
           "keywords": [
             "moderna",
-            "up",
-            "biotech"
+            "stock",
+            "cramer",
+            "up"
           ],
           "audio": "projects/stock/2026-07-04/audio/01-top-mover-mrna-01.mp3",
           "image": "projects/stock/2026-07-04/images/01-top-mover-mrna-01.jpg",
           "words": [
             {
-              "text": "Moderna",
+              "text": "That",
               "start": 0.1,
-              "duration": 0.3375
+              "duration": 0.275
             },
             {
-              "text": "shares",
-              "start": 0.45,
-              "duration": 0.3875
+              "text": "rally",
+              "start": 0.375,
+              "duration": 0.3
             },
             {
-              "text": "were",
-              "start": 0.8375,
+              "text": "followed",
+              "start": 0.675,
+              "duration": 0.4375
+            },
+            {
+              "text": "positive",
+              "start": 1.1125,
+              "duration": 0.4125
+            },
+            {
+              "text": "comments",
+              "start": 1.5375,
+              "duration": 0.4125
+            },
+            {
+              "text": "from",
+              "start": 1.9625,
               "duration": 0.225
             },
             {
-              "text": "up",
-              "start": 1.15,
-              "duration": 0.15
-            },
-            {
-              "text": "about",
-              "start": 1.35,
+              "text": "Jim",
+              "start": 2.1875,
               "duration": 0.35
             },
             {
-              "text": "10 percent",
-              "start": 1.7125,
-              "duration": 0.8875
+              "text": "Cramer",
+              "start": 2.5375,
+              "duration": 0.45
             },
             {
-              "text": "after",
-              "start": 3.1,
-              "duration": 0.2875
-            },
-            {
-              "text": "Jim",
+              "text": "who",
               "start": 3.3875,
+              "duration": 0.075
+            },
+            {
+              "text": "said",
+              "start": 3.4625,
+              "duration": 0.2375
+            },
+            {
+              "text": "he",
+              "start": 3.7,
+              "duration": 0.0875
+            },
+            {
+              "text": "liked",
+              "start": 3.7875,
               "duration": 0.2625
             },
             {
-              "text": "Cramer",
-              "start": 3.65,
-              "duration": 0.3625
+              "text": "having",
+              "start": 4.05,
+              "duration": 0.3
             },
             {
-              "text": "expressed",
-              "start": 4.0125,
-              "duration": 0.525
+              "text": "a",
+              "start": 4.35,
+              "duration": 0.05
             },
             {
-              "text": "his",
-              "start": 4.5375,
-              "duration": 0.1
+              "text": "position",
+              "start": 4.4125,
+              "duration": 0.5
             },
             {
-              "text": "liking",
-              "start": 4.65,
-              "duration": 0.3625
+              "text": "in",
+              "start": 4.9125,
+              "duration": 0.0625
+            },
+            {
+              "text": "Moderna",
+              "start": 4.975,
+              "duration": 0.5125
             },
             {
               "text": "for",
-              "start": 5.025,
+              "start": 5.6875,
               "duration": 0.0875
             },
             {
               "text": "the",
-              "start": 5.125,
-              "duration": 0.0625
+              "start": 5.775,
+              "duration": 0.075
             },
             {
-              "text": "stock",
-              "start": 5.1875,
-              "duration": 0.4875
+              "text": "first",
+              "start": 5.85,
+              "duration": 0.4125
             },
             {
-              "text": "advising",
-              "start": 6.075,
-              "duration": 0.525
+              "text": "time",
+              "start": 6.275,
+              "duration": 0.1875
             },
             {
-              "text": "investors",
-              "start": 6.6125,
-              "duration": 0.5375
+              "text": "in",
+              "start": 6.475,
+              "duration": 0.075
             },
             {
-              "text": "on",
-              "start": 7.15,
-              "duration": 0.1125
-            },
-            {
-              "text": "market",
-              "start": 7.275,
-              "duration": 0.3
-            },
-            {
-              "text": "rotation",
-              "start": 7.575,
+              "text": "ages",
+              "start": 6.55,
               "duration": 0.5375
             }
           ],
-          "durationInFrames": 265
+          "durationInFrames": 234
         },
         {
           "kind": "beat",
-          "vo": "Cramer specifically highlighted Moderna's significant gains this year, seeing opportunity in the current market shift.",
-          "caption": "Cramer Likes MRNA",
+          "vo": "Cramer highlighted the stock's significant gains this year and advised investors on navigating today's market rotation.",
+          "caption": "MRNA's yearly gains",
           "ticker": "MRNA",
           "name": "Moderna",
           "price": 79.76,
@@ -209,8 +207,9 @@
           "sentiment": "up",
           "keywords": [
             "moderna",
-            "cramer",
-            "positive"
+            "gains",
+            "market",
+            "rotation"
           ],
           "audio": "projects/stock/2026-07-04/audio/01-top-mover-mrna-02.mp3",
           "image": "projects/stock/2026-07-04/images/01-top-mover-mrna-02.jpg",
@@ -221,82 +220,87 @@
               "duration": 0.325
             },
             {
-              "text": "specifically",
-              "start": 0.4375,
-              "duration": 0.65
-            },
-            {
               "text": "highlighted",
-              "start": 1.0875,
-              "duration": 0.575
-            },
-            {
-              "text": "Moderna's",
-              "start": 1.6625,
+              "start": 0.425,
               "duration": 0.525
             },
             {
+              "text": "the",
+              "start": 0.95,
+              "duration": 0.0625
+            },
+            {
+              "text": "stock's",
+              "start": 1.025,
+              "duration": 0.5375
+            },
+            {
               "text": "significant",
-              "start": 2.3875,
-              "duration": 0.9125
+              "start": 1.7625,
+              "duration": 0.8375
             },
             {
               "text": "gains",
-              "start": 3.3125,
-              "duration": 0.3625
+              "start": 2.6,
+              "duration": 0.4125
             },
             {
               "text": "this",
-              "start": 3.675,
+              "start": 3.0125,
               "duration": 0.2125
             },
             {
               "text": "year",
-              "start": 3.8875,
-              "duration": 0.3125
+              "start": 3.225,
+              "duration": 0.3625
             },
             {
-              "text": "seeing",
-              "start": 4.675,
-              "duration": 0.3
-            },
-            {
-              "text": "opportunity",
-              "start": 4.975,
-              "duration": 0.8625
-            },
-            {
-              "text": "in",
-              "start": 6.0125,
-              "duration": 0.075
-            },
-            {
-              "text": "the",
-              "start": 6.0875,
+              "text": "and",
+              "start": 4.025,
               "duration": 0.0625
             },
             {
-              "text": "current",
-              "start": 6.15,
-              "duration": 0.275
+              "text": "advised",
+              "start": 4.1,
+              "duration": 0.4875
+            },
+            {
+              "text": "investors",
+              "start": 4.5875,
+              "duration": 0.55
+            },
+            {
+              "text": "on",
+              "start": 5.1375,
+              "duration": 0.2375
+            },
+            {
+              "text": "navigating",
+              "start": 5.375,
+              "duration": 0.6
+            },
+            {
+              "text": "today's",
+              "start": 5.9875,
+              "duration": 0.4125
             },
             {
               "text": "market",
-              "start": 6.425,
-              "duration": 0.275
+              "start": 6.4125,
+              "duration": 0.3625
             },
             {
-              "text": "shift",
-              "start": 6.7,
-              "duration": 0.475
+              "text": "rotation",
+              "start": 6.775,
+              "duration": 0.55
             }
           ],
-          "durationInFrames": 237
+          "durationInFrames": 242
         },
         {
           "kind": "beat",
-          "vo": "This positive sentiment comes as the market heads into its final week before second-quarter earnings reports.",
-          "caption": "Ahead of Q2 Earnings",
+          "vo": "Moderna's move comes as the broader market trades sideways and oil dips, with Q2 earnings season just around the corner.",
+          "caption": "Q2 earnings ahead",
           "ticker": "MRNA",
           "name": "Moderna",
           "price": 79.76,
@@ -304,218 +308,211 @@
           "sentiment": "neutral",
           "keywords": [
             "moderna",
+            "earnings",
             "market",
-            "earnings"
+            "oil"
           ],
           "audio": "projects/stock/2026-07-04/audio/01-top-mover-mrna-03.mp3",
           "image": "projects/stock/2026-07-04/images/01-top-mover-mrna-03.jpg",
           "words": [
             {
-              "text": "This",
-              "start": 0.1,
-              "duration": 0.175
-            },
-            {
-              "text": "positive",
-              "start": 0.275,
-              "duration": 0.525
-            },
-            {
-              "text": "sentiment",
-              "start": 0.8,
-              "duration": 0.425
-            },
-            {
-              "text": "comes",
-              "start": 1.225,
-              "duration": 0.4125
-            },
-            {
-              "text": "as",
-              "start": 1.65,
-              "duration": 0.125
-            },
-            {
-              "text": "the",
-              "start": 1.775,
-              "duration": 0.0625
-            },
-            {
-              "text": "market",
-              "start": 1.8375,
-              "duration": 0.4375
-            },
-            {
-              "text": "heads",
-              "start": 2.2875,
+              "text": "Moderna's",
+              "start": 0.0875,
               "duration": 0.45
             },
             {
-              "text": "into",
-              "start": 2.875,
-              "duration": 0.2375
+              "text": "move",
+              "start": 0.5375,
+              "duration": 0.3125
             },
             {
-              "text": "its",
-              "start": 3.1125,
-              "duration": 0.1125
+              "text": "comes",
+              "start": 0.85,
+              "duration": 0.425
             },
             {
-              "text": "final",
-              "start": 3.225,
-              "duration": 0.4875
+              "text": "as",
+              "start": 1.2875,
+              "duration": 0.1375
             },
             {
-              "text": "week",
-              "start": 3.725,
-              "duration": 0.35
+              "text": "the",
+              "start": 1.4375,
+              "duration": 0.0875
             },
             {
-              "text": "before",
-              "start": 4.275,
+              "text": "broader",
+              "start": 1.5375,
+              "duration": 0.4
+            },
+            {
+              "text": "market",
+              "start": 1.95,
               "duration": 0.4125
             },
             {
-              "text": "second-quarter",
-              "start": 4.7,
-              "duration": 0.725
+              "text": "trades",
+              "start": 2.375,
+              "duration": 0.4
             },
             {
-              "text": "earnings",
-              "start": 5.4375,
+              "text": "sideways",
+              "start": 2.7875,
+              "duration": 0.8
+            },
+            {
+              "text": "and",
+              "start": 3.6875,
               "duration": 0.2875
             },
             {
-              "text": "reports",
-              "start": 5.725,
-              "duration": 0.6375
+              "text": "oil",
+              "start": 3.9875,
+              "duration": 0.275
+            },
+            {
+              "text": "dips",
+              "start": 4.2625,
+              "duration": 0.5125
+            },
+            {
+              "text": "with",
+              "start": 5.15,
+              "duration": 0.1375
+            },
+            {
+              "text": "Q2",
+              "start": 5.2875,
+              "duration": 0.425
+            },
+            {
+              "text": "earnings",
+              "start": 5.7125,
+              "duration": 0.325
+            },
+            {
+              "text": "season",
+              "start": 6.05,
+              "duration": 0.45
+            },
+            {
+              "text": "just",
+              "start": 6.75,
+              "duration": 0.2
+            },
+            {
+              "text": "around",
+              "start": 6.95,
+              "duration": 0.2
+            },
+            {
+              "text": "the",
+              "start": 7.15,
+              "duration": 0.05
+            },
+            {
+              "text": "corner",
+              "start": 7.2,
+              "duration": 0.45
             }
           ],
-          "durationInFrames": 212
+          "durationInFrames": 251
         },
         {
           "kind": "cta",
-          "vo": "What's your take on Moderna?",
-          "text": "What's your take on Moderna?",
+          "vo": "Watching any of these?",
+          "text": "Watching any of these?",
           "sentiment": "neutral",
           "audio": "projects/stock/2026-07-04/audio/01-top-mover-mrna-04.mp3",
           "image": "projects/stock/2026-07-04/images/01-top-mover-mrna-04.jpg",
           "words": [
             {
-              "text": "What's",
-              "start": 0.1,
-              "duration": 0.1125
+              "text": "Watching",
+              "start": 0.1125,
+              "duration": 0.2875
             },
             {
-              "text": "your",
-              "start": 0.2125,
-              "duration": 0.0875
+              "text": "any",
+              "start": 0.4,
+              "duration": 0.175
             },
             {
-              "text": "take",
-              "start": 0.3,
-              "duration": 0.2125
+              "text": "of",
+              "start": 0.575,
+              "duration": 0.075
             },
             {
-              "text": "on",
-              "start": 0.5125,
-              "duration": 0.1125
-            },
-            {
-              "text": "Moderna",
-              "start": 0.625,
-              "duration": 0.4375
+              "text": "these",
+              "start": 0.6625,
+              "duration": 0.5
             }
           ],
-          "durationInFrames": 53
+          "durationInFrames": 56
         }
       ]
     },
     {
       "type": "market-recap",
-      "title": "Tech Mixed, Apple Gains",
+      "title": "Apple Climbs, Tesla Drops Today",
       "file": "02_market-recap-aapl.mp4",
-      "hook": "Tech stocks saw big swings today, with Apple making headlines.",
-      "cta": "Watching any of these moves?",
-      "fbCaption": "A mixed day for tech! Apple and Netflix saw gains, while Tesla and Arm Holdings pulled back. We break down the key movers and shakers. #StockMarket #TechStocks #Apple #Netflix #Tesla #ArmHoldings",
+      "hook": "Apple shares climbed almost 5 percent today.",
+      "cta": "Watching any of these?",
+      "fbCaption": "Apple, Netflix, Tesla, and Dell all saw significant moves today. Get the rundown! For information only — not financial advice.",
       "hashtags": [
-        "#StockMarket",
-        "#MarketRecap",
-        "#TechStocks",
         "#Apple",
         "#Netflix",
         "#Tesla",
-        "#ArmHoldings",
-        "#Reels"
+        "#Dell",
+        "#MarketRecap"
       ],
       "disclaimer": "For information only — not financial advice.",
       "tickers": [
         "AAPL",
         "NFLX",
         "TSLA",
-        "ARM"
+        "DELL"
       ],
       "segments": [
         {
           "kind": "hook",
-          "vo": "Tech stocks saw big swings today, with Apple making headlines.",
-          "text": "Tech stocks saw big swings today, with Apple making headlines.",
+          "vo": "Apple shares climbed almost 5 percent today.",
+          "text": "Apple shares climbed almost 5 percent today.",
           "sentiment": "up",
           "audio": "projects/stock/2026-07-04/audio/02-market-recap-aapl-00.mp3",
           "image": "projects/stock/2026-07-04/images/02-market-recap-aapl-00.jpg",
           "words": [
             {
-              "text": "Tech",
+              "text": "Apple",
               "start": 0.1,
-              "duration": 0.1375
+              "duration": 0.25
             },
             {
-              "text": "stocks",
-              "start": 0.2375,
-              "duration": 0.4875
+              "text": "shares",
+              "start": 0.35,
+              "duration": 0.3125
             },
             {
-              "text": "saw",
-              "start": 0.9125,
-              "duration": 0.1875
+              "text": "climbed",
+              "start": 0.675,
+              "duration": 0.4625
             },
             {
-              "text": "big",
-              "start": 1.1875,
-              "duration": 0.2875
+              "text": "almost",
+              "start": 1.3125,
+              "duration": 0.3625
             },
             {
-              "text": "swings",
-              "start": 1.4875,
-              "duration": 0.3875
+              "text": "5 percent",
+              "start": 1.6875,
+              "duration": 0.7375
             },
             {
               "text": "today",
-              "start": 1.875,
-              "duration": 0.375
-            },
-            {
-              "text": "with",
-              "start": 2.65,
-              "duration": 0.1375
-            },
-            {
-              "text": "Apple",
-              "start": 2.7875,
-              "duration": 0.3
-            },
-            {
-              "text": "making",
-              "start": 3.0875,
-              "duration": 0.275
-            },
-            {
-              "text": "headlines",
-              "start": 3.3625,
-              "duration": 0.725
+              "start": 2.4375,
+              "duration": 0.425
             }
           ],
-          "durationInFrames": 144
+          "durationInFrames": 107
         },
         {
           "kind": "board",
@@ -591,8 +588,8 @@
         },
         {
           "kind": "beat",
-          "vo": "Apple shares climbed nearly 5 percent, following news of its plans for a major iPhone lineup expansion, including its first foldable model.",
-          "caption": "Apple +5% on Foldable iPhone",
+          "vo": "The iPhone maker saw gains after news of its plans for foldable iPhones and an iPhone Ultra push in late 2026 and early 2027.",
+          "caption": "Apple's foldable iPhone plans",
           "ticker": "AAPL",
           "name": "Apple",
           "price": 308.63,
@@ -601,124 +598,139 @@
           "keywords": [
             "apple",
             "iphone",
-            "up",
-            "tech"
+            "foldables",
+            "up"
           ],
           "audio": "projects/stock/2026-07-04/audio/02-market-recap-aapl-02.mp3",
           "image": "projects/stock/2026-07-04/images/02-market-recap-aapl-02.jpg",
           "words": [
             {
-              "text": "Apple",
+              "text": "The",
               "start": 0.1,
-              "duration": 0.275
+              "duration": 0.1125
             },
             {
-              "text": "shares",
-              "start": 0.375,
+              "text": "iPhone",
+              "start": 0.2125,
+              "duration": 0.4375
+            },
+            {
+              "text": "maker",
+              "start": 0.65,
               "duration": 0.325
             },
             {
-              "text": "climbed",
-              "start": 0.7,
+              "text": "saw",
+              "start": 0.9875,
+              "duration": 0.3125
+            },
+            {
+              "text": "gains",
+              "start": 1.3,
               "duration": 0.4375
             },
             {
-              "text": "nearly",
-              "start": 1.2125,
-              "duration": 0.4375
-            },
-            {
-              "text": "5 percent",
-              "start": 1.65,
-              "duration": 1.0625
-            },
-            {
-              "text": "following",
-              "start": 3.0125,
-              "duration": 0.55
+              "text": "after",
+              "start": 1.7375,
+              "duration": 0.2625
             },
             {
               "text": "news",
-              "start": 3.5625,
-              "duration": 0.3625
+              "start": 2,
+              "duration": 0.325
             },
             {
               "text": "of",
-              "start": 3.925,
-              "duration": 0.075
+              "start": 2.325,
+              "duration": 0.0625
             },
             {
               "text": "its",
-              "start": 4,
+              "start": 2.3875,
               "duration": 0.0875
             },
             {
               "text": "plans",
-              "start": 4.0875,
-              "duration": 0.6125
+              "start": 2.4875,
+              "duration": 0.5125
             },
             {
               "text": "for",
-              "start": 4.8375,
-              "duration": 0.175
-            },
-            {
-              "text": "a",
-              "start": 5.0125,
-              "duration": 0.025
-            },
-            {
-              "text": "major",
-              "start": 5.0375,
-              "duration": 0.55
-            },
-            {
-              "text": "iPhone",
-              "start": 5.5875,
-              "duration": 0.475
-            },
-            {
-              "text": "lineup",
-              "start": 6.0625,
-              "duration": 0.3375
-            },
-            {
-              "text": "expansion",
-              "start": 6.4,
-              "duration": 0.6125
-            },
-            {
-              "text": "including",
-              "start": 7.4,
-              "duration": 0.4625
-            },
-            {
-              "text": "its",
-              "start": 7.875,
+              "start": 3,
               "duration": 0.125
             },
             {
-              "text": "first",
-              "start": 8,
-              "duration": 0.45
-            },
-            {
               "text": "foldable",
-              "start": 8.4625,
-              "duration": 0.5
+              "start": 3.1375,
+              "duration": 0.55
             },
             {
-              "text": "model",
-              "start": 8.9625,
-              "duration": 0.425
+              "text": "iPhones",
+              "start": 3.7,
+              "duration": 0.7625
+            },
+            {
+              "text": "and",
+              "start": 4.7125,
+              "duration": 0.125
+            },
+            {
+              "text": "an",
+              "start": 4.8375,
+              "duration": 0.1375
+            },
+            {
+              "text": "iPhone",
+              "start": 4.9875,
+              "duration": 0.4625
+            },
+            {
+              "text": "Ultra",
+              "start": 5.4625,
+              "duration": 0.3625
+            },
+            {
+              "text": "push",
+              "start": 5.825,
+              "duration": 0.3625
+            },
+            {
+              "text": "in",
+              "start": 6.2,
+              "duration": 0.15
+            },
+            {
+              "text": "late",
+              "start": 6.35,
+              "duration": 0.225
+            },
+            {
+              "text": "2026",
+              "start": 6.575,
+              "duration": 1.05
+            },
+            {
+              "text": "and",
+              "start": 7.8625,
+              "duration": 0.1875
+            },
+            {
+              "text": "early",
+              "start": 8.15,
+              "duration": 0.275
+            },
+            {
+              "text": "2027",
+              "start": 8.4375,
+              "duration": 0.825
             }
           ],
-          "durationInFrames": 303
+          "durationInFrames": 299
         },
         {
           "kind": "beat",
-          "vo": "Meanwhile, Netflix also rose almost 5 percent. The streaming giant highlighted its asset-light business model, generating strong cash flow compared to competitors.",
-          "caption": "Netflix +5% Strong Cash Flow",
+          "vo": "Meanwhile, Netflix was also up over 4 and a half percent, as the company reported delivering an asset-light cash haul in its latest quarter.",
+          "caption": "Netflix cash flow strong",
           "ticker": "NFLX",
           "name": "Netflix",
           "price": 77.65,
@@ -727,6 +739,7 @@
           "keywords": [
             "netflix",
             "streaming",
+            "cash",
             "up"
           ],
           "audio": "projects/stock/2026-07-04/audio/02-market-recap-aapl-03.mp3",
@@ -734,116 +747,131 @@
           "words": [
             {
               "text": "Meanwhile",
-              "start": 0.0875,
-              "duration": 0.55
+              "start": 0.1,
+              "duration": 0.6125
             },
             {
               "text": "Netflix",
-              "start": 1.025,
-              "duration": 0.4625
+              "start": 1.1,
+              "duration": 0.525
+            },
+            {
+              "text": "was",
+              "start": 1.625,
+              "duration": 0.1625
             },
             {
               "text": "also",
-              "start": 1.5625,
-              "duration": 0.3875
+              "start": 1.8,
+              "duration": 0.475
             },
             {
-              "text": "rose",
-              "start": 1.95,
-              "duration": 0.4
+              "text": "up",
+              "start": 2.2875,
+              "duration": 0.1875
             },
             {
-              "text": "almost",
-              "start": 2.4,
-              "duration": 0.3875
+              "text": "over",
+              "start": 2.5375,
+              "duration": 0.225
             },
             {
-              "text": "5 percent",
-              "start": 2.7875,
-              "duration": 0.8875
+              "text": "4",
+              "start": 2.775,
+              "duration": 0.3375
             },
             {
-              "text": "The",
-              "start": 4.075,
+              "text": "and",
+              "start": 3.1125,
               "duration": 0.0625
             },
             {
-              "text": "streaming",
-              "start": 4.1375,
-              "duration": 0.4625
+              "text": "a",
+              "start": 3.175,
+              "duration": 0.025
             },
             {
-              "text": "giant",
-              "start": 4.6875,
-              "duration": 0.4125
+              "text": "half",
+              "start": 3.2,
+              "duration": 0.3375
             },
             {
-              "text": "highlighted",
+              "text": "percent",
+              "start": 3.55,
+              "duration": 0.55
+            },
+            {
+              "text": "as",
+              "start": 4.5125,
+              "duration": 0.125
+            },
+            {
+              "text": "the",
+              "start": 4.6375,
+              "duration": 0.0875
+            },
+            {
+              "text": "company",
+              "start": 4.725,
+              "duration": 0.3625
+            },
+            {
+              "text": "reported",
               "start": 5.1,
-              "duration": 0.5375
-            },
-            {
-              "text": "its",
-              "start": 5.65,
-              "duration": 0.15
-            },
-            {
-              "text": "asset-light",
-              "start": 5.8875,
-              "duration": 0.85
-            },
-            {
-              "text": "business",
-              "start": 6.75,
-              "duration": 0.4125
-            },
-            {
-              "text": "model",
-              "start": 7.175,
-              "duration": 0.375
-            },
-            {
-              "text": "generating",
-              "start": 7.825,
-              "duration": 0.5375
-            },
-            {
-              "text": "strong",
-              "start": 8.375,
-              "duration": 0.5375
-            },
-            {
-              "text": "cash",
-              "start": 8.925,
-              "duration": 0.4
-            },
-            {
-              "text": "flow",
-              "start": 9.325,
               "duration": 0.4875
             },
             {
-              "text": "compared",
-              "start": 9.8875,
-              "duration": 0.5
+              "text": "delivering",
+              "start": 5.5875,
+              "duration": 0.5375
             },
             {
-              "text": "to",
-              "start": 10.3875,
-              "duration": 0.075
+              "text": "an",
+              "start": 6.275,
+              "duration": 0.1375
             },
             {
-              "text": "competitors",
-              "start": 10.4625,
-              "duration": 0.7375
+              "text": "asset-light",
+              "start": 6.4625,
+              "duration": 0.7625
+            },
+            {
+              "text": "cash",
+              "start": 7.225,
+              "duration": 0.375
+            },
+            {
+              "text": "haul",
+              "start": 7.6125,
+              "duration": 0.3625
+            },
+            {
+              "text": "in",
+              "start": 8.175,
+              "duration": 0.0875
+            },
+            {
+              "text": "its",
+              "start": 8.2625,
+              "duration": 0.1125
+            },
+            {
+              "text": "latest",
+              "start": 8.375,
+              "duration": 0.3
+            },
+            {
+              "text": "quarter",
+              "start": 8.6875,
+              "duration": 0.425
             }
           ],
-          "durationInFrames": 358
+          "durationInFrames": 295
         },
         {
           "kind": "beat",
-          "vo": "On the downside, Tesla dropped over 7 percent. This came after Barclays reiterated an Equalweight rating on the stock, citing cautious outlook concerns.",
-          "caption": "Tesla -7% on Cautious Outlook",
+          "vo": "On the downside, Tesla lost nearly 7 and a half percent, with cautious outlooks from analysts amid ongoing developments in its robotaxi and Optimus programs.",
+          "caption": "Tesla robotaxi outlook",
           "ticker": "TSLA",
           "name": "Tesla",
           "price": 393.45,
@@ -851,8 +879,9 @@
           "sentiment": "down",
           "keywords": [
             "tesla",
-            "down",
-            "ev"
+            "robotaxi",
+            "optimus",
+            "down"
           ],
           "audio": "projects/stock/2026-07-04/audio/02-market-recap-aapl-04.mp3",
           "image": "projects/stock/2026-07-04/images/02-market-recap-aapl-04.jpg",
@@ -860,271 +889,623 @@
             {
               "text": "On",
               "start": 0.0875,
-              "duration": 0.075
+              "duration": 0.0875
             },
             {
               "text": "the",
-              "start": 0.1625,
-              "duration": 0.0625
+              "start": 0.175,
+              "duration": 0.075
             },
             {
               "text": "downside",
-              "start": 0.2375,
-              "duration": 0.65
+              "start": 0.25,
+              "duration": 0.7
             },
             {
               "text": "Tesla",
-              "start": 1.125,
-              "duration": 0.3875
+              "start": 1.1875,
+              "duration": 0.4125
             },
             {
-              "text": "dropped",
-              "start": 1.5125,
+              "text": "lost",
+              "start": 1.6,
               "duration": 0.5
             },
             {
-              "text": "over",
-              "start": 2.175,
-              "duration": 0.2125
+              "text": "nearly",
+              "start": 2.1125,
+              "duration": 0.4
             },
             {
-              "text": "7 percent",
-              "start": 2.3875,
-              "duration": 0.825
+              "text": "7",
+              "start": 2.5125,
+              "duration": 0.5375
             },
             {
-              "text": "This",
-              "start": 3.625,
-              "duration": 0.15
+              "text": "and",
+              "start": 3.0625,
+              "duration": 0.1
             },
             {
-              "text": "came",
-              "start": 3.775,
-              "duration": 0.2125
+              "text": "a",
+              "start": 3.1625,
+              "duration": 0.0375
             },
             {
-              "text": "after",
-              "start": 3.9875,
-              "duration": 0.2875
+              "text": "half",
+              "start": 3.2,
+              "duration": 0.375
             },
             {
-              "text": "Barclays",
-              "start": 4.2875,
-              "duration": 0.475
+              "text": "percent",
+              "start": 3.575,
+              "duration": 0.5625
             },
             {
-              "text": "reiterated",
-              "start": 4.7625,
-              "duration": 0.575
-            },
-            {
-              "text": "an",
-              "start": 5.35,
+              "text": "with",
+              "start": 4.425,
               "duration": 0.1375
             },
             {
-              "text": "Equalweight",
-              "start": 5.6,
-              "duration": 0.675
+              "text": "cautious",
+              "start": 4.5625,
+              "duration": 0.5375
             },
             {
-              "text": "rating",
-              "start": 6.2875,
+              "text": "outlooks",
+              "start": 5.1,
               "duration": 0.3375
             },
             {
-              "text": "on",
-              "start": 6.625,
-              "duration": 0.075
+              "text": "from",
+              "start": 5.4375,
+              "duration": 0.125
             },
             {
-              "text": "the",
-              "start": 6.7,
-              "duration": 0.0625
+              "text": "analysts",
+              "start": 5.5625,
+              "duration": 0.4125
             },
             {
-              "text": "stock",
-              "start": 6.775,
-              "duration": 0.45
+              "text": "amid",
+              "start": 5.975,
+              "duration": 0.3875
             },
             {
-              "text": "citing",
-              "start": 7.6375,
-              "duration": 0.325
+              "text": "ongoing",
+              "start": 6.4625,
+              "duration": 0.5375
             },
             {
-              "text": "cautious",
-              "start": 7.975,
-              "duration": 0.6125
+              "text": "developments",
+              "start": 7,
+              "duration": 0.6
             },
             {
-              "text": "outlook",
-              "start": 8.6875,
-              "duration": 0.325
+              "text": "in",
+              "start": 7.6125,
+              "duration": 0.125
             },
             {
-              "text": "concerns",
-              "start": 9.025,
-              "duration": 0.7625
+              "text": "its",
+              "start": 7.75,
+              "duration": 0.1375
+            },
+            {
+              "text": "robotaxi",
+              "start": 7.9,
+              "duration": 0.8875
+            },
+            {
+              "text": "and",
+              "start": 8.95,
+              "duration": 0.2625
+            },
+            {
+              "text": "Optimus",
+              "start": 9.225,
+              "duration": 0.3875
+            },
+            {
+              "text": "programs",
+              "start": 9.6125,
+              "duration": 0.7375
             }
           ],
-          "durationInFrames": 315
+          "durationInFrames": 332
         },
         {
           "kind": "beat",
-          "vo": "And Arm Holdings fell about 6 and a half percent, continuing its pullback after reaching peak levels earlier this year.",
-          "caption": "Arm Holdings -6.5% Pullback",
-          "ticker": "ARM",
-          "name": "Arm Holdings",
-          "price": 315.28,
-          "changePct": -6.5754,
+          "vo": "Dell dropped over 7 percent, moving with the broader semiconductor sector today.",
+          "caption": "Dell moves with sector",
+          "ticker": "DELL",
+          "name": "Dell",
+          "price": 394.32,
+          "changePct": -7.2734,
           "sentiment": "down",
           "keywords": [
-            "arm",
-            "down",
-            "chips"
+            "dell",
+            "semiconductors",
+            "down"
           ],
           "audio": "projects/stock/2026-07-04/audio/02-market-recap-aapl-05.mp3",
           "image": "projects/stock/2026-07-04/images/02-market-recap-aapl-05.jpg",
           "words": [
             {
-              "text": "And",
-              "start": 0.1,
-              "duration": 0.125
+              "text": "Dell",
+              "start": 0.0875,
+              "duration": 0.3375
             },
             {
-              "text": "Arm",
-              "start": 0.225,
-              "duration": 0.225
+              "text": "dropped",
+              "start": 0.4375,
+              "duration": 0.475
             },
             {
-              "text": "Holdings",
-              "start": 0.45,
-              "duration": 0.4625
+              "text": "over",
+              "start": 1.075,
+              "duration": 0.2125
             },
             {
-              "text": "fell",
-              "start": 0.925,
-              "duration": 0.2625
+              "text": "7 percent",
+              "start": 1.2875,
+              "duration": 0.925
             },
             {
-              "text": "about",
-              "start": 1.1875,
-              "duration": 0.2625
+              "text": "moving",
+              "start": 2.6625,
+              "duration": 0.2875
             },
             {
-              "text": "6",
-              "start": 1.4625,
-              "duration": 0.5125
-            },
-            {
-              "text": "and",
-              "start": 2.1,
-              "duration": 0.1625
-            },
-            {
-              "text": "a",
-              "start": 2.2625,
-              "duration": 0.0375
-            },
-            {
-              "text": "half",
-              "start": 2.3,
-              "duration": 0.4125
-            },
-            {
-              "text": "percent",
-              "start": 2.725,
-              "duration": 0.5375
-            },
-            {
-              "text": "continuing",
-              "start": 3.55,
-              "duration": 0.525
-            },
-            {
-              "text": "its",
-              "start": 4.075,
+              "text": "with",
+              "start": 2.95,
               "duration": 0.1
             },
             {
-              "text": "pullback",
-              "start": 4.175,
-              "duration": 0.6
+              "text": "the",
+              "start": 3.05,
+              "duration": 0.0875
             },
             {
-              "text": "after",
-              "start": 4.9,
-              "duration": 0.3375
+              "text": "broader",
+              "start": 3.1375,
+              "duration": 0.5
             },
             {
-              "text": "reaching",
-              "start": 5.25,
-              "duration": 0.3625
+              "text": "semiconductor",
+              "start": 3.9875,
+              "duration": 0.7
             },
             {
-              "text": "peak",
-              "start": 5.6125,
-              "duration": 0.3125
+              "text": "sector",
+              "start": 4.6875,
+              "duration": 0.4
             },
             {
-              "text": "levels",
-              "start": 5.925,
-              "duration": 0.3125
-            },
-            {
-              "text": "earlier",
-              "start": 6.25,
-              "duration": 0.35
-            },
-            {
-              "text": "this",
-              "start": 6.6,
-              "duration": 0.1875
-            },
-            {
-              "text": "year",
-              "start": 6.7875,
-              "duration": 0.3375
+              "text": "today",
+              "start": 5.1,
+              "duration": 0.425
             }
           ],
-          "durationInFrames": 235
+          "durationInFrames": 188
         },
         {
           "kind": "cta",
-          "vo": "Watching any of these moves?",
-          "text": "Watching any of these moves?",
+          "vo": "Watching any of these?",
+          "text": "Watching any of these?",
           "sentiment": "neutral",
           "audio": "projects/stock/2026-07-04/audio/02-market-recap-aapl-06.mp3",
           "image": "projects/stock/2026-07-04/images/02-market-recap-aapl-06.jpg",
           "words": [
             {
               "text": "Watching",
-              "start": 0.1,
-              "duration": 0.325
+              "start": 0.1125,
+              "duration": 0.2875
             },
             {
               "text": "any",
-              "start": 0.4375,
-              "duration": 0.2
+              "start": 0.4,
+              "duration": 0.175
             },
             {
               "text": "of",
-              "start": 0.65,
+              "start": 0.575,
               "duration": 0.075
             },
             {
               "text": "these",
-              "start": 0.725,
+              "start": 0.6625,
+              "duration": 0.5
+            }
+          ],
+          "durationInFrames": 56
+        }
+      ]
+    },
+    {
+      "type": "headline",
+      "title": "Oil Prices Dip Amid Geopolitical Shifts",
+      "file": "03_headline.mp4",
+      "hook": "Geopolitical tensions and oil prices saw movement today.",
+      "cta": "Watching any of these?",
+      "fbCaption": "Oil prices and geopolitical headlines made waves today. Here's what you need to know. For information only — not financial advice.",
+      "hashtags": [
+        "#OilPrices",
+        "#Geopolitics",
+        "#Iran",
+        "#MarketNews"
+      ],
+      "disclaimer": "For information only — not financial advice.",
+      "tickers": [],
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "Geopolitical tensions and oil prices saw movement today.",
+          "text": "Geopolitical tensions and oil prices saw movement today.",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-04/audio/03-headline-00.mp3",
+          "image": "projects/stock/2026-07-04/images/03-headline-00.jpg",
+          "words": [
+            {
+              "text": "Geopolitical",
+              "start": 0.0875,
+              "duration": 0.75
+            },
+            {
+              "text": "tensions",
+              "start": 0.85,
+              "duration": 0.6375
+            },
+            {
+              "text": "and",
+              "start": 1.75,
+              "duration": 0.1875
+            },
+            {
+              "text": "oil",
+              "start": 2.075,
+              "duration": 0.25
+            },
+            {
+              "text": "prices",
+              "start": 2.325,
+              "duration": 0.4625
+            },
+            {
+              "text": "saw",
+              "start": 3.05,
+              "duration": 0.3
+            },
+            {
+              "text": "movement",
+              "start": 3.35,
+              "duration": 0.5125
+            },
+            {
+              "text": "today",
+              "start": 3.875,
+              "duration": 0.425
+            }
+          ],
+          "durationInFrames": 151
+        },
+        {
+          "kind": "hook",
+          "vo": "Oil dipped to pre-Iran war prices, influencing broader market sentiment ahead of Q2 earnings.",
+          "text": "Oil prices dip",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-04/audio/03-headline-01.mp3",
+          "image": "projects/stock/2026-07-04/images/03-headline-01.jpg",
+          "words": [
+            {
+              "text": "Oil",
+              "start": 0.075,
               "duration": 0.225
             },
             {
-              "text": "moves",
-              "start": 0.95,
+              "text": "dipped",
+              "start": 0.3125,
+              "duration": 0.3625
+            },
+            {
+              "text": "to",
+              "start": 0.875,
+              "duration": 0.125
+            },
+            {
+              "text": "pre-Iran",
+              "start": 1.0125,
+              "duration": 0.75
+            },
+            {
+              "text": "war",
+              "start": 1.7625,
+              "duration": 0.3
+            },
+            {
+              "text": "prices",
+              "start": 2.0625,
               "duration": 0.6625
+            },
+            {
+              "text": "influencing",
+              "start": 3.1375,
+              "duration": 0.625
+            },
+            {
+              "text": "broader",
+              "start": 3.7625,
+              "duration": 0.3875
+            },
+            {
+              "text": "market",
+              "start": 4.15,
+              "duration": 0.35
+            },
+            {
+              "text": "sentiment",
+              "start": 4.5125,
+              "duration": 0.375
+            },
+            {
+              "text": "ahead",
+              "start": 4.9,
+              "duration": 0.4375
+            },
+            {
+              "text": "of",
+              "start": 5.6,
+              "duration": 0.0875
+            },
+            {
+              "text": "Q2",
+              "start": 5.7,
+              "duration": 0.5125
+            },
+            {
+              "text": "earnings",
+              "start": 6.2125,
+              "duration": 0.55
             }
           ],
-          "durationInFrames": 70
+          "durationInFrames": 224
+        },
+        {
+          "kind": "hook",
+          "vo": "This comes as Reuters reported Iran is exploring oil sales to Japan, with buyers seeking longer sanctions waivers.",
+          "text": "Iran eyes Japan oil sales",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-04/audio/03-headline-02.mp3",
+          "image": "projects/stock/2026-07-04/images/03-headline-02.jpg",
+          "words": [
+            {
+              "text": "This",
+              "start": 0.1,
+              "duration": 0.1625
+            },
+            {
+              "text": "comes",
+              "start": 0.2625,
+              "duration": 0.375
+            },
+            {
+              "text": "as",
+              "start": 0.65,
+              "duration": 0.25
+            },
+            {
+              "text": "Reuters",
+              "start": 0.9,
+              "duration": 0.4125
+            },
+            {
+              "text": "reported",
+              "start": 1.3125,
+              "duration": 0.4125
+            },
+            {
+              "text": "Iran",
+              "start": 1.7375,
+              "duration": 0.475
+            },
+            {
+              "text": "is",
+              "start": 2.3625,
+              "duration": 0.125
+            },
+            {
+              "text": "exploring",
+              "start": 2.4875,
+              "duration": 0.725
+            },
+            {
+              "text": "oil",
+              "start": 3.2125,
+              "duration": 0.3125
+            },
+            {
+              "text": "sales",
+              "start": 3.525,
+              "duration": 0.4375
+            },
+            {
+              "text": "to",
+              "start": 3.975,
+              "duration": 0.0875
+            },
+            {
+              "text": "Japan",
+              "start": 4.0625,
+              "duration": 0.525
+            },
+            {
+              "text": "with",
+              "start": 5,
+              "duration": 0.1375
+            },
+            {
+              "text": "buyers",
+              "start": 5.15,
+              "duration": 0.375
+            },
+            {
+              "text": "seeking",
+              "start": 5.525,
+              "duration": 0.5
+            },
+            {
+              "text": "longer",
+              "start": 6.025,
+              "duration": 0.4
+            },
+            {
+              "text": "sanctions",
+              "start": 6.425,
+              "duration": 0.4375
+            },
+            {
+              "text": "waivers",
+              "start": 6.8625,
+              "duration": 0.55
+            }
+          ],
+          "durationInFrames": 244
+        },
+        {
+          "kind": "hook",
+          "vo": "Additionally, the funeral of Khamenei in Iran projected a hardline grip, while Turkey's Erdogan commented on potential US-Iran deals.",
+          "text": "Geopolitical shifts",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-04/audio/03-headline-03.mp3",
+          "image": "projects/stock/2026-07-04/images/03-headline-03.jpg",
+          "words": [
+            {
+              "text": "Additionally",
+              "start": 0.1,
+              "duration": 0.6
+            },
+            {
+              "text": "the",
+              "start": 0.925,
+              "duration": 0.1
+            },
+            {
+              "text": "funeral",
+              "start": 1.025,
+              "duration": 0.4125
+            },
+            {
+              "text": "of",
+              "start": 1.4375,
+              "duration": 0.0875
+            },
+            {
+              "text": "Khamenei",
+              "start": 1.525,
+              "duration": 0.55
+            },
+            {
+              "text": "in",
+              "start": 2.075,
+              "duration": 0.075
+            },
+            {
+              "text": "Iran",
+              "start": 2.1625,
+              "duration": 0.425
+            },
+            {
+              "text": "projected",
+              "start": 2.6,
+              "duration": 0.575
+            },
+            {
+              "text": "a",
+              "start": 3.3,
+              "duration": 0.0375
+            },
+            {
+              "text": "hardline",
+              "start": 3.3375,
+              "duration": 0.6875
+            },
+            {
+              "text": "grip",
+              "start": 4.025,
+              "duration": 0.3625
+            },
+            {
+              "text": "while",
+              "start": 4.8375,
+              "duration": 0.175
+            },
+            {
+              "text": "Turkey's",
+              "start": 5.025,
+              "duration": 0.45
+            },
+            {
+              "text": "Erdogan",
+              "start": 5.4875,
+              "duration": 0.5
+            },
+            {
+              "text": "commented",
+              "start": 5.9875,
+              "duration": 0.5125
+            },
+            {
+              "text": "on",
+              "start": 6.575,
+              "duration": 0.125
+            },
+            {
+              "text": "potential",
+              "start": 6.7,
+              "duration": 0.5
+            },
+            {
+              "text": "US-Iran",
+              "start": 7.2,
+              "duration": 0.7
+            },
+            {
+              "text": "deals",
+              "start": 7.9125,
+              "duration": 0.5375
+            }
+          ],
+          "durationInFrames": 275
+        },
+        {
+          "kind": "cta",
+          "vo": "Watching any of these?",
+          "text": "Watching any of these?",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-04/audio/03-headline-04.mp3",
+          "words": [
+            {
+              "text": "Watching",
+              "start": 0.1125,
+              "duration": 0.2875
+            },
+            {
+              "text": "any",
+              "start": 0.4,
+              "duration": 0.175
+            },
+            {
+              "text": "of",
+              "start": 0.575,
+              "duration": 0.075
+            },
+            {
+              "text": "these",
+              "start": 0.6625,
+              "duration": 0.5
+            }
+          ],
+          "durationInFrames": 56
         }
       ]
     }

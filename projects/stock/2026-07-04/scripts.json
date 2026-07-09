@@ -1,122 +1,174 @@
 {
   "date": "2026-07-04",
-  "generatedAt": "2026-07-05T07:50:42.211Z",
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-07-05T17:21:43.801Z",
   "scripts": [
     {
       "type": "top-mover",
-      "title": "Moderna's Big Boost",
-      "hook": "Moderna surged over 10 percent today, catching Jim Cramer's eye.",
+      "title": "Moderna Leads Today's Movers",
+      "hook": "Moderna jumped a strong 10 percent today.",
       "beats": [
         {
-          "vo": "Moderna shares were up about 10 percent, after Jim Cramer expressed his liking for the stock, advising investors on market rotation.",
-          "caption": "Moderna +10%",
+          "vo": "That rally followed positive comments from Jim Cramer, who said he liked having a position in Moderna for the first time in ages.",
+          "caption": "Cramer likes MRNA",
           "ticker": "MRNA",
           "sentiment": "up",
           "keywords": [
             "moderna",
-            "up",
-            "biotech"
-          ]
-        },
-        {
-          "vo": "Cramer specifically highlighted Moderna's significant gains this year, seeing opportunity in the current market shift.",
-          "caption": "Cramer Likes MRNA",
-          "ticker": "MRNA",
-          "sentiment": "up",
-          "keywords": [
-            "moderna",
+            "stock",
             "cramer",
-            "positive"
+            "up"
           ]
         },
         {
-          "vo": "This positive sentiment comes as the market heads into its final week before second-quarter earnings reports.",
-          "caption": "Ahead of Q2 Earnings",
+          "vo": "Cramer highlighted the stock's significant gains this year and advised investors on navigating today's market rotation.",
+          "caption": "MRNA's yearly gains",
+          "ticker": "MRNA",
+          "sentiment": "up",
+          "keywords": [
+            "moderna",
+            "gains",
+            "market",
+            "rotation"
+          ]
+        },
+        {
+          "vo": "Moderna's move comes as the broader market trades sideways and oil dips, with Q2 earnings season just around the corner.",
+          "caption": "Q2 earnings ahead",
           "ticker": "MRNA",
           "sentiment": "neutral",
           "keywords": [
             "moderna",
+            "earnings",
             "market",
-            "earnings"
+            "oil"
           ]
         }
       ],
-      "cta": "What's your take on Moderna?",
+      "cta": "Watching any of these?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "Moderna took center stage today after a big jump! Find out why Jim Cramer is talking about it and what's next for the biotech giant. #Moderna #StockMarket #JimCramer #MarketNews",
+      "fbCaption": "Moderna made a big move today! Here's why. For information only — not financial advice.",
       "hashtags": [
         "#Moderna",
-        "#MRNA",
         "#StockMarket",
-        "#TopMover",
         "#JimCramer",
-        "#MarketNews",
-        "#Reels"
+        "#MarketNews"
       ]
     },
     {
       "type": "market-recap",
-      "title": "Tech Mixed, Apple Gains",
-      "hook": "Tech stocks saw big swings today, with Apple making headlines.",
+      "title": "Apple Climbs, Tesla Drops Today",
+      "hook": "Apple shares climbed almost 5 percent today.",
       "beats": [
         {
-          "vo": "Apple shares climbed nearly 5 percent, following news of its plans for a major iPhone lineup expansion, including its first foldable model.",
-          "caption": "Apple +5% on Foldable iPhone",
+          "vo": "The iPhone maker saw gains after news of its plans for foldable iPhones and an iPhone Ultra push in late 2026 and early 2027.",
+          "caption": "Apple's foldable iPhone plans",
           "ticker": "AAPL",
           "sentiment": "up",
           "keywords": [
             "apple",
             "iphone",
-            "up",
-            "tech"
+            "foldables",
+            "up"
           ]
         },
         {
-          "vo": "Meanwhile, Netflix also rose almost 5 percent. The streaming giant highlighted its asset-light business model, generating strong cash flow compared to competitors.",
-          "caption": "Netflix +5% Strong Cash Flow",
+          "vo": "Meanwhile, Netflix was also up over 4 and a half percent, as the company reported delivering an asset-light cash haul in its latest quarter.",
+          "caption": "Netflix cash flow strong",
           "ticker": "NFLX",
           "sentiment": "up",
           "keywords": [
             "netflix",
             "streaming",
+            "cash",
             "up"
           ]
         },
         {
-          "vo": "On the downside, Tesla dropped over 7 percent. This came after Barclays reiterated an Equalweight rating on the stock, citing cautious outlook concerns.",
-          "caption": "Tesla -7% on Cautious Outlook",
+          "vo": "On the downside, Tesla lost nearly 7 and a half percent, with cautious outlooks from analysts amid ongoing developments in its robotaxi and Optimus programs.",
+          "caption": "Tesla robotaxi outlook",
           "ticker": "TSLA",
           "sentiment": "down",
           "keywords": [
             "tesla",
-            "down",
-            "ev"
+            "robotaxi",
+            "optimus",
+            "down"
           ]
         },
         {
-          "vo": "And Arm Holdings fell about 6 and a half percent, continuing its pullback after reaching peak levels earlier this year.",
-          "caption": "Arm Holdings -6.5% Pullback",
-          "ticker": "ARM",
+          "vo": "Dell dropped over 7 percent, moving with the broader semiconductor sector today.",
+          "caption": "Dell moves with sector",
+          "ticker": "DELL",
           "sentiment": "down",
           "keywords": [
-            "arm",
-            "down",
-            "chips"
+            "dell",
+            "semiconductors",
+            "down"
           ]
         }
       ],
-      "cta": "Watching any of these moves?",
+      "cta": "Watching any of these?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "A mixed day for tech! Apple and Netflix saw gains, while Tesla and Arm Holdings pulled back. We break down the key movers and shakers. #StockMarket #TechStocks #Apple #Netflix #Tesla #ArmHoldings",
+      "fbCaption": "Apple, Netflix, Tesla, and Dell all saw significant moves today. Get the rundown! For information only — not financial advice.",
       "hashtags": [
-        "#StockMarket",
-        "#MarketRecap",
-        "#TechStocks",
         "#Apple",
         "#Netflix",
         "#Tesla",
-        "#ArmHoldings",
-        "#Reels"
+        "#Dell",
+        "#MarketRecap"
+      ]
+    },
+    {
+      "type": "headline",
+      "title": "Oil Prices Dip Amid Geopolitical Shifts",
+      "hook": "Geopolitical tensions and oil prices saw movement today.",
+      "beats": [
+        {
+          "vo": "Oil dipped to pre-Iran war prices, influencing broader market sentiment ahead of Q2 earnings.",
+          "caption": "Oil prices dip",
+          "ticker": "",
+          "sentiment": "neutral",
+          "keywords": [
+            "oil",
+            "prices",
+            "market",
+            "earnings"
+          ]
+        },
+        {
+          "vo": "This comes as Reuters reported Iran is exploring oil sales to Japan, with buyers seeking longer sanctions waivers.",
+          "caption": "Iran eyes Japan oil sales",
+          "ticker": "",
+          "sentiment": "neutral",
+          "keywords": [
+            "iran",
+            "oil",
+            "japan",
+            "sanctions"
+          ]
+        },
+        {
+          "vo": "Additionally, the funeral of Khamenei in Iran projected a hardline grip, while Turkey's Erdogan commented on potential US-Iran deals.",
+          "caption": "Geopolitical shifts",
+          "ticker": "",
+          "sentiment": "neutral",
+          "keywords": [
+            "iran",
+            "turkey",
+            "geopolitics",
+            "neutral"
+          ]
+        }
+      ],
+      "cta": "Watching any of these?",
+      "disclaimer": "For information only — not financial advice.",
+      "fbCaption": "Oil prices and geopolitical headlines made waves today. Here's what you need to know. For information only — not financial advice.",
+      "hashtags": [
+        "#OilPrices",
+        "#Geopolitics",
+        "#Iran",
+        "#MarketNews"
       ]
     }
   ]

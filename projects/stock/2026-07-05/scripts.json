@@ -1,50 +1,50 @@
 {
   "date": "2026-07-05",
-  "generatedAt": "2026-07-05T12:35:06.443Z",
+  "generatedAt": "2026-07-05T18:11:20.752Z",
   "scripts": [
     {
       "type": "top-mover",
       "title": "Moderna Soars This Week",
-      "hook": "Moderna jumped almost nineteen percent this week, making it a standout.",
+      "hook": "Moderna jumped almost 19 percent this week.",
       "beats": [
         {
-          "vo": "Moderna surged almost nineteen percent this week, closing near eighty dollars a share.",
-          "caption": "Moderna +18.57%",
+          "vo": "This significant rise came after Jim Cramer expressed his liking for the stock, highlighting its year-to-date gains.",
+          "caption": "Cramer likes Moderna",
           "ticker": "MRNA",
           "sentiment": "up",
           "keywords": [
             "modera",
+            "cramer",
             "pharma",
             "up"
           ]
         },
         {
-          "vo": "The company saw renewed investor interest after market commentator Jim Cramer expressed liking his position in the stock for the first time in ages.",
-          "caption": "Cramer likes MRNA",
-          "ticker": "MRNA",
-          "sentiment": "up",
+          "vo": "The positive sentiment emerged as markets saw some rotation, with oil prices also dipping to pre-Iran war levels.",
+          "caption": "Market rotation",
+          "ticker": "",
+          "sentiment": "neutral",
           "keywords": [
-            "modera",
-            "stock",
-            "opinion"
+            "market",
+            "oil",
+            "economy"
           ]
         },
         {
-          "vo": "This came as oil prices dipped and the market saw a rotation into certain stocks ahead of the second quarter earnings season.",
-          "caption": "Market rotation, oil dips",
+          "vo": "Investors are now watching Moderna closely as the final week before second-quarter earnings approaches.",
+          "caption": "Q2 earnings ahead",
           "ticker": "MRNA",
           "sentiment": "neutral",
           "keywords": [
             "modera",
-            "market",
-            "oil",
-            "earnings"
+            "earnings",
+            "watch"
           ]
         }
       ],
-      "cta": "Watching Moderna? Let us know!",
+      "cta": "Watching any of these?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "Moderna led the pack this week with a significant jump. Here's why. For information only — not financial advice.",
+      "fbCaption": "Moderna took center stage this week with a big jump. Find out why! For information only — not financial advice.",
       "hashtags": [
         "#Moderna",
         "#StockMarket",
@@ -54,65 +54,65 @@
     },
     {
       "type": "market-recap",
-      "title": "Weekly Market Movers: AI and Crypto",
-      "hook": "Palantir shares rose just over fourteen percent this week.",
+      "title": "Weekly Market Wrap: Apple, Palantir, and Chip Stocks",
+      "hook": "Apple climbed almost 9 percent this week.",
       "beats": [
         {
-          "vo": "Palantir shares rose just over fourteen percent this week after CEO Alex Karp voiced concerns that enterprise customers are wary of frontier AI companies fearing for their intellectual property.",
-          "caption": "Palantir +14.50%",
+          "vo": "The tech giant saw this surge moving with the broader tech sector, as no specific company news was reported.",
+          "caption": "Apple with tech sector",
+          "ticker": "AAPL",
+          "sentiment": "up",
+          "keywords": [
+            "apple",
+            "tech",
+            "up"
+          ]
+        },
+        {
+          "vo": "Meanwhile, Palantir gained about 14 and a half percent after its CEO Alex Karp said enterprises fear for their intellectual property with frontier AI companies.",
+          "caption": "Palantir AI skepticism",
           "ticker": "PLTR",
           "sentiment": "up",
           "keywords": [
             "palantir",
             "ai",
+            "software",
             "up"
           ]
         },
         {
-          "vo": "Meanwhile, Coinbase climbed over eleven percent as Bitcoin traded above sixty-two thousand dollars, fueled by renewed momentum for US cryptocurrency legislation.",
-          "caption": "Coinbase +11.02%",
+          "vo": "In crypto, Coinbase rose over 11 percent as Bitcoin traded above 62-thousand dollars, fueled by renewed momentum for US crypto legislation.",
+          "caption": "Coinbase rides Bitcoin",
           "ticker": "COIN",
           "sentiment": "up",
           "keywords": [
             "coinbase",
-            "crypto",
             "bitcoin",
+            "crypto",
             "up"
           ]
         },
         {
-          "vo": "On the downside, Micron fell nearly fourteen percent. This came as Wall Street veterans flagged the chip maker's sell-off as a potential warning sign for the broader AI sector.",
-          "caption": "Micron -13.84%",
+          "vo": "On the downside, Micron fell almost 14 percent despite recent positive comments from Wall Street and Nvidia's CEO about strong AI-driven demand for memory chips.",
+          "caption": "Micron drops despite AI news",
           "ticker": "MU",
           "sentiment": "down",
           "keywords": [
             "micron",
             "chips",
-            "ai",
-            "down"
-          ]
-        },
-        {
-          "vo": "And Super Micro Computer dropped over eleven percent, moving with the broader semiconductor sector this week.",
-          "caption": "Super Micro -11.13%",
-          "ticker": "SMCI",
-          "sentiment": "down",
-          "keywords": [
-            "supermicro",
-            "chips",
+            "semiconductors",
             "down"
           ]
         }
       ],
       "cta": "What caught your eye this week?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "A look at this week's notable stock moves, from Palantir's AI insights to Micron's dip. For information only — not financial advice.",
+      "fbCaption": "This week's market highlights included Apple, Palantir, and Coinbase on the rise, while some chip stocks dipped. Get the details! For information only — not financial advice.",
       "hashtags": [
         "#MarketRecap",
-        "#Palantir",
-        "#Coinbase",
-        "#Micron",
-        "#AIStocks"
+        "#WeeklyReview",
+        "#StockMarket",
+        "#TechStocks"
       ]
     }
   ]

@@ -87,7 +87,23 @@
 	function setProgress(job) {
 		progWrap.classList.remove('hidden');
 		progFill.style.width = `${Math.round((job.progress || 0) * 100)}%`;
-		progLabel.textContent = job.error ? `Error: ${job.error}` : prettyStage(job.stage);
+		const pct = Math.round((job.progress || 0) * 100);
+		progLabel.textContent = job.error
+			? `Error: ${job.error}`
+			: `${pct}% · ${prettyStage(job.stage)}${job.detail ? ` — ${job.detail}` : ''}`;
+	}
+
+	// Poll the pipeline log so a slow/stalled run is visible, not a mystery.
+	async function refreshLog(date) {
+		const logEl = $('stockLog');
+		if (!logEl) return;
+		try {
+			const res = await fetch(`/api/stock/log?date=${encodeURIComponent(date)}&lines=40`);
+			logEl.textContent = await res.text();
+			logEl.scrollTop = logEl.scrollHeight;
+		} catch {
+			/* ignore */
+		}
 	}
 
 	function prettyStage(stage) {
@@ -110,6 +126,7 @@
 		const res = await fetch(`/api/stock/status?date=${encodeURIComponent(date)}`);
 		const job = await res.json();
 		setProgress(job);
+		refreshLog(date);
 		if (job.done) {
 			clearInterval(polling);
 			polling = null;

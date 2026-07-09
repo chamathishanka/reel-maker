@@ -173,8 +173,11 @@ function boardRows(movers) {
 }
 
 // Synthesize VO per segment (fit frames to audio) and generate a backdrop image
-// for each content beat. Both write under public/ before bundling.
-async function prepareSegments(segments, dirs, reelSlug) {
+// for each content beat. Sequential by design — the free image service
+// (Pollinations) rate-limits concurrent requests per IP (429s), so running
+// these in parallel causes MORE failures/gradient-fallbacks, not fewer. No
+// rush: correctness and image quality matter more than shaving a minute.
+async function prepareSegments(segments, dirs, reelSlug, onSegment) {
 	const {audioDir, publicAudioRel, imageDir, publicImageRel} = dirs;
 	fs.mkdirSync(audioDir, {recursive: true});
 	const out = [];
@@ -184,6 +187,7 @@ async function prepareSegments(segments, dirs, reelSlug) {
 
 		const audioFile = `${reelSlug}-${idx}.mp3`;
 		const spoken = speechFriendly(seg.vo || seg.text || '.');
+		onSegment?.({index: i, total: segments.length, phase: 'voice'});
 		const {wordBoundaries} = await synthesize(spoken, path.join(audioDir, audioFile));
 		const dur = await audioDuration(path.join(audioDir, audioFile));
 		// Real per-word timings for karaoke captions; estimate if the engine
@@ -193,6 +197,7 @@ async function prepareSegments(segments, dirs, reelSlug) {
 		// Every segment gets a dimmed backdrop image (no more flat-black hook/cta).
 		// Beats use their stock's sector; hook/cta use generic "markets" scenes.
 		const sector = seg.kind === 'beat' ? tickerMap[seg.ticker]?.sector || 'markets' : 'markets';
+		onSegment?.({index: i, total: segments.length, phase: 'image'});
 		const img = await generateBeatImage({
 			sector,
 			sentiment: seg.sentiment,
@@ -268,7 +273,17 @@ export async function renderDay({date = todayStr(), onProgress} = {}) {
 
 		onProgress?.({stage: 'voicing', reel: r + 1, of: scripts.length, type: script.type});
 		const planned = planSegments(script, quotesByTicker, marketData.movers, marketData.mode === 'weekly');
-		const segments = await prepareSegments(planned, dirs, `${num}-${reelSlug}`);
+		const segments = await prepareSegments(planned, dirs, `${num}-${reelSlug}`, (s) =>
+			onProgress?.({
+				stage: 'voicing',
+				reel: r + 1,
+				of: scripts.length,
+				type: script.type,
+				segment: s.index + 1,
+				segments: s.total,
+				phase: s.phase,
+			}),
+		);
 
 		const musicAudio = pickMusic(date, publicMusicDir, publicMusicRel);
 

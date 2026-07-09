@@ -28,6 +28,11 @@ than inventing a cause. NEVER fabricate a reason, a number, or a headline.
    mixed", "several stocks moved", "tech had a busy day", "stocks were volatile".
    Those say nothing and kill the hook. Name a specific thing, always.
 2. Each BEAT: one specific number + ticker + the WHY, in 1–2 spoken sentences.
+   **Beat 1 must NOT restate the hook.** The hook grabs attention; beat 1 moves
+   the story FORWARD with new information (the reason, a detail, context) — never
+   repeat the hook's sentence or its headline number back-to-back. If the hook
+   already said "Moderna jumped 10 percent," beat 1 goes straight to WHY, not
+   "Moderna jumped 10 percent" again.
 3. Optional retention twist: tease the last/most surprising beat early.
 4. CTA: one short, soft engagement question (e.g. "Watching any of these?").
 5. DISCLAIMER: exactly "For information only — not financial advice."

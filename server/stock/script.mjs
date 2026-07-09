@@ -112,8 +112,10 @@ function buildDaySetPrompt(data, mode = 'daily') {
 		`line, different lead stock/topic, different focus. No two reels may lead with ` +
 		`the same stock. Assign these lanes:\n` +
 		`1. "top-mover" (ALWAYS): a single-stock deep story on ${tm ? tm.name + ' (' + tm.ticker + ')' : 'the biggest mover'}, ` +
-		`framed as ${period}'s standout. Only THIS reel may lead with that stock. Break the one story into 3 beats — the move, ` +
-		`the reason/why, and one line of factual context (all the same stock, each its own beat).\n` +
+		`framed as ${period}'s standout. Only THIS reel may lead with that stock. The hook states the move; ` +
+		`then 3 beats that ADVANCE the story WITHOUT restating the hook — (1) the reason/why, (2) supporting ` +
+		`context or a related detail, (3) what it means going forward. Never make a beat that just repeats the ` +
+		`hook's number.\n` +
 		`2. "market-recap" (ALWAYS): a broader ${weekly ? 'week-in-review' : 'tour'}. It must NOT lead with ${tm ? tm.ticker : 'the top mover'}; ` +
 		`instead open the HOOK on ONE specific standout — a named stock (not the top mover) and its exact ` +
 		`number — then cover 3–4 DIFFERENT names. Do NOT open with a vague "mixed market" / "several stocks moved" line.\n` +

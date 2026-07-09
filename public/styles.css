@@ -431,3 +431,23 @@ body.mode-stock #stockHeader { display: block; }
 }
 .stock-reel-links a { color: var(--accent-2); text-decoration: none; font-size: 13px; }
 .stock-reel-links a:hover { text-decoration: underline; }
+
+/* ---- Stock live log ------------------------------------------------------ */
+.stock-log-wrap { margin-top: 14px; }
+.stock-log-wrap summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+.stock-log-wrap summary:hover { color: var(--stamp); }
+.stock-log {
+  margin-top: 10px;
+  max-height: 260px;
+  overflow: auto;
+  background: var(--bg-2);
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Consolas', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
