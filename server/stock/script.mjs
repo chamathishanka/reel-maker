@@ -107,7 +107,9 @@ function buildDaySetPrompt(data, mode = 'daily') {
 		`Top losers:\n${movers.losers.map(moverLine).join('\n')}\n` +
 		moverNewsBlock(allMovers, moverNews) +
 		`\nMarket headlines:\n${newsBlock(marketNews, 8)}\n\n` +
-		`TASK: produce a SET of ${weekly ? '1 OR 2' : '2 OR 3'} short reels for ${period}. They post ` +
+		// Weekly must be EXACTLY 2: the Saturday run slots one reel to Saturday and
+		// one to Sunday, so a single-reel week would leave Sunday with no video.
+		`TASK: produce a SET of ${weekly ? 'EXACTLY 2' : '2 OR 3'} short reels for ${period}. They post ` +
 		`together, so they MUST read as clearly different videos — different opening ` +
 		`line, different lead stock/topic, different focus. No two reels may lead with ` +
 		`the same stock. Assign these lanes:\n` +

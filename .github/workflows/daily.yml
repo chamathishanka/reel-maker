@@ -1,0 +1,88 @@
+name: Daily stock reels
+
+# 22:15 UTC, Mon-Fri = 18:15 ET (EDT) / 17:15 ET (EST) — comfortably after the
+# 16:00 ET close in both DST regimes, with time for quotes and news to settle.
+#
+# Cron precision does not matter here: the run renders the reels and then hands
+# Facebook three future `scheduled_publish_time` values (see server/stock/market.mjs).
+# Meta fires them at the right moment, so an hour of GitHub cron jitter is harmless.
+on:
+  schedule:
+    # Weekdays: after the US close, three reels spread over the next ~18h.
+    - cron: '15 22 * * 1-5'
+    # Saturday morning: the weekly wrap. Emits two reels and slots one to
+    # Saturday 11:00 ET and one to Sunday 11:00 ET, so the weekend isn't dark.
+    # 13:00 UTC = 09:00 ET (EDT) / 08:00 ET (EST) — both clear the 11:00 slot.
+    - cron: '0 13 * * 6'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Trading date (YYYY-MM-DD). Blank = today in ET.'
+        required: false
+        type: string
+      dry_run:
+        description: 'Render, but only print the post slots instead of scheduling them.'
+        required: false
+        type: boolean
+        default: true
+
+# Never let two runs render/publish the same day concurrently.
+concurrency:
+  group: daily-stock-reels
+  cancel-in-progress: false
+
+jobs:
+  render-and-schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Remotion renders in headless Chrome. Fetch the Headless Shell up front so
+      # a download failure surfaces as its own step rather than mid-render.
+      - name: Ensure Chrome Headless Shell
+        run: npx remotion browser ensure
+
+      # Args are assembled in the shell, not by YAML interpolation — an empty
+      # `inputs.date` would otherwise leave a dangling line-continuation.
+      - name: Render and schedule reels
+        run: |
+          args=()
+          if [ -n "$INPUT_DATE" ]; then args+=("$INPUT_DATE"); fi
+          args+=(--publish)
+          if [ "$INPUT_DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          echo "Running: node server/stock/pipeline.mjs ${args[*]}"
+          node server/stock/pipeline.mjs "${args[@]}"
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+          INPUT_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          STOCK_DATA_PROVIDER: ${{ vars.STOCK_DATA_PROVIDER || 'finnhub' }}
+          STOCK_TTS_VOICE: ${{ vars.STOCK_TTS_VOICE || 'en-US-AndrewMultilingualNeural' }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+
+      # The mp4s are already uploaded to Facebook by this point; keep them only
+      # long enough to debug a bad render. 3 days x ~31MB stays inside the free
+      # 500MB artifact allowance.
+      - name: Upload rendered reels
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reels-${{ github.run_id }}
+          path: |
+            output/stock/**/*.mp4
+            output/stock/**/pipeline.log
+          retention-days: 3
+          if-no-files-found: ignore

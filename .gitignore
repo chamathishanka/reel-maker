@@ -10,10 +10,13 @@ projects/**/images/
 projects/**/audio/
 public/projects/
 
-# Music tracks — binary/licensed audio stays local (README + .gitkeep tracked)
+# Music tracks — committed so the unattended CI render has a music bed. This
+# requires the repo stay PRIVATE: these are licensed tracks, not ours to
+# redistribute. Renders degrade to silence (not failure) if this folder is empty.
 assets/stock/music/*
 !assets/stock/music/README.md
 !assets/stock/music/.gitkeep
+!assets/stock/music/*.mp3
 
 # Per-render / generated project artefacts
 **/slides.resolved.json

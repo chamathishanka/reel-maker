@@ -329,7 +329,9 @@ const WordCaptions = ({words = [], groupSize = 3}) => {
 			style={{
 				alignItems: 'center',
 				justifyContent: 'flex-end',
-				paddingBottom: 340,
+				// Sits under the ticker card, well clear of the bottom ~320px that
+				// Reels/TikTok cover with their own caption + action-button chrome.
+				paddingBottom: 520,
 				paddingLeft: 70,
 				paddingRight: 70,
 			}}

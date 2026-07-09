@@ -123,14 +123,23 @@ export async function generateBeatImage({
 	const prompt = buildImagePrompt({sector, sentiment, variant});
 	const seed = seedFrom(cacheKey + prompt);
 	fs.mkdirSync(outDir, {recursive: true});
-	for (let attempt = 1; attempt <= 2; attempt++) {
+
+	// Pollinations is unauthenticated and rate-limits erratically. Back off
+	// exponentially with jitter so a burst of 500s in an unattended run doesn't
+	// cost us every backdrop at once. A total miss is survivable — the caller
+	// falls back to a gradient — but each retry is much cheaper than that.
+	const MAX_ATTEMPTS = 4;
+	for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
 		try {
 			const buf = await fetchImage(prompt, seed);
 			fs.writeFileSync(absPath, buf);
 			return {absPath, fileName, cached: false};
 		} catch (err) {
-			console.warn(`[images] ${cacheKey} attempt ${attempt} failed: ${err.message}`);
-			if (attempt < 2) await new Promise((r) => setTimeout(r, 1500));
+			console.warn(`[images] ${cacheKey} attempt ${attempt}/${MAX_ATTEMPTS} failed: ${err.message}`);
+			if (attempt < MAX_ATTEMPTS) {
+				const backoff = 1500 * 2 ** (attempt - 1) + Math.random() * 500;
+				await new Promise((r) => setTimeout(r, backoff));
+			}
 		}
 	}
 	return null; // caller falls back to gradient

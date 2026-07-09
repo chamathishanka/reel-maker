@@ -64,7 +64,8 @@ const finnhub = {
 							`https://finnhub.io/api/v1/quote?symbol=${ticker}&token=${key}`,
 							`quote ${ticker}`,
 						);
-						// Finnhub quote: c=current, d=change, dp=percent, pc=prevClose
+						// Finnhub quote: c=current, d=change, dp=percent, pc=prevClose,
+						// t=unix seconds of the last trade (used for staleness checks).
 						if (q && typeof q.c === 'number' && q.c > 0) {
 							return {
 								ticker,
@@ -76,6 +77,7 @@ const finnhub = {
 								high: q.h,
 								low: q.l,
 								open: q.o,
+								quoteTime: q.t,
 							};
 						}
 						return null;
