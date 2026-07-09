@@ -47,6 +47,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # renderStock.mjs shells out to bare `ffprobe` to measure voiceover length.
+      # It is NOT preinstalled on the ubuntu-24.04 runner image.
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffprobe -version | head -1
+
       # Remotion renders in headless Chrome. Fetch the Headless Shell up front so
       # a download failure surfaces as its own step rather than mid-render.
       - name: Ensure Chrome Headless Shell
