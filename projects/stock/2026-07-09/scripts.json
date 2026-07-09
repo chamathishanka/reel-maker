@@ -1,166 +1,131 @@
 {
   "date": "2026-07-09",
-  "generatedAt": "2026-07-09T16:36:20.626Z",
+  "generatedAt": "2026-07-09T17:09:07.337Z",
   "scripts": [
     {
       "type": "top-mover",
-      "title": "Arm Holdings Soars Today",
-      "hook": "Arm Holdings jumped over 11 percent today.",
+      "title": "Arm Holdings Soars on AI Enthusiasm",
+      "hook": "Arm Holdings jumped over eleven percent today.",
       "beats": [
         {
-          "vo": "The semiconductor designer surged to just over 333 dollars, continuing the strong momentum seen across the broader chip sector.",
-          "caption": "ARM: +11.12% to $333.64",
+          "vo": "The chip designer rallied sharply with the broader semiconductor sector, driven by renewed AI enthusiasm.",
+          "caption": "ARM: +11.12% on AI hype",
           "ticker": "ARM",
           "sentiment": "up",
           "keywords": [
             "arm",
             "semiconductor",
-            "up",
-            "tech"
-          ]
-        },
-        {
-          "vo": "This significant climb comes as investor excitement around artificial intelligence continues to drive demand for advanced processing units.",
-          "caption": "AI Demand Fuels Chip Sector",
-          "ticker": "",
-          "sentiment": "up",
-          "keywords": [
             "ai",
-            "chips",
-            "innovation",
-            "growth"
-          ]
-        },
-        {
-          "vo": "The rally in Arm was part of a broader trend, with other chip-related stocks also seeing substantial gains, pushing the Nasdaq index higher.",
-          "caption": "Nasdaq Climbs 150+ Points",
-          "ticker": "",
-          "sentiment": "up",
-          "keywords": [
-            "tech",
-            "market",
-            "nasdaq",
             "up"
           ]
         },
         {
-          "vo": "For information only — not financial advice.",
-          "caption": "NOT FINANCIAL ADVICE",
-          "ticker": "",
-          "sentiment": "neutral",
+          "vo": "This surge, alongside other big tech names, reflected strong investor confidence in advanced chip technology.",
+          "caption": "Sector-wide confidence",
+          "ticker": "ARM",
+          "sentiment": "up",
           "keywords": [
-            "disclaimer"
+            "tech",
+            "investor",
+            "confidence",
+            "up"
+          ]
+        },
+        {
+          "vo": "The sector's performance signals continued belief in advanced chip technology's future.",
+          "caption": "Future of chip tech",
+          "ticker": "ARM",
+          "sentiment": "up",
+          "keywords": [
+            "chips",
+            "future",
+            "tech",
+            "up"
           ]
         }
       ],
-      "cta": "Watching any of these chip stocks?",
+      "cta": "What's driving your portfolio?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "Arm Holdings was a standout today, soaring over 11% as the AI-driven chip sector continues its strong run. Find out why it moved and what else impacted markets!",
+      "fbCaption": "Arm Holdings led today's market movers, with chip stocks continuing their strong run. For information only — not financial advice.",
       "hashtags": [
         "#ArmHoldings",
-        "#ARM",
         "#ChipStocks",
-        "#AITrade",
-        "#MarketRecap",
-        "#StockMarket"
+        "#AI",
+        "#MarketRecap"
       ]
     },
     {
       "type": "market-recap",
-      "title": "Chip Stocks Surge, Retail Dips",
-      "hook": "AMD climbed about 7 and a half percent today.",
+      "title": "Semiconductor Surge, Retailer Dip",
+      "hook": "AMD shares climbed almost eight percent today.",
       "beats": [
         {
-          "vo": "The chipmaker rose as the broader semiconductor sector saw a renewed interest in AI-related stocks, reaching just over 556 dollars.",
-          "caption": "AMD: +7.50% to $556.21",
+          "vo": "The chipmaker gained as AI trade excitement reignited across the semiconductor sector, with Micron also up over seven percent.",
+          "caption": "AMD: +7.50% & MU: +7.26% on AI",
           "ticker": "AMD",
           "sentiment": "up",
           "keywords": [
             "amd",
-            "semiconductor",
-            "ai",
-            "up"
-          ]
-        },
-        {
-          "vo": "Micron also gained over 7 percent, moving with the positive sentiment in the chip industry and the reignited AI trade.",
-          "caption": "Micron: +7.26% to $1017.64",
-          "ticker": "MU",
-          "sentiment": "up",
-          "keywords": [
             "micron",
             "chips",
-            "ai",
-            "up"
+            "ai"
           ]
         },
         {
-          "vo": "On the downside, retail giant Costco dipped by about 4 and a half percent during the session.",
-          "caption": "Costco: -4.53% to $909.95",
+          "vo": "On the downside, Costco fell over four-and-a-half percent, gapping lower with other S&P 500 names.",
+          "caption": "COST: -4.53% gap down",
           "ticker": "COST",
           "sentiment": "down",
           "keywords": [
             "costco",
             "retail",
             "down",
-            "market"
+            "sp500"
           ]
         },
         {
-          "vo": "And Palantir lost over 4 percent today, with its shares trading lower alongside some other tech names.",
-          "caption": "Palantir: -4.14% to $126.74",
+          "vo": "Palantir also dropped over four percent, despite new partnership announcements.",
+          "caption": "PLTR: -4.14% on news",
           "ticker": "PLTR",
           "sentiment": "down",
           "keywords": [
             "palantir",
-            "tech",
             "software",
-            "down"
-          ]
-        },
-        {
-          "vo": "For information only — not financial advice.",
-          "caption": "NOT FINANCIAL ADVICE",
-          "ticker": "",
-          "sentiment": "neutral",
-          "keywords": [
-            "disclaimer"
+            "down",
+            "ai"
           ]
         }
       ],
-      "cta": "What's in your portfolio today?",
+      "cta": "Watching any of these today?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "Today's market saw chip stocks like AMD and Micron surge on renewed AI enthusiasm, while Costco and Palantir ended the day lower. Get the full market rundown!",
+      "fbCaption": "From surging chip stocks to a dip in retail, here's a quick look at today's market. For information only — not financial advice.",
       "hashtags": [
-        "#MarketRecap",
-        "#AMD",
-        "#Micron",
-        "#Costco",
-        "#Palantir",
+        "#MarketMovers",
         "#StockMarket",
-        "#TechStocks"
+        "#AMD",
+        "#Costco"
       ]
     },
     {
       "type": "headline",
-      "title": "Middle East Tensions & Market Moves",
-      "hook": "Geopolitical events in the Middle East captured market attention today.",
+      "title": "Geopolitical Tensions in Focus",
+      "hook": "Geopolitical tensions in the Middle East were a key focus today.",
       "beats": [
         {
-          "vo": "Reports indicated Iran fired ballistic missiles, reportedly hitting US military targets in the Gulf, following recent tensions in the region.",
-          "caption": "Iran-US Tensions Rise",
+          "vo": "Reuters reported Iran claimed to hit US military targets in the Gulf, following ballistic missile launches.",
+          "caption": "Iran claims US target hit",
           "ticker": "",
           "sentiment": "neutral",
           "keywords": [
-            "iran",
             "geopolitics",
-            "news",
-            "world"
+            "iran",
+            "gulf",
+            "tensions"
           ]
         },
         {
-          "vo": "Despite these developments, the S&P 500 and Nasdaq indexes opened higher, largely driven by strong gains in the semiconductor sector.",
-          "caption": "S&P 500 & Nasdaq Up",
+          "vo": "Despite these rising tensions, both the S&P 500 and Nasdaq still opened higher.",
+          "caption": "S&P 500, Nasdaq higher",
           "ticker": "",
           "sentiment": "up",
           "keywords": [
@@ -171,38 +136,26 @@
           ]
         },
         {
-          "vo": "Meanwhile, oil producer Occidental Petroleum dipped about 2 and a half percent today, with investors weighing various market factors.",
-          "caption": "Occidental Dips -2.59%",
-          "ticker": "OXY",
-          "sentiment": "down",
-          "keywords": [
-            "occidental",
-            "oil",
-            "energy",
-            "down"
-          ]
-        },
-        {
-          "vo": "For information only — not financial advice.",
-          "caption": "NOT FINANCIAL ADVICE",
+          "vo": "This market resilience was largely driven by strong gains in chip stocks.",
+          "caption": "Chip stocks drive gains",
           "ticker": "",
-          "sentiment": "neutral",
+          "sentiment": "up",
           "keywords": [
-            "disclaimer"
+            "chips",
+            "tech",
+            "market",
+            "up"
           ]
         }
       ],
-      "cta": "How do you think these events will impact markets?",
+      "cta": "What caught your eye?",
       "disclaimer": "For information only — not financial advice.",
-      "fbCaption": "Geopolitical events in the Middle East made headlines today, but the market's response was mixed. The Nasdaq pushed higher, while some stocks like Occidental Petroleum saw declines. Dive into the details!",
+      "fbCaption": "Geopolitical events unfolded today, but the market found resilience in tech. For information only — not financial advice.",
       "hashtags": [
         "#Geopolitics",
         "#MarketNews",
-        "#Iran",
-        "#USMarket",
         "#StockMarket",
-        "#Nasdaq",
-        "#SP500"
+        "#MiddleEast"
       ]
     }
   ]

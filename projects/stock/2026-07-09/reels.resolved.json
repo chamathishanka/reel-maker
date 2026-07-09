@@ -1,0 +1,1182 @@
+{
+  "date": "2026-07-09",
+  "results": [
+    {
+      "type": "top-mover",
+      "title": "Arm Holdings Soars on AI Enthusiasm",
+      "file": "01_top-mover-arm.mp4",
+      "hook": "Arm Holdings jumped over eleven percent today.",
+      "cta": "What's driving your portfolio?",
+      "fbCaption": "Arm Holdings led today's market movers, with chip stocks continuing their strong run. For information only — not financial advice.",
+      "hashtags": [
+        "#ArmHoldings",
+        "#ChipStocks",
+        "#AI",
+        "#MarketRecap"
+      ],
+      "disclaimer": "For information only — not financial advice.",
+      "tickers": [
+        "ARM"
+      ],
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "Arm Holdings jumped over eleven percent today.",
+          "text": "Arm Holdings jumped over eleven percent today.",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-09/audio/01-top-mover-arm-00.mp3",
+          "image": "projects/stock/2026-07-09/images/01-top-mover-arm-00.jpg",
+          "words": [
+            {
+              "text": "Arm",
+              "start": 0.1,
+              "duration": 0.225
+            },
+            {
+              "text": "Holdings",
+              "start": 0.325,
+              "duration": 0.4625
+            },
+            {
+              "text": "jumped",
+              "start": 0.8625,
+              "duration": 0.425
+            },
+            {
+              "text": "over",
+              "start": 1.4125,
+              "duration": 0.2375
+            },
+            {
+              "text": "eleven",
+              "start": 1.65,
+              "duration": 0.35
+            },
+            {
+              "text": "percent",
+              "start": 2,
+              "duration": 0.375
+            },
+            {
+              "text": "today",
+              "start": 2.375,
+              "duration": 0.3875
+            }
+          ],
+          "durationInFrames": 104
+        },
+        {
+          "kind": "beat",
+          "vo": "The chip designer rallied sharply with the broader semiconductor sector, driven by renewed AI enthusiasm.",
+          "caption": "ARM: +11.12% on AI hype",
+          "ticker": "ARM",
+          "name": "Arm Holdings",
+          "price": 333.64,
+          "changePct": 11.1244,
+          "sentiment": "up",
+          "keywords": [
+            "arm",
+            "semiconductor",
+            "ai",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-09/audio/01-top-mover-arm-01.mp3",
+          "image": "projects/stock/2026-07-09/images/01-top-mover-arm-01.jpg",
+          "words": [
+            {
+              "text": "The",
+              "start": 0.1125,
+              "duration": 0.0625
+            },
+            {
+              "text": "chip",
+              "start": 0.175,
+              "duration": 0.2375
+            },
+            {
+              "text": "designer",
+              "start": 0.425,
+              "duration": 0.5125
+            },
+            {
+              "text": "rallied",
+              "start": 0.9375,
+              "duration": 0.3875
+            },
+            {
+              "text": "sharply",
+              "start": 1.3375,
+              "duration": 0.55
+            },
+            {
+              "text": "with",
+              "start": 1.8875,
+              "duration": 0.1125
+            },
+            {
+              "text": "the",
+              "start": 2,
+              "duration": 0.0875
+            },
+            {
+              "text": "broader",
+              "start": 2.1,
+              "duration": 0.475
+            },
+            {
+              "text": "semiconductor",
+              "start": 2.5875,
+              "duration": 0.725
+            },
+            {
+              "text": "sector",
+              "start": 3.325,
+              "duration": 0.5125
+            },
+            {
+              "text": "driven",
+              "start": 4.2125,
+              "duration": 0.3125
+            },
+            {
+              "text": "by",
+              "start": 4.525,
+              "duration": 0.1375
+            },
+            {
+              "text": "renewed",
+              "start": 4.675,
+              "duration": 0.6
+            },
+            {
+              "text": "AI",
+              "start": 5.45,
+              "duration": 0.5875
+            },
+            {
+              "text": "enthusiasm",
+              "start": 6.225,
+              "duration": 0.8625
+            }
+          ],
+          "durationInFrames": 234
+        },
+        {
+          "kind": "beat",
+          "vo": "This surge, alongside other big tech names, reflected strong investor confidence in advanced chip technology.",
+          "caption": "Sector-wide confidence",
+          "ticker": "ARM",
+          "name": "Arm Holdings",
+          "price": 333.64,
+          "changePct": 11.1244,
+          "sentiment": "up",
+          "keywords": [
+            "tech",
+            "investor",
+            "confidence",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-09/audio/01-top-mover-arm-02.mp3",
+          "image": "projects/stock/2026-07-09/images/01-top-mover-arm-02.jpg",
+          "words": [
+            {
+              "text": "This",
+              "start": 0.1,
+              "duration": 0.2
+            },
+            {
+              "text": "surge",
+              "start": 0.3125,
+              "duration": 0.5375
+            },
+            {
+              "text": "alongside",
+              "start": 1.05,
+              "duration": 0.8
+            },
+            {
+              "text": "other",
+              "start": 1.8625,
+              "duration": 0.275
+            },
+            {
+              "text": "big",
+              "start": 2.2625,
+              "duration": 0.3625
+            },
+            {
+              "text": "tech",
+              "start": 2.725,
+              "duration": 0.3125
+            },
+            {
+              "text": "names",
+              "start": 3.0375,
+              "duration": 0.525
+            },
+            {
+              "text": "reflected",
+              "start": 3.7625,
+              "duration": 0.5
+            },
+            {
+              "text": "strong",
+              "start": 4.275,
+              "duration": 0.6
+            },
+            {
+              "text": "investor",
+              "start": 4.875,
+              "duration": 0.5125
+            },
+            {
+              "text": "confidence",
+              "start": 5.4,
+              "duration": 0.6375
+            },
+            {
+              "text": "in",
+              "start": 6.05,
+              "duration": 0.125
+            },
+            {
+              "text": "advanced",
+              "start": 6.1875,
+              "duration": 0.4625
+            },
+            {
+              "text": "chip",
+              "start": 6.65,
+              "duration": 0.1875
+            },
+            {
+              "text": "technology",
+              "start": 6.8375,
+              "duration": 0.675
+            }
+          ],
+          "durationInFrames": 247
+        },
+        {
+          "kind": "beat",
+          "vo": "The sector's performance signals continued belief in advanced chip technology's future.",
+          "caption": "Future of chip tech",
+          "ticker": "ARM",
+          "name": "Arm Holdings",
+          "price": 333.64,
+          "changePct": 11.1244,
+          "sentiment": "up",
+          "keywords": [
+            "chips",
+            "future",
+            "tech",
+            "up"
+          ],
+          "audio": "projects/stock/2026-07-09/audio/01-top-mover-arm-03.mp3",
+          "image": "projects/stock/2026-07-09/images/01-top-mover-arm-03.jpg",
+          "words": [
+            {
+              "text": "The",
+              "start": 0.1,
+              "duration": 0.075
+            },
+            {
+              "text": "sector's",
+              "start": 0.175,
+              "duration": 0.3875
+            },
+            {
+              "text": "performance",
+              "start": 0.5625,
+              "duration": 0.5625
+            },
+            {
+              "text": "signals",
+              "start": 1.125,
+              "duration": 0.4625
+            },
+            {
+              "text": "continued",
+              "start": 1.7,
+              "duration": 0.5625
+            },
+            {
+              "text": "belief",
+              "start": 2.275,
+              "duration": 0.475
+            },
+            {
+              "text": "in",
+              "start": 2.85,
+              "duration": 0.1
+            },
+            {
+              "text": "advanced",
+              "start": 2.9625,
+              "duration": 0.575
+            },
+            {
+              "text": "chip",
+              "start": 3.5375,
+              "duration": 0.275
+            },
+            {
+              "text": "technology's",
+              "start": 3.825,
+              "duration": 0.7
+            },
+            {
+              "text": "future",
+              "start": 4.525,
+              "duration": 0.575
+            }
+          ],
+          "durationInFrames": 175
+        },
+        {
+          "kind": "cta",
+          "vo": "What's driving your portfolio?",
+          "text": "What's driving your portfolio?",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-09/audio/01-top-mover-arm-04.mp3",
+          "image": "projects/stock/2026-07-09/images/01-top-mover-arm-04.jpg",
+          "words": [
+            {
+              "text": "What's",
+              "start": 0.1,
+              "duration": 0.1625
+            },
+            {
+              "text": "driving",
+              "start": 0.2625,
+              "duration": 0.325
+            },
+            {
+              "text": "your",
+              "start": 0.6,
+              "duration": 0.075
+            },
+            {
+              "text": "portfolio",
+              "start": 0.675,
+              "duration": 0.725
+            }
+          ],
+          "durationInFrames": 63
+        }
+      ]
+    },
+    {
+      "type": "market-recap",
+      "title": "Semiconductor Surge, Retailer Dip",
+      "file": "02_market-recap-amd.mp4",
+      "hook": "AMD shares climbed almost eight percent today.",
+      "cta": "Watching any of these today?",
+      "fbCaption": "From surging chip stocks to a dip in retail, here's a quick look at today's market. For information only — not financial advice.",
+      "hashtags": [
+        "#MarketMovers",
+        "#StockMarket",
+        "#AMD",
+        "#Costco"
+      ],
+      "disclaimer": "For information only — not financial advice.",
+      "tickers": [
+        "AMD",
+        "COST",
+        "PLTR"
+      ],
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "AMD shares climbed almost eight percent today.",
+          "text": "AMD shares climbed almost eight percent today.",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-09/audio/02-market-recap-amd-00.mp3",
+          "image": "projects/stock/2026-07-09/images/02-market-recap-amd-00.jpg",
+          "words": [
+            {
+              "text": "AMD",
+              "start": 0.1,
+              "duration": 0.3875
+            },
+            {
+              "text": "shares",
+              "start": 0.4875,
+              "duration": 0.375
+            },
+            {
+              "text": "climbed",
+              "start": 0.875,
+              "duration": 0.4625
+            },
+            {
+              "text": "almost",
+              "start": 1.475,
+              "duration": 0.475
+            },
+            {
+              "text": "eight",
+              "start": 2.1,
+              "duration": 0.125
+            },
+            {
+              "text": "percent",
+              "start": 2.225,
+              "duration": 0.375
+            },
+            {
+              "text": "today",
+              "start": 2.6,
+              "duration": 0.3875
+            }
+          ],
+          "durationInFrames": 111
+        },
+        {
+          "kind": "board",
+          "vo": "Here's how today's movers stack up.",
+          "sentiment": "neutral",
+          "rows": [
+            {
+              "ticker": "ARM",
+              "price": 333.64,
+              "changePct": 11.1244
+            },
+            {
+              "ticker": "AMD",
+              "price": 556.21,
+              "changePct": 7.4999
+            },
+            {
+              "ticker": "MU",
+              "price": 1017.64,
+              "changePct": 7.2555
+            },
+            {
+              "ticker": "COST",
+              "price": 909.95,
+              "changePct": -4.5303
+            },
+            {
+              "ticker": "PLTR",
+              "price": 126.74,
+              "changePct": -4.1446
+            },
+            {
+              "ticker": "OXY",
+              "price": 52.2,
+              "changePct": -2.5938
+            }
+          ],
+          "audio": "projects/stock/2026-07-09/audio/02-market-recap-amd-01.mp3",
+          "image": "projects/stock/2026-07-09/images/02-market-recap-amd-01.jpg",
+          "words": [
+            {
+              "text": "Here's",
+              "start": 0.1125,
+              "duration": 0.15
+            },
+            {
+              "text": "how",
+              "start": 0.2625,
+              "duration": 0.075
+            },
+            {
+              "text": "today's",
+              "start": 0.3375,
+              "duration": 0.4875
+            },
+            {
+              "text": "movers",
+              "start": 0.8375,
+              "duration": 0.4375
+            },
+            {
+              "text": "stack",
+              "start": 1.275,
+              "duration": 0.35
+            },
+            {
+              "text": "up",
+              "start": 1.625,
+              "duration": 0.225
+            }
+          ],
+          "durationInFrames": 77
+        },
+        {
+          "kind": "beat",
+          "vo": "The chipmaker gained as AI trade excitement reignited across the semiconductor sector, with Micron also up over seven percent.",
+          "caption": "AMD: +7.50% & MU: +7.26% on AI",
+          "ticker": "AMD",
+          "name": "AMD",
+          "price": 556.21,
+          "changePct": 7.4999,
+          "sentiment": "up",
+          "keywords": [
+            "amd",
+            "micron",
+            "chips",
+            "ai"
+          ],
+          "audio": "projects/stock/2026-07-09/audio/02-market-recap-amd-02.mp3",
+          "image": "projects/stock/2026-07-09/images/02-market-recap-amd-02.jpg",
+          "words": [
+            {
+              "text": "The",
+              "start": 0.1,
+              "duration": 0.075
+            },
+            {
+              "text": "chipmaker",
+              "start": 0.175,
+              "duration": 0.6625
+            },
+            {
+              "text": "gained",
+              "start": 0.8375,
+              "duration": 0.4625
+            },
+            {
+              "text": "as",
+              "start": 1.3125,
+              "duration": 0.3125
+            },
+            {
+              "text": "AI",
+              "start": 1.7125,
+              "duration": 0.4875
+            },
+            {
+              "text": "trade",
+              "start": 2.2125,
+              "duration": 0.3375
+            },
+            {
+              "text": "excitement",
+              "start": 2.55,
+              "duration": 0.575
+            },
+            {
+              "text": "reignited",
+              "start": 3.1375,
+              "duration": 0.65
+            },
+            {
+              "text": "across",
+              "start": 3.8875,
+              "duration": 0.4875
+            },
+            {
+              "text": "the",
+              "start": 4.3875,
+              "duration": 0.1
+            },
+            {
+              "text": "semiconductor",
+              "start": 4.4875,
+              "duration": 0.725
+            },
+            {
+              "text": "sector",
+              "start": 5.225,
+              "duration": 0.4875
+            },
+            {
+              "text": "with",
+              "start": 6.1125,
+              "duration": 0.1375
+            },
+            {
+              "text": "Micron",
+              "start": 6.25,
+              "duration": 0.6
+            },
+            {
+              "text": "also",
+              "start": 6.9625,
+              "duration": 0.4375
+            },
+            {
+              "text": "up",
+              "start": 7.4125,
+              "duration": 0.225
+            },
+            {
+              "text": "over",
+              "start": 7.775,
+              "duration": 0.175
+            },
+            {
+              "text": "seven",
+              "start": 7.95,
+              "duration": 0.3125
+            },
+            {
+              "text": "percent",
+              "start": 8.2625,
+              "duration": 0.5625
+            }
+          ],
+          "durationInFrames": 286
+        },
+        {
+          "kind": "beat",
+          "vo": "On the downside, Costco fell over four-and-a-half percent, gapping lower with other S&P 500 names.",
+          "caption": "COST: -4.53% gap down",
+          "ticker": "COST",
+          "name": "Costco",
+          "price": 909.95,
+          "changePct": -4.5303,
+          "sentiment": "down",
+          "keywords": [
+            "costco",
+            "retail",
+            "down",
+            "sp500"
+          ],
+          "audio": "projects/stock/2026-07-09/audio/02-market-recap-amd-03.mp3",
+          "image": "projects/stock/2026-07-09/images/02-market-recap-amd-03.jpg",
+          "words": [
+            {
+              "text": "On",
+              "start": 0.075,
+              "duration": 0.075
+            },
+            {
+              "text": "the",
+              "start": 0.15,
+              "duration": 0.0625
+            },
+            {
+              "text": "downside",
+              "start": 0.2125,
+              "duration": 0.675
+            },
+            {
+              "text": "Costco",
+              "start": 1.125,
+              "duration": 0.5
+            },
+            {
+              "text": "fell",
+              "start": 1.625,
+              "duration": 0.425
+            },
+            {
+              "text": "over",
+              "start": 2.2125,
+              "duration": 0.2375
+            },
+            {
+              "text": "four-and-a-half",
+              "start": 2.4625,
+              "duration": 0.6875
+            },
+            {
+              "text": "percent",
+              "start": 3.1625,
+              "duration": 0.525
+            },
+            {
+              "text": "gapping",
+              "start": 4.1125,
+              "duration": 0.425
+            },
+            {
+              "text": "lower",
+              "start": 4.5375,
+              "duration": 0.35
+            },
+            {
+              "text": "with",
+              "start": 4.8875,
+              "duration": 0.15
+            },
+            {
+              "text": "other",
+              "start": 5.1,
+              "duration": 0.3375
+            },
+            {
+              "text": "S&P",
+              "start": 5.45,
+              "duration": 0.4625
+            },
+            {
+              "text": "500",
+              "start": 5.925,
+              "duration": 0.5125
+            },
+            {
+              "text": "names",
+              "start": 6.4375,
+              "duration": 0.5125
+            }
+          ],
+          "durationInFrames": 230
+        },
+        {
+          "kind": "beat",
+          "vo": "Palantir also dropped over four percent, despite new partnership announcements.",
+          "caption": "PLTR: -4.14% on news",
+          "ticker": "PLTR",
+          "name": "Palantir",
+          "price": 126.74,
+          "changePct": -4.1446,
+          "sentiment": "down",
+          "keywords": [
+            "palantir",
+            "software",
+            "down",
+            "ai"
+          ],
+          "audio": "projects/stock/2026-07-09/audio/02-market-recap-amd-04.mp3",
+          "image": "projects/stock/2026-07-09/images/02-market-recap-amd-04.jpg",
+          "words": [
+            {
+              "text": "Palantir",
+              "start": 0.1,
+              "duration": 0.55
+            },
+            {
+              "text": "also",
+              "start": 0.725,
+              "duration": 0.35
+            },
+            {
+              "text": "dropped",
+              "start": 1.0875,
+              "duration": 0.5
+            },
+            {
+              "text": "over",
+              "start": 1.725,
+              "duration": 0.25
+            },
+            {
+              "text": "four",
+              "start": 1.975,
+              "duration": 0.4125
+            },
+            {
+              "text": "percent",
+              "start": 2.4,
+              "duration": 0.55
+            },
+            {
+              "text": "despite",
+              "start": 3.25,
+              "duration": 0.525
+            },
+            {
+              "text": "new",
+              "start": 3.7875,
+              "duration": 0.2625
+            },
+            {
+              "text": "partnership",
+              "start": 4.05,
+              "duration": 0.525
+            },
+            {
+              "text": "announcements",
+              "start": 4.575,
+              "duration": 0.7
+            }
+          ],
+          "durationInFrames": 180
+        },
+        {
+          "kind": "cta",
+          "vo": "Watching any of these today?",
+          "text": "Watching any of these today?",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-09/audio/02-market-recap-amd-05.mp3",
+          "image": "projects/stock/2026-07-09/images/02-market-recap-amd-05.jpg",
+          "words": [
+            {
+              "text": "Watching",
+              "start": 0.1,
+              "duration": 0.3
+            },
+            {
+              "text": "any",
+              "start": 0.4,
+              "duration": 0.2
+            },
+            {
+              "text": "of",
+              "start": 0.6,
+              "duration": 0.0625
+            },
+            {
+              "text": "these",
+              "start": 0.6625,
+              "duration": 0.225
+            },
+            {
+              "text": "today",
+              "start": 0.8875,
+              "duration": 0.4125
+            }
+          ],
+          "durationInFrames": 61
+        }
+      ]
+    },
+    {
+      "type": "headline",
+      "title": "Geopolitical Tensions in Focus",
+      "file": "03_headline.mp4",
+      "hook": "Geopolitical tensions in the Middle East were a key focus today.",
+      "cta": "What caught your eye?",
+      "fbCaption": "Geopolitical events unfolded today, but the market found resilience in tech. For information only — not financial advice.",
+      "hashtags": [
+        "#Geopolitics",
+        "#MarketNews",
+        "#StockMarket",
+        "#MiddleEast"
+      ],
+      "disclaimer": "For information only — not financial advice.",
+      "tickers": [],
+      "segments": [
+        {
+          "kind": "hook",
+          "vo": "Geopolitical tensions in the Middle East were a key focus today.",
+          "text": "Geopolitical tensions in the Middle East were a key focus today.",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-09/audio/03-headline-00.mp3",
+          "image": "projects/stock/2026-07-09/images/03-headline-00.jpg",
+          "words": [
+            {
+              "text": "Geopolitical",
+              "start": 0.0875,
+              "duration": 0.7875
+            },
+            {
+              "text": "tensions",
+              "start": 0.8875,
+              "duration": 0.4875
+            },
+            {
+              "text": "in",
+              "start": 1.375,
+              "duration": 0.0625
+            },
+            {
+              "text": "the",
+              "start": 1.45,
+              "duration": 0.05
+            },
+            {
+              "text": "Middle",
+              "start": 1.5125,
+              "duration": 0.25
+            },
+            {
+              "text": "East",
+              "start": 1.825,
+              "duration": 0.4
+            },
+            {
+              "text": "were",
+              "start": 2.2375,
+              "duration": 0.125
+            },
+            {
+              "text": "a",
+              "start": 2.3625,
+              "duration": 0.075
+            },
+            {
+              "text": "key",
+              "start": 2.45,
+              "duration": 0.2875
+            },
+            {
+              "text": "focus",
+              "start": 2.7375,
+              "duration": 0.4125
+            },
+            {
+              "text": "today",
+              "start": 3.1625,
+              "duration": 0.4625
+            }
+          ],
+          "durationInFrames": 131
+        },
+        {
+          "kind": "hook",
+          "vo": "Reuters reported Iran claimed to hit US military targets in the Gulf, following ballistic missile launches.",
+          "text": "Iran claims US target hit",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-09/audio/03-headline-01.mp3",
+          "image": "projects/stock/2026-07-09/images/03-headline-01.jpg",
+          "words": [
+            {
+              "text": "Reuters",
+              "start": 0.0875,
+              "duration": 0.3625
+            },
+            {
+              "text": "reported",
+              "start": 0.45,
+              "duration": 0.5
+            },
+            {
+              "text": "Iran",
+              "start": 1.05,
+              "duration": 0.4875
+            },
+            {
+              "text": "claimed",
+              "start": 1.55,
+              "duration": 0.375
+            },
+            {
+              "text": "to",
+              "start": 1.925,
+              "duration": 0.075
+            },
+            {
+              "text": "hit",
+              "start": 2,
+              "duration": 0.3375
+            },
+            {
+              "text": "US",
+              "start": 2.3375,
+              "duration": 0.55
+            },
+            {
+              "text": "military",
+              "start": 2.8875,
+              "duration": 0.55
+            },
+            {
+              "text": "targets",
+              "start": 3.4375,
+              "duration": 0.45
+            },
+            {
+              "text": "in",
+              "start": 3.9,
+              "duration": 0.0875
+            },
+            {
+              "text": "the",
+              "start": 3.9875,
+              "duration": 0.05
+            },
+            {
+              "text": "Gulf",
+              "start": 4.0375,
+              "duration": 0.4625
+            },
+            {
+              "text": "following",
+              "start": 4.925,
+              "duration": 0.4625
+            },
+            {
+              "text": "ballistic",
+              "start": 5.3875,
+              "duration": 0.55
+            },
+            {
+              "text": "missile",
+              "start": 5.95,
+              "duration": 0.2625
+            },
+            {
+              "text": "launches",
+              "start": 6.225,
+              "duration": 0.5875
+            }
+          ],
+          "durationInFrames": 226
+        },
+        {
+          "kind": "hook",
+          "vo": "Despite these rising tensions, both the S&P 500 and Nasdaq still opened higher.",
+          "text": "S&P 500, Nasdaq higher",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-09/audio/03-headline-02.mp3",
+          "image": "projects/stock/2026-07-09/images/03-headline-02.jpg",
+          "words": [
+            {
+              "text": "Despite",
+              "start": 0.1,
+              "duration": 0.475
+            },
+            {
+              "text": "these",
+              "start": 0.5875,
+              "duration": 0.2625
+            },
+            {
+              "text": "rising",
+              "start": 0.8625,
+              "duration": 0.4875
+            },
+            {
+              "text": "tensions",
+              "start": 1.35,
+              "duration": 0.6875
+            },
+            {
+              "text": "both",
+              "start": 2.2125,
+              "duration": 0.2375
+            },
+            {
+              "text": "the",
+              "start": 2.4625,
+              "duration": 0.1375
+            },
+            {
+              "text": "S&P",
+              "start": 2.6125,
+              "duration": 0.525
+            },
+            {
+              "text": "500",
+              "start": 3.15,
+              "duration": 0.5875
+            },
+            {
+              "text": "and",
+              "start": 3.7375,
+              "duration": 0.075
+            },
+            {
+              "text": "Nasdaq",
+              "start": 3.8125,
+              "duration": 0.625
+            },
+            {
+              "text": "still",
+              "start": 4.625,
+              "duration": 0.3625
+            },
+            {
+              "text": "opened",
+              "start": 5.075,
+              "duration": 0.25
+            },
+            {
+              "text": "higher",
+              "start": 5.3375,
+              "duration": 0.4375
+            }
+          ],
+          "durationInFrames": 195
+        },
+        {
+          "kind": "hook",
+          "vo": "This market resilience was largely driven by strong gains in chip stocks.",
+          "text": "Chip stocks drive gains",
+          "sentiment": "up",
+          "audio": "projects/stock/2026-07-09/audio/03-headline-03.mp3",
+          "image": "projects/stock/2026-07-09/images/03-headline-03.jpg",
+          "words": [
+            {
+              "text": "This",
+              "start": 0.075,
+              "duration": 0.15
+            },
+            {
+              "text": "market",
+              "start": 0.2375,
+              "duration": 0.325
+            },
+            {
+              "text": "resilience",
+              "start": 0.575,
+              "duration": 0.5875
+            },
+            {
+              "text": "was",
+              "start": 1.1625,
+              "duration": 0.1625
+            },
+            {
+              "text": "largely",
+              "start": 1.3375,
+              "duration": 0.525
+            },
+            {
+              "text": "driven",
+              "start": 1.8625,
+              "duration": 0.325
+            },
+            {
+              "text": "by",
+              "start": 2.1875,
+              "duration": 0.1375
+            },
+            {
+              "text": "strong",
+              "start": 2.325,
+              "duration": 0.575
+            },
+            {
+              "text": "gains",
+              "start": 2.9,
+              "duration": 0.45
+            },
+            {
+              "text": "in",
+              "start": 3.3625,
+              "duration": 0.1
+            },
+            {
+              "text": "chip",
+              "start": 3.475,
+              "duration": 0.275
+            },
+            {
+              "text": "stocks",
+              "start": 3.75,
+              "duration": 0.625
+            }
+          ],
+          "durationInFrames": 153
+        },
+        {
+          "kind": "cta",
+          "vo": "What caught your eye?",
+          "text": "What caught your eye?",
+          "sentiment": "neutral",
+          "audio": "projects/stock/2026-07-09/audio/03-headline-04.mp3",
+          "image": "projects/stock/2026-07-09/images/03-headline-04.jpg",
+          "words": [
+            {
+              "text": "What",
+              "start": 0.1,
+              "duration": 0.075
+            },
+            {
+              "text": "caught",
+              "start": 0.175,
+              "duration": 0.225
+            },
+            {
+              "text": "your",
+              "start": 0.4,
+              "duration": 0.0875
+            },
+            {
+              "text": "eye",
+              "start": 0.5,
+              "duration": 0.2375
+            }
+          ],
+          "durationInFrames": 44
+        }
+      ]
+    }
+  ]
+}

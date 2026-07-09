@@ -11,7 +11,12 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-// Total length = sum of the (audio-fitted) segment frames the server computed.
+// Brief logo card that plays before the hook. Fixed length, not part of the
+// server's audio-fitted segment timings.
+const INTRO_SECONDS = 0.9;
+
+// Total length = intro card + sum of the (audio-fitted) segment frames the
+// server computed.
 export const calculateStockMetadata = ({props}) => {
 	const data = props.data;
 	const fps = data.fps || 30;
@@ -19,8 +24,9 @@ export const calculateStockMetadata = ({props}) => {
 		(a, s) => a + Math.max(1, Math.round(s.durationInFrames)),
 		0,
 	);
+	const introFrames = Math.round(fps * INTRO_SECONDS);
 	return {
-		durationInFrames: Math.max(1, totalFrames),
+		durationInFrames: Math.max(1, totalFrames + introFrames),
 		fps,
 		width: data.width || 1080,
 		height: data.height || 1920,
@@ -207,6 +213,47 @@ const DateStamp = ({date}) => {
 	);
 };
 
+// Persistent brand mark, top-right, across every frame — small enough to sit
+// clear of captions/disclaimer at the bottom and the date stamp at top-centre.
+const Watermark = () => (
+	<AbsoluteFill style={{alignItems: 'flex-end', pointerEvents: 'none'}}>
+		<Img
+			src={staticFile('brand/wss-mark.png')}
+			style={{width: 100, height: 100, marginTop: 44, marginRight: 36, opacity: 0.55}}
+		/>
+	</AbsoluteFill>
+);
+
+// Opening logo card — the one place the full lockup is shown large enough to
+// read, then it steps aside for the hook.
+const IntroCard = ({durationInFrames}) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+	const enter = spring({frame, fps, config: {damping: 200}, durationInFrames: Math.round(fps * 0.4)});
+	const fadeOut = interpolate(frame, [durationInFrames - 8, durationInFrames], [1, 0], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp',
+	});
+	return (
+		<AbsoluteFill
+			style={{
+				backgroundColor: '#070A12',
+				alignItems: 'center',
+				justifyContent: 'center',
+			}}
+		>
+			<Img
+				src={staticFile('brand/wss-logo.png')}
+				style={{
+					width: 720,
+					opacity: enter * fadeOut,
+					transform: `scale(${interpolate(enter, [0, 1], [0.92, 1])})`,
+				}}
+			/>
+		</AbsoluteFill>
+	);
+};
+
 // A brief "market board" — a compact table of the day's top movers with their
 // price and % move, rows staggering in. Uses real fetched data.
 const MarketBoard = ({rows = [], date, weekly}) => {
@@ -389,7 +436,35 @@ const HookCard = ({text, words, durationInFrames}) => {
 	);
 };
 
-const OutroCard = ({cta, disclaimer, channelName}) => (
+// Explicit follow ask — the actual conversion moment. Given a light pulse so
+// motion pulls the eye to it in the last beat, when viewers are deciding
+// whether to tap follow before swiping away.
+const FollowCTA = () => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+	const enter = spring({frame, fps, config: {damping: 200}, durationInFrames: Math.round(fps * 0.5)});
+	const pulse = 1 + Math.sin((frame / fps) * Math.PI * 1.6) * 0.035;
+	return (
+		<div
+			style={{
+				marginTop: 40,
+				opacity: enter,
+				transform: `scale(${pulse})`,
+				fontFamily: SANS,
+				fontWeight: 800,
+				fontSize: 38,
+				letterSpacing: 1.5,
+				color: UP,
+				textAlign: 'center',
+				textTransform: 'uppercase',
+			}}
+		>
+			Follow for daily market updates
+		</div>
+	);
+};
+
+const OutroCard = ({cta, disclaimer}) => (
 	<AbsoluteFill
 		style={{
 			background: 'radial-gradient(120% 80% at 50% 30%, #131A2E 0%, #0A0E1A 60%, #070A12 100%)',
@@ -401,20 +476,8 @@ const OutroCard = ({cta, disclaimer, channelName}) => (
 		<div style={{fontFamily: SANS, fontWeight: 800, fontSize: 70, color: INK, textAlign: 'center', lineHeight: 1.2}}>
 			{cta}
 		</div>
-		{channelName ? (
-			<div
-				style={{
-					marginTop: 44,
-					fontFamily: SANS,
-					fontSize: 30,
-					letterSpacing: 3,
-					color: 'rgba(244,247,251,0.55)',
-					textTransform: 'uppercase',
-				}}
-			>
-				{channelName}
-			</div>
-		) : null}
+		<Img src={staticFile('brand/wss-logo.png')} style={{width: 460, marginTop: 50}} />
+		<FollowCTA />
 		{disclaimer ? (
 			<div
 				style={{
@@ -462,7 +525,9 @@ const MusicBed = ({src, volume = 0.09}) => {
 };
 
 export const StockVideo = ({data}) => {
-	let startFrame = 0;
+	const fps = data.fps || 30;
+	const introFrames = Math.round(fps * INTRO_SECONDS);
+	let startFrame = introFrames;
 
 	const sequences = data.segments.map((seg, i) => {
 		const durationInFrames = Math.max(1, Math.round(seg.durationInFrames));
@@ -475,7 +540,7 @@ export const StockVideo = ({data}) => {
 			) : seg.kind === 'cta' ? (
 				<AbsoluteFill>
 					<Backdrop image={seg.image} sentiment="neutral" durationInFrames={durationInFrames} />
-					<OutroCard cta={seg.text} disclaimer={data.disclaimer} channelName={data.channelName} />
+					<OutroCard cta={seg.text} disclaimer={data.disclaimer} />
 				</AbsoluteFill>
 			) : seg.kind === 'board' ? (
 				<AbsoluteFill>
@@ -514,8 +579,14 @@ export const StockVideo = ({data}) => {
 
 	return (
 		<AbsoluteFill style={{backgroundColor: '#070A12'}}>
+			<Sequence from={0} durationInFrames={introFrames}>
+				<IntroCard durationInFrames={introFrames} />
+			</Sequence>
 			{sequences}
-			<DateStamp date={data.date} />
+			<Sequence from={introFrames}>
+				<DateStamp date={data.date} />
+			</Sequence>
+			<Watermark />
 			{data.musicAudio ? <MusicBed src={data.musicAudio} volume={data.musicVolume} /> : null}
 		</AbsoluteFill>
 	);

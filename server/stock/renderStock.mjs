@@ -64,7 +64,29 @@ async function audioDuration(absPath) {
 		'-v', 'error', '-show_entries', 'format=duration',
 		'-of', 'default=noprint_wrappers=1:nokey=1', absPath,
 	]);
-	return parseFloat(stdout.trim());
+	const dur = parseFloat(stdout.trim());
+	if (!(dur > 0)) throw new Error(`ffprobe returned an invalid duration for ${absPath}`);
+	return dur;
+}
+
+// Synthesize + measure one segment's VO, re-synthesizing from scratch if the
+// result is unusable (e.g. a TTS engine wrote a corrupt/empty file that
+// ffprobe can't read). Defense-in-depth on top of the TTS layer's own retry —
+// this is what stops one bad segment from crashing an entire multi-reel run.
+async function synthesizeSegmentAudio(spoken, absPath) {
+	const MAX_ATTEMPTS = 2;
+	let lastErr;
+	for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+		try {
+			const {wordBoundaries} = await synthesize(spoken, absPath);
+			const dur = await audioDuration(absPath);
+			return {wordBoundaries, dur};
+		} catch (err) {
+			lastErr = err;
+			console.warn(`[render] audio synth+probe attempt ${attempt} failed for ${absPath}: ${err.message}`);
+		}
+	}
+	throw lastErr;
 }
 
 const slugify = (s) =>
@@ -188,8 +210,7 @@ async function prepareSegments(segments, dirs, reelSlug, onSegment) {
 		const audioFile = `${reelSlug}-${idx}.mp3`;
 		const spoken = speechFriendly(seg.vo || seg.text || '.');
 		onSegment?.({index: i, total: segments.length, phase: 'voice'});
-		const {wordBoundaries} = await synthesize(spoken, path.join(audioDir, audioFile));
-		const dur = await audioDuration(path.join(audioDir, audioFile));
+		const {wordBoundaries, dur} = await synthesizeSegmentAudio(spoken, path.join(audioDir, audioFile));
 		// Real per-word timings for karaoke captions; estimate if the engine
 		// didn't provide them (e.g. ElevenLabs).
 		const words = wordBoundaries?.length ? wordBoundaries : estimateWords(spoken, dur);

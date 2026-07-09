@@ -63,6 +63,27 @@ async function edgeSynthesize(text, outPath) {
 	throw lastErr;
 }
 
+// msedge-tts drops raw `text` straight into an SSML/XML template with no
+// escaping (see its _SSMLTemplate). An unescaped `&`, `<`, or `>` (e.g. "S&P
+// 500") corrupts the XML payload the service receives — it then closes the
+// stream cleanly but sends ZERO audio bytes, silently and *deterministically*
+// (no amount of retrying fixes it). Escape before every call.
+function escapeXml(text) {
+	return (text || '')
+		.replaceAll('&', '&amp;')
+		.replaceAll('<', '&lt;')
+		.replaceAll('>', '&gt;');
+}
+
+// The service echoes word-boundary text back in escaped form (e.g. "S&amp;P"),
+// so un-escape before it's ever shown on screen as a caption.
+function unescapeXml(text) {
+	return (text || '')
+		.replaceAll('&lt;', '<')
+		.replaceAll('&gt;', '>')
+		.replaceAll('&amp;', '&');
+}
+
 async function edgeSynthesizeOnce(text, outPath) {
 	const tts = new MsEdgeTTS();
 	// wordBoundaryEnabled gives per-word timestamps → real karaoke captions.
@@ -71,7 +92,7 @@ async function edgeSynthesizeOnce(text, outPath) {
 	});
 
 	fs.mkdirSync(path.dirname(outPath), {recursive: true});
-	const {audioStream, metadataStream} = tts.toStream(text);
+	const {audioStream, metadataStream} = tts.toStream(escapeXml(text));
 
 	const wordBoundaries = [];
 	if (metadataStream) {
@@ -83,7 +104,7 @@ async function edgeSynthesizeOnce(text, outPath) {
 				const b = meta?.Metadata?.[0]?.Data;
 				if (b?.Offset != null && b.text?.Text) {
 					wordBoundaries.push({
-						text: b.text.Text,
+						text: unescapeXml(b.text.Text),
 						start: b.Offset / 1e7,
 						duration: (b.Duration ?? 0) / 1e7,
 					});
@@ -103,6 +124,16 @@ async function edgeSynthesizeOnce(text, outPath) {
 	});
 
 	tts.close?.();
+
+	// edge-tts occasionally closes the stream cleanly (fires 'finish') without
+	// ever sending audio data — that looked like success but wrote a 0-byte
+	// mp3, which crashed the pipeline later at ffprobe. Treat empty output as
+	// a failure so the retry wrapper in edgeSynthesize() catches it.
+	const {size} = fs.statSync(outPath);
+	if (size < 200) {
+		throw new Error(`edge-tts produced an empty/truncated file (${size} bytes)`);
+	}
+
 	return {path: outPath, wordBoundaries};
 }
 
